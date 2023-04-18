@@ -1,6 +1,6 @@
 {
   "orgName": "Auto-Scheduler - Dev Org",
-  "edition": "Developer",
+  "template": "0TTB0000001fyQZ",
   "settings": {
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true
