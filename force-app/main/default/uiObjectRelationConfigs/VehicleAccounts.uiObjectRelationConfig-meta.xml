@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UIObjectRelationConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <UIObjectRelationFieldConfigs>
+        <displayLabel>Account Type</displayLabel>
+        <queryText>{&quot;fieldNode&quot;:{&quot;fieldEnumOrId&quot;:&quot;Type&quot;},&quot;startNode&quot;:{&quot;initialObject&quot;:&quot;RelatedObject&quot;},&quot;traversalNodes&quot;:[]}</queryText>
+        <rowOrder>2</rowOrder>
+    </UIObjectRelationFieldConfigs>
+    <UIObjectRelationFieldConfigs>
+        <displayLabel>Active</displayLabel>
+        <queryText>{&quot;fieldNode&quot;:{&quot;fieldEnumOrId&quot;:&quot;IsActive&quot;},&quot;startNode&quot;:{&quot;initialObject&quot;:&quot;IndirectRelationshipObject&quot;},&quot;traversalNodes&quot;:[]}</queryText>
+        <rowOrder>1</rowOrder>
+    </UIObjectRelationFieldConfigs>
+    <UIObjectRelationFieldConfigs>
+        <displayLabel>Account Phone</displayLabel>
+        <queryText>{&quot;fieldNode&quot;:{&quot;fieldEnumOrId&quot;:&quot;Phone&quot;},&quot;startNode&quot;:{&quot;initialObject&quot;:&quot;RelatedObject&quot;},&quot;traversalNodes&quot;:[]}</queryText>
+        <rowOrder>3</rowOrder>
+    </UIObjectRelationFieldConfigs>
+    <UIObjectRelationFieldConfigs>
+        <displayLabel>Name</displayLabel>
+        <queryText>{&quot;fieldNode&quot;:{&quot;fieldEnumOrId&quot;:&quot;Name&quot;},&quot;startNode&quot;:{&quot;initialObject&quot;:&quot;IndirectRelationshipObject&quot;},&quot;traversalNodes&quot;:[]}</queryText>
+        <rowOrder>4</rowOrder>
+    </UIObjectRelationFieldConfigs>
+    <UIObjectRelationFieldConfigs>
+        <displayLabel>Stakeholder Role</displayLabel>
+        <queryText>{&quot;fieldNode&quot;:{&quot;fieldEnumOrId&quot;:&quot;StakeholderRole&quot;},&quot;startNode&quot;:{&quot;initialObject&quot;:&quot;IndirectRelationshipObject&quot;},&quot;traversalNodes&quot;:[]}</queryText>
+        <rowOrder>5</rowOrder>
+    </UIObjectRelationFieldConfigs>
+    <UIObjectRelationFieldConfigs>
+        <displayLabel>Effective Start Date</displayLabel>
+        <queryText>{&quot;fieldNode&quot;:{&quot;fieldEnumOrId&quot;:&quot;EffectiveStartDate&quot;},&quot;startNode&quot;:{&quot;initialObject&quot;:&quot;IndirectRelationshipObject&quot;},&quot;traversalNodes&quot;:[]}</queryText>
+        <rowOrder>6</rowOrder>
+    </UIObjectRelationFieldConfigs>
+    <UIObjectRelationFieldConfigs>
+        <displayLabel>Effective End Date</displayLabel>
+        <queryText>{&quot;fieldNode&quot;:{&quot;fieldEnumOrId&quot;:&quot;EffectiveEndDate&quot;},&quot;startNode&quot;:{&quot;initialObject&quot;:&quot;IndirectRelationshipObject&quot;},&quot;traversalNodes&quot;:[]}</queryText>
+        <rowOrder>7</rowOrder>
+    </UIObjectRelationFieldConfigs>
+    <contextObject>Vehicle</contextObject>
+    <indirectObjectContextField>VehicleId</indirectObjectContextField>
+    <indirectObjectRelatedField>AccountId</indirectObjectRelatedField>
+    <indirectRelationshipObject>AssetAccountParticipant</indirectRelationshipObject>
+    <isActive>true</isActive>
+    <masterLabel>Vehicle Accounts</masterLabel>
+    <relatedObject>Account</relatedObject>
+    <relationshipType>Indirect</relationshipType>
+</UIObjectRelationConfig>

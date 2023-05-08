@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>Name</columns>
+    <columns>BusinessPartnerRegisteredName</columns>
+    <columns>BusinessOperatingName</columns>
+    <columns>Account</columns>
+    <columns>BusinessPartnerType</columns>
+    <columns>ServiceType</columns>
+    <columns>RegionName</columns>
+    <filterScope>Mine</filterScope>
+    <label>All Business Profiles</label>
+</ListView>

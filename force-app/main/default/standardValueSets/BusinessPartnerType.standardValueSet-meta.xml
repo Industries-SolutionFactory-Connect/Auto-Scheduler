@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Original Equipment Manufacturer</fullName>
+        <default>false</default>
+        <label>Original Equipment Manufacturer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Dealer</fullName>
+        <default>false</default>
+        <label>Dealer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Customer</fullName>
+        <default>false</default>
+        <label>Customer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Distributor</fullName>
+        <default>false</default>
+        <label>Distributor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Financier</fullName>
+        <default>false</default>
+        <label>Financier</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Supplier</fullName>
+        <default>false</default>
+        <label>Supplier</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Service Provider</fullName>
+        <default>false</default>
+        <label>Service Provider</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Spare Parts Dealer</fullName>
+        <default>false</default>
+        <label>Spare Parts Dealer</label>
+    </standardValue>
+</StandardValueSet>

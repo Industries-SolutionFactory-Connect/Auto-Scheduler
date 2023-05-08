@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Autocar</fullName>
+        <default>false</default>
+        <label>Autocar</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CarCheck</fullName>
+        <default>false</default>
+        <label>CarCheck</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CarArena</fullName>
+        <default>false</default>
+        <label>CarArena</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Zigwheels</fullName>
+        <default>false</default>
+        <label>Zigwheels</label>
+    </standardValue>
+</StandardValueSet>
