@@ -19,6 +19,13 @@
     },
     "languageSettings": {
       "enableTranslationWorkbench": true
+    },
+    "IndustriesAutomotiveSettings": {
+      "enableAutomotiveScheduler": true
+    },
+    "IndustriesSettings": {
+      "enableMultiResourceOrgPref": true
     }
+
   }
 }
