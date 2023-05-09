@@ -34,7 +34,7 @@ flows:
                 task: assign_permission_sets
                 options:
                     api_names: WarrantyLifecycleMgmtPsl, ClaimsManagementFoundationPsl, AutomotiveSchedulerPsl, CriteriaBasedSearchAndFilterPsl, OmniStudioAdmin, OmniStudioUser, ManufacturingPartnerLeadMgmtPsl, ActionPlans, IndustriesVisit
-                    user_alias: UUser
+                    user_alias: UUser, AUser
                 ui_options:
                     name: Adding Permission Set to Admin User
  
