@@ -3,12 +3,13 @@ project:
     name: Auto-Scheduler
     package:
         name: Auto-Scheduler
-        api_version: '57.0'
+        api_version: '58.0'
     git:
         default_branch: 'main'
         prefix_feature: 'feature/'
         prefix_beta: 'beta/'
         prefix_release: 'release/'
+        repo_url: https://github.com/Industries-SolutionFactory-Connect/Auto-Scheduler
     source_format: sfdx
 
 tasks:
@@ -26,3 +27,33 @@ tasks:
     run_tests:
         options:
             required_org_code_coverage_percent: 75
+flows:
+    auto-sch-setup:
+        steps:
+            1:
+                task: assign_permission_sets
+                options:
+                    api_names: WarrantyLifecycleMgmtPsl, ClaimsManagementFoundationPsl, AutomotiveSchedulerPsl, CriteriaBasedSearchAndFilterPsl, OmniStudioAdmin, OmniStudioUser, ManufacturingPartnerLeadMgmtPsl, ActionPlans, IndustriesVisit
+                    user_alias: UUser
+                ui_options:
+                    name: Adding Permission Set to Admin User
+ 
+ plans:
+    install:
+        slug: install
+        title: Automotive Scheduler
+        tier: primary
+        is_listed: True
+        preflight_message: "This will install Automotive Scheduler Module"
+        post_install_message: "Thanks for installing Automotive Scheduler Module. "
+        error_message: "To get help with this error, go to [help.salesforce.com](https://help.salesforce.com/), find the Support & Services area and log a technical support ticket with Salesforce. Include “PMM” in the subject line and include in your comment the installation link shown here."
+        checks:
+            - when: "'AutomotiveSchedulerPsl' not in tasks.get_available_permission_set_licenses()"
+                action: error
+                message: "You need AutomotiveSchedulerPsl licence to use this feature. Contact your Administrator."
+            - when: "'AutomotiveSchedulerInExprcCloudPsl' not in tasks.get_available_permission_set_licenses()"
+                action: error
+                message: "You need AutomotiveSchedulerInExprcCloudPsl licence to use this feature. Contact your Administrator."
+        steps:
+            1:
+                flow: auto-sch-setup
