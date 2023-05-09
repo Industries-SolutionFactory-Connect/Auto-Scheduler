@@ -49,11 +49,11 @@ plans:
         error_message: "To get help with this error, go to [help.salesforce.com](https://help.salesforce.com/), find the Support & Services area and log a technical support ticket with Salesforce. Include “PMM” in the subject line and include in your comment the installation link shown here."
         checks:
             - when: "'AutomotiveSchedulerPsl' not in tasks.get_available_permission_set_licenses()"
-                action: error
-                message: "You need AutomotiveSchedulerPsl licence to use this feature. Contact your Administrator."
+              action: error
+              message: "You need AutomotiveSchedulerPsl licence to use this feature. Contact your Administrator."
             - when: "'AutomotiveSchedulerInExprcCloudPsl' not in tasks.get_available_permission_set_licenses()"
-                action: error
-                message: "You need AutomotiveSchedulerInExprcCloudPsl licence to use this feature. Contact your Administrator."
+              action: error
+              message: "You need AutomotiveSchedulerInExprcCloudPsl licence to use this feature. Contact your Administrator."
         steps:
             1:
                 flow: auto-sch-setup
