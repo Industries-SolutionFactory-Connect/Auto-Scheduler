@@ -38,7 +38,7 @@ flows:
                 ui_options:
                     name: Adding Permission Set to Admin User
  
- plans:
+plans:
     install:
         slug: install
         title: Automotive Scheduler
