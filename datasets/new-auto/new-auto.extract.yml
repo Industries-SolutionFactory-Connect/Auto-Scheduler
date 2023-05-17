@@ -1,0 +1,790 @@
+extract:
+  Skill:
+    fields:
+    - Description
+    - DeveloperName
+    - Language
+    - MasterLabel
+    - TypeId
+  SkillType:
+    fields:
+    - DeveloperName
+    - MasterLabel
+  WorkType:
+    fields:
+    - AppointmentCategoryId
+    - ApptStartTimeIntvlInMin
+    - BlockTimeAfterAppointment
+    - BlockTimeAfterUnit
+    - BlockTimeBeforeAppointment
+    - BlockTimeBeforeUnit
+    - DefaultAppointmentType
+    - Description
+    - DurationType
+    - EstimatedDuration
+    - OperatingHoursId
+    - TimeFrameEndUnit
+    - TimeFrameStartUnit
+    - TimeframeEnd
+    - TimeframeStart
+    - Name
+  AppointmentCategory:
+    fields:
+    - Name
+  OperatingHours:
+    fields:
+    - Description
+    - Name
+    - TimeZone
+  SkillRequirement:
+    fields:
+    - RelatedRecordId
+    - SkillId
+    - SkillLevel
+  Account:
+    fields:
+    - Description
+    - Fax
+    - Name
+    - AccountNumber
+    - Phone
+    - Rating
+    - Site
+    - AccountSource
+    - Type
+    - AnnualRevenue
+    - BillingCity
+    - BillingCountry
+    - BillingGeocodeAccuracy
+    - BillingLatitude
+    - BillingLongitude
+    - BillingState
+    - BillingStreet
+    - BillingPostalCode
+    - Jigsaw
+    - NumberOfEmployees
+    - Industry
+    - OperatingHoursId
+    - Ownership
+    - ParentId
+    - ShippingCity
+    - ShippingCountry
+    - ShippingGeocodeAccuracy
+    - ShippingLatitude
+    - ShippingLongitude
+    - ShippingState
+    - ShippingStreet
+    - ShippingPostalCode
+    - Sic
+    - SicDesc
+    - TickerSymbol
+    - Website
+  Contact:
+    fields:
+    - AccountId
+    - AssistantName
+    - AssistantPhone
+    - Birthdate
+    - Fax
+    - Phone
+    - Description
+    - Jigsaw
+    - Department
+    - DoNotCall
+    - Email
+    - EmailBouncedDate
+    - EmailBouncedReason
+    - HasOptedOutOfEmail
+    - HasOptedOutOfFax
+    - FirstName
+    - GenderIdentity
+    - HomePhone
+    - IndividualId
+    - LastName
+    - LeadSource
+    - MailingCity
+    - MailingCountry
+    - MailingGeocodeAccuracy
+    - MailingLatitude
+    - MailingLongitude
+    - MailingState
+    - MailingStreet
+    - MailingPostalCode
+    - MobilePhone
+    - OtherCity
+    - OtherCountry
+    - OtherGeocodeAccuracy
+    - OtherLatitude
+    - OtherLongitude
+    - OtherPhone
+    - OtherState
+    - OtherStreet
+    - OtherPostalCode
+    - Pronouns
+    - ReportsToId
+    - Salutation
+    - Title
+  Individual:
+    fields:
+    - LastName
+  Product2:
+    fields:
+    - IsActive
+    - AvailabilityDate
+    - BusinessBrandId
+    - IsCertified
+    - ConfigureDuringSale
+    - DiscontinuedDate
+    - DisplayUrl
+    - IsEnvrPrtcRegCompliant
+    - ExternalDataSourceId
+    - ExternalId
+    - HarmonizedSystemCode
+    - HarmonizedTariffSchedCode
+    - MakeName
+    - ManufacturerPartNumber
+    - ManufacturerName
+    - ModelName
+    - ModelYear
+    - ProductCategoryCode
+    - ProductCode
+    - Description
+    - Family
+    - ProductLineCode
+    - Name
+    - Product_Purpose__c
+    - StockKeepingUnit
+    - Type
+    - QuantityUnitOfMeasure
+    - IsSerialized
+    - UniversalProductCode
+    - Vehicle_Definition__c
+    - VehicleTrimLevel
+    - VersionName
+  BusinessBrand:
+    fields:
+    - Name
+    - OrgId
+  VehicleDefinition:
+    fields:
+    - AccelerationTime
+    - AuxiliaryBatteryType
+    - BatteryCapacity
+    - BodyType
+    - CombinedFuelEconomy
+    - CurbWeight
+    - DoorCount
+    - DoorStyleType
+    - DrivetrainType
+    - EmissionStandard
+    - EngineCubicCapacity
+    - EngineName
+    - ExternalReferenceNumber
+    - ExtraUrbanFuelEconomy
+    - FuelTankCapacity
+    - FuelType
+    - Height
+    - Length
+    - MainBatteryType
+    - MaximumBatteryRange
+    - MaximumGrossWeight
+    - MaximumTorque
+    - MinimumBatteryRange
+    - ModelCode
+    - Name
+    - TopSpeed
+    - TotalPower
+    - TransmissionType
+    - UrbanFuelEconomy
+    - VariantName
+    - VehicleClass
+    - Wheelbase
+    - Width
+    - GeoCountryId
+    - ProductId
+  Asset:
+    fields:
+    - AccountId
+    - Name
+    - AssetProvidedById
+    - AssetServicedById
+    - City
+    - IsCompetitorProduct
+    - ContactId
+    - Country
+    - Description
+    - GeocodeAccuracy
+    - InstallDate
+    - IsInternal
+    - Latitude
+    - Longitude
+    - ParentId
+    - PostalCode
+    - Price
+    - Product2Id
+    - PurchaseDate
+    - Quantity
+    - SerialNumber
+    - State
+    - Status
+    - Street
+    - UsageEndDate
+  Vehicle:
+    fields:
+    - CurrentOwnerId
+    - ActiveRecallCount
+    - ActiveServiceContractCount
+    - ActiveSubscriptionCount
+    - ActiveWarrantyCount
+    - AssetId
+    - AverageMarketValue
+    - ChassisNumber
+    - LocationCity
+    - ConditionType
+    - LocationCountry
+    - CylinderCount
+    - EngineNumber
+    - ExteriorColor
+    - FrontRimSize
+    - FrontTireSize
+    - GearBoxType
+    - LocationGeocodeAccuracy
+    - HeadUnitName
+    - HeadUnitSecurityCode
+    - HighestMarketValue
+    - IgnitionKeyCode
+    - InteriorColor
+    - IsRecallOpen
+    - LastOdometerReading
+    - LastServiceDate
+    - LatestResidualValue
+    - LatestResidualValueDate
+    - LocationLatitude
+    - LocationLongitude
+    - LowestMarketValue
+    - ManufacturedDate
+    - ManufacturerWarrantyEndDate
+    - ManufacturerWarrantyStartDt
+    - ManufacturingBatchNumber
+    - ManufacturingPlantName
+    - MarketPrice
+    - MarketPriceDate
+    - MarketPriceSource
+    - OdometerReadingDate
+    - OdometerStatus
+    - LocationPostalCode
+    - RearRimSize
+    - RearTireSize
+    - RegistrationRegionCode
+    - RegistrationValidityDate
+    - LocationState
+    - Status
+    - SteeringType
+    - StockCode
+    - LocationStreet
+    - IsTelematicsServiceActive
+    - OdometerReadingUomId
+    - UpholsteryColor
+    - UpholsteryType
+    - VehicleDefinitionId
+    - VehicleIdentificationNumber
+    - Name
+    - VehicleRegistrationNumber
+  UnitOfMeasure:
+    fields:
+    - Description
+    - Name
+    - Type
+    - UnitCode
+  GeoCountry:
+    fields:
+    - Description
+    - IsoCode
+    - Name
+  WorkOrder:
+    fields:
+    - AccountId
+    - AssetId
+    - BusinessHoursId
+    - CaseId
+    - City
+    - ContactId
+    - Country
+    - Description
+    - Duration
+    - DurationType
+    - EndDate
+    - GeocodeAccuracy
+    - Labor_Amount__c
+    - Latitude
+    - LocationId
+    - Longitude
+    - ParentWorkOrderId
+    - Parts_Amount__c
+    - Pricebook2Id
+    - Priority
+    - Repair_Date__c
+    - StartDate
+    - State
+    - Status
+    - Street
+    - Subject
+    - Tax
+    - ServiceTerritoryId
+    - WorkTypeId
+    - PostalCode
+  BusinessHours:
+    fields:
+    - FridayEndTime
+    - FridayStartTime
+    - IsActive
+    - IsDefault
+    - MondayEndTime
+    - MondayStartTime
+    - Name
+    - SaturdayEndTime
+    - SaturdayStartTime
+    - SundayEndTime
+    - SundayStartTime
+    - ThursdayEndTime
+    - ThursdayStartTime
+    - TimeZoneSidKey
+    - TuesdayEndTime
+    - TuesdayStartTime
+    - WednesdayEndTime
+    - WednesdayStartTime
+  Case:
+    fields:
+    - Comments
+    - Description
+    - IsEscalated
+    - Origin
+    - Priority
+    - Reason
+    - Status
+    - Subject
+    - SuppliedCompany
+    - SuppliedEmail
+    - SuppliedName
+    - SuppliedPhone
+    - Type
+    - AccountId
+    - ContactId
+    - ParentId
+  Location:
+    fields:
+    - CloseDate
+    - ConstructionEndDate
+    - ConstructionStartDate
+    - Description
+    - DrivingDirections
+    - ExternalReference
+    - IsInventoryLocation
+    - IsMobile
+    - Latitude
+    - LocationType
+    - Longitude
+    - Name
+    - OpenDate
+    - PossessionDate
+    - RemodelEndDate
+    - RemodelStartDate
+    - TimeZone
+    - VisitorAddressId
+    - LogoId
+    - ParentLocationId
+  Pricebook2:
+    fields:
+    - Description
+    - IsActive
+    - Name
+  ServiceTerritory:
+    fields:
+    - City
+    - Country
+    - Description
+    - GeocodeAccuracy
+    - IsActive
+    - Latitude
+    - Longitude
+    - Name
+    - PostalCode
+    - State
+    - Street
+    - TypicalInTerritoryTravelTime
+    - OperatingHoursId
+    - ParentTerritoryId
+  WorkTypeGroup:
+    fields:
+    - IsActive
+    - AdditionalInformation
+    - Category
+    - Description
+    - GroupType
+    - ParentTopicId
+    - Name
+  BusinessProfile:
+    fields:
+    - AccountId
+    - BusinessOperatingName
+    - BusinessPartnerCode
+    - BusinessPartnerRegisteredName
+    - BusinessPartnerType
+    - BusinessTaxIdentifier
+    - ExternalReferenceNumber
+    - RegionName
+    - ServiceType
+    - ServiceTerritoryId
+  ServiceResource:
+    fields:
+    - AccountId
+    - IsActive
+    - AssetId
+    - Description
+    - LocationId
+    - IsPrimary
+    - Name
+    - ResourceType
+    - RelatedRecordId
+  ServiceAppointment:
+    fields:
+    - ActualDuration
+    - ActualEndTime
+    - ActualStartTime
+    - AdditionalInformation
+    - IsAnonymousBooking
+    - ApptBookingInfoUrl
+    - AppointmentCategoryId
+    - AppointmentInvitationId
+    - AppointmentType
+    - ArrivalWindowEndTime
+    - ArrivalWindowStartTime
+    - CancellationReason
+    - City
+    - Comments
+    - ContactId
+    - Country
+    - Description
+    - DueDate
+    - Duration
+    - DurationType
+    - EarliestStartTime
+    - Email
+    - EngagementChannelTypeId
+    - GeocodeAccuracy
+    - Latitude
+    - Longitude
+    - IsOffsiteAppointment
+    - ParentRecordId
+    - Phone
+    - SchedEndTime
+    - SchedStartTime
+    - ServiceNote
+    - State
+    - Status
+    - Street
+    - Subject
+    - ServiceTerritoryId
+    - WorkTypeId
+    - PostalCode
+  AppointmentInvitation:
+    fields: []
+  EngagementChannelType:
+    fields:
+    - Name
+  Address:
+    fields:
+    - AddressType
+    - City
+    - Country
+    - Description
+    - DrivingDirections
+    - GeocodeAccuracy
+    - Latitude
+    - LocationType
+    - Longitude
+    - PostalCode
+    - State
+    - Street
+    - TimeZone
+  ContentAsset:
+    fields:
+    - DeveloperName
+    - MasterLabel
+  AssetAccountParticipant:
+    fields:
+    - AccountId
+    - IsActive
+    - AssetId
+    - EffectiveEndDate
+    - EffectiveStartDate
+    - Name
+    - StakeholderRole
+    - UsageType
+    - VehicleId
+  AssetContactParticipant:
+    fields:
+    - IsActive
+    - AssetId
+    - ContactId
+    - EffectiveEndDate
+    - EffectiveStartDate
+    - Name
+    - StakeholderRole
+    - UsageType
+    - VehicleId
+  AssetMilestone:
+    fields:
+    - AssetId
+    - Name
+    - City
+    - Country
+    - Description
+    - ExpiredDate
+    - GeocodeAccuracy
+    - Latitude
+    - LocationId
+    - Longitude
+    - MilestoneDate
+    - MilestoneType
+    - PostalCode
+    - SourceSystemIdentifier
+    - SourceSystemName
+    - Stage
+    - StageComment
+    - State
+    - Street
+    - UsageType
+    - VehicleId
+  Order:
+    fields:
+    - AccountId
+    - BillingCity
+    - BillingCountry
+    - BillingGeocodeAccuracy
+    - BillingLatitude
+    - BillingLongitude
+    - BillingState
+    - BillingStreet
+    - BillingPostalCode
+    - CompanyAuthorizedById
+    - ContractId
+    - CustomerAuthorizedById
+    - Description
+    - EndDate
+    - OriginalOrderId
+    - EffectiveDate
+    - Type
+    - Pricebook2Id
+    - IsReductionOrder
+    - ShippingCity
+    - ShippingCountry
+    - ShippingGeocodeAccuracy
+    - ShippingLatitude
+    - ShippingLongitude
+    - ShippingState
+    - ShippingStreet
+    - ShippingPostalCode
+    - Status
+  Contract:
+    fields:
+    - BillingCity
+    - BillingCountry
+    - BillingGeocodeAccuracy
+    - BillingLatitude
+    - BillingLongitude
+    - BillingPostalCode
+    - BillingState
+    - BillingStreet
+    - CompanySignedDate
+    - ContractTerm
+    - CustomerSignedDate
+    - CustomerSignedTitle
+    - Description
+    - OwnerExpirationNotice
+    - ShippingCity
+    - ShippingCountry
+    - ShippingGeocodeAccuracy
+    - ShippingLatitude
+    - ShippingLongitude
+    - ShippingPostalCode
+    - ShippingState
+    - ShippingStreet
+    - SpecialTerms
+    - StartDate
+    - Status
+  OrderItem:
+    fields:
+    - EndDate
+    - Description
+    - ListPrice
+    - OrderId
+    - OriginalOrderItemId
+    - PricebookEntryId
+    - Product2Id
+    - Quantity
+    - ServiceDate
+    - UnitPrice
+  PricebookEntry:
+    fields:
+    - IsActive
+    - UnitPrice
+    - UseStandardPrice
+    - Pricebook2Id
+    - Product2Id
+  Lead:
+    fields:
+    - AnnualRevenue
+    - City
+    - Company
+    - IsConverted
+    - Country
+    - Jigsaw
+    - Description
+    - DoNotCall
+    - Email
+    - HasOptedOutOfEmail
+    - NumberOfEmployees
+    - Fax
+    - HasOptedOutOfFax
+    - FirstName
+    - GenderIdentity
+    - GeocodeAccuracy
+    - IndividualId
+    - Industry
+    - LastName
+    - Latitude
+    - LeadSource
+    - Longitude
+    - MobilePhone
+    - Phone
+    - Pronouns
+    - Rating
+    - Salutation
+    - State
+    - Status
+    - Street
+    - Title
+    - IsUnreadByOwner
+    - Website
+    - PostalCode
+  Opportunity:
+    fields:
+    - AccountId
+    - Amount
+    - CampaignId
+    - CloseDate
+    - ContactId
+    - ContractId
+    - Description
+    - ForecastCategoryName
+    - LeadSource
+    - Name
+    - NextStep
+    - Type
+    - Pricebook2Id
+    - IsPrivate
+    - Probability
+    - TotalOpportunityQuantity
+    - SourceId
+    - StageName
+  Campaign:
+    fields:
+    - Name
+  RecordAlert:
+    fields:
+    - IsActive
+    - Description
+    - EffectiveDate
+    - ParentId
+    - RecordAlertCategoryId
+    - Severity
+    - SnoozeUntilDate
+    - SourceSystemIdentifier
+    - Subject
+    - ValidUntilDate
+    - WhatId
+  ProductRelatedMaterial:
+    fields:
+    - Description
+    - EffectiveEndDate
+    - EffectiveStartDate
+    - LeadTime
+    - MinimumEligibleQuantity
+    - Name
+    - ProductComponentId
+    - ProductId
+    - QuantityPerProductUnit
+    - LeadTimeUomId
+    - MinimumEligibleQuantityUomId
+    - QuantityUomId
+    - UsageCategory
+  ProductRelatedComponent:
+    fields:
+    - IsQuantityEditable
+    - IsDefaultComponent
+    - MaxQuantity
+    - MinQuantity
+    - DoesBundlePriceIncludeChild
+    - ProductComponentGroupId
+    - ChildProductId
+    - ParentProductId
+    - ProductRelationshipTypeId
+    - Quantity
+    - QuantityScaleMethod
+    - IsComponentRequired
+    - Sequence
+  ProductComponentGroup:
+    fields:
+    - Name
+  ProductRelationshipType:
+    fields:
+    - AssociatedProductRoleCat
+    - MainProductRoleCat
+    - Name
+  ActionPlan:
+    fields:
+    - ActionPlanTemplateVersionId
+    - ActionPlanType
+    - ActualEndDate
+    - ActualStartDate
+    - EndDate
+    - Name
+    - RecordCreationType
+    - RecurringScheduleId
+    - IsUsingHolidayHours
+    - StartDate
+    - ActionPlanState
+    - StatusCode
+    - TargetId
+  ActionPlanTemplateVersion:
+    fields:
+    - ActivationDateTime
+    - InactivationDateTime
+    - Name
+    - Status
+    - Version
+  RecurrenceSchedule:
+    fields:
+    - Name
+    - NextScheduleDateTime
+    - ProcessName
+    - ScheduleFrequency
+    - StartDate
+  ActionPlanItem:
+    fields:
+    - ActionPlanId
+    - ItemId
+    - Name
+    - ItemState
+    - ActionPlanTemplateItemId
+    - DisplayOrder
+    - IsRequired
+  ActionPlanTemplateItem:
+    fields:
+    - DisplayOrder
+    - IsActive
+    - IsRequired
+    - ItemEntityType
+    - Name
+    - UniqueName
