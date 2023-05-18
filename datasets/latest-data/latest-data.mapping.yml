@@ -99,17 +99,6 @@ Insert WorkTypeGroup:
       table: WorkTypeGroup
       key_field: ParentTopicId
       after: Insert WorkTypeGroup
-Insert Skill:
-  sf_object: Skill
-  table: Skill
-  fields:
-  - Description
-  - DeveloperName
-  - Language
-  - MasterLabel
-Insert AppointmentInvitation:
-  sf_object: AppointmentInvitation
-  table: AppointmentInvitation
 Insert EngagementChannelType:
   sf_object: EngagementChannelType
   table: EngagementChannelType
@@ -133,6 +122,15 @@ Insert ContentAsset:
   fields:
   - DeveloperName
   - MasterLabel
+Insert SkillType:
+  sf_object: SkillType
+  table: SkillType
+  fields:
+  - DeveloperName
+  - MasterLabel
+Insert AppointmentInvitation:
+  sf_object: AppointmentInvitation
+  table: AppointmentInvitation
 Insert Account:
   sf_object: Account
   table: Account
@@ -241,6 +239,18 @@ Insert WorkType:
     OperatingHoursId:
       table: OperatingHours
       key_field: OperatingHoursId
+Insert Skill:
+  sf_object: Skill
+  table: Skill
+  fields:
+  - Description
+  - DeveloperName
+  - Language
+  - MasterLabel
+  lookups:
+    TypeId:
+      table: SkillType
+      key_field: TypeId
 Insert Lead:
   sf_object: Lead
   table: Lead
@@ -424,6 +434,15 @@ Insert Contract:
     AccountId:
       table: Account
       key_field: AccountId
+Insert SkillRequirement:
+  sf_object: SkillRequirement
+  table: SkillRequirement
+  fields:
+  - SkillLevel
+  lookups:
+    SkillId:
+      table: Skill
+      key_field: SkillId
 Insert ActionPlanItem:
   sf_object: ActionPlanItem
   table: ActionPlanItem

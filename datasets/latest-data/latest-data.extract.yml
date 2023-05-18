@@ -498,6 +498,7 @@ extract:
     - DeveloperName
     - Language
     - MasterLabel
+    - TypeId
   ServiceAppointment:
     fields:
     - ActualDuration
@@ -539,8 +540,6 @@ extract:
     - ServiceTerritoryId
     - WorkTypeId
     - PostalCode
-  AppointmentInvitation:
-    fields: []
   EngagementChannelType:
     fields:
     - Name
@@ -559,6 +558,7 @@ extract:
     - State
     - Street
     - TimeZone
+    - ParentId
   AssetAccountParticipant:
     fields:
     - AccountId
@@ -609,6 +609,9 @@ extract:
     - ForecastCategoryName
     - AccountId
     - ContactId
+    - CloseDate
+    - Name
+    - StageName
   Order:
     fields:
     - AccountId
@@ -666,6 +669,7 @@ extract:
     - SpecialTerms
     - StartDate
     - Status
+    - AccountId
   OrderItem:
     fields:
     - EndDate
@@ -737,6 +741,7 @@ extract:
   ProductComponentGroup:
     fields:
     - Name
+    - ParentProductId
   ProductRelatedMaterial:
     fields:
     - Description
@@ -752,3 +757,16 @@ extract:
     - MinimumEligibleQuantityUomId
     - QuantityUomId
     - UsageCategory
+  ContentAsset:
+    fields:
+    - DeveloperName
+    - MasterLabel
+  SkillRequirement:
+    fields:
+    - RelatedRecordId
+    - SkillId
+    - SkillLevel
+  SkillType:
+    fields:
+    - DeveloperName
+    - MasterLabel

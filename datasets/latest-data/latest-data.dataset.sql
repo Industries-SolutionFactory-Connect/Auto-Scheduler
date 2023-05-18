@@ -597,12 +597,12 @@ CREATE TABLE "OrderItem" (
 	"Product2Id" VARCHAR(255), 
 	PRIMARY KEY (id)
 );
-INSERT INTO "OrderItem" VALUES(1,'','','30000.0','1.0','','30000.0','6','','4','3');
+INSERT INTO "OrderItem" VALUES(1,'','','30000.0','1.0','','30000.0','6','','3','3');
 INSERT INTO "OrderItem" VALUES(2,'','','40000.0','1.0','','40000.0','5','','2','2');
-INSERT INTO "OrderItem" VALUES(3,'','','30000.0','1.0','','30000.0','3','','01u9A00000B3kS1QAJ','3');
-INSERT INTO "OrderItem" VALUES(4,'','','35000.0','1.0','','35000.0','2','','3','4');
-INSERT INTO "OrderItem" VALUES(5,'','','40000.0','1.0','','40000.0','4','','2','2');
-INSERT INTO "OrderItem" VALUES(6,'','','35000.0','1.0','','35000.0','1','','3','4');
+INSERT INTO "OrderItem" VALUES(3,'','','35000.0','1.0','','35000.0','2','','4','5');
+INSERT INTO "OrderItem" VALUES(4,'','','40000.0','1.0','','40000.0','4','','2','2');
+INSERT INTO "OrderItem" VALUES(5,'','','35000.0','1.0','','35000.0','1','','4','5');
+INSERT INTO "OrderItem" VALUES(6,'','','30000.0','1.0','','30000.0','3','','01u9A00000B3kS1QAJ','3');
 CREATE TABLE "Pricebook2" (
 	id INTEGER NOT NULL, 
 	"Description" VARCHAR(255), 
@@ -622,8 +622,8 @@ CREATE TABLE "PricebookEntry" (
 );
 INSERT INTO "PricebookEntry" VALUES(1,'True','26000.0','False','1','1');
 INSERT INTO "PricebookEntry" VALUES(2,'True','40000.0','False','1','2');
-INSERT INTO "PricebookEntry" VALUES(3,'True','35000.0','False','1','4');
-INSERT INTO "PricebookEntry" VALUES(4,'True','30000.0','False','1','3');
+INSERT INTO "PricebookEntry" VALUES(3,'True','30000.0','False','1','3');
+INSERT INTO "PricebookEntry" VALUES(4,'True','35000.0','False','1','5');
 CREATE TABLE "Product2" (
 	id INTEGER NOT NULL, 
 	"IsActive" VARCHAR(255), 
@@ -662,13 +662,13 @@ CREATE TABLE "Product2" (
 INSERT INTO "Product2" VALUES(1,'True','','False','','','','False','','','','Neo','','','Ionic CD4','2022','','Neo_Ionic_EV_CD4_2022_VXi','','','','Neo Ionic EV CD4 2022 VXi','','NEO-0000067','Bundle','','True','','VXi','','','');
 INSERT INTO "Product2" VALUES(2,'True','','False','','','','False','','','','Neo','','','Ionic CD4','2018','','Neo_Ionic_EV_CD4_VXi_2018','','EV','','Neo_Ionic_EV_CD4_VXi_2018','','','Base','','True','','VXi','','4','');
 INSERT INTO "Product2" VALUES(3,'True','','False','','','','False','','','','Neo','','','Jazz','2022','','Neo_Jazz_2022_VXi','','Hatchback','','Neo Jazz 2022 VXi','Sell','NEO-0000098','Bundle','','True','','LXi','','1','1');
-INSERT INTO "Product2" VALUES(4,'True','','False','','','','False','','','','Neo','','','CRV','2022','','Neo_CRV_2022_ZXi','','SUV','','Neo CRV 2022 ZXi','Sell','NEO-0000069','Bundle','','True','','ZXi','','3','');
-INSERT INTO "Product2" VALUES(5,'True','','False','','','','False','','','','Neo','','','Petrol Spark-Ignition Internal Combustion','2022','','i-VTEC_DOHC_VTC','','Spares','','Engine 1.4L i-VTEC','','NEO-0000016','Base','','True','','','','2','');
-INSERT INTO "Product2" VALUES(6,'True','','False','','','','False','','','','','','','','','','ZN-VI-0010','','Spares','','Wiper Blades','Plan','','Base','','False','','','','','');
-INSERT INTO "Product2" VALUES(7,'True','','False','','','','False','','','','','','','','','','ZN-DL-0010','','Spares','','Car Door Lock','Sell','','','','False','','','','','');
-INSERT INTO "Product2" VALUES(8,'True','','False','','','','False','','','','','','','','','','ZN-WR-0010','','Spares','','Window Regulator','Sell','','','','False','','','','','');
-INSERT INTO "Product2" VALUES(9,'True','','False','','','','False','','','','Neo','','','Neo Smart Connect','2023','','SC_ALXA_2022','Premium 7" Full HD 1080 Touch Screen Car Multimedia Player with Car Stereo','Spares','','Smart Connect','','NEO-0002344','','','False','','','','2','');
-INSERT INTO "Product2" VALUES(10,'True','','False','','','','False','','','','Neo','','','Aptly','2022','','ALDF274382','','Spares','','Aluminium Diffuser','','','Base','','True','','','','2','');
+INSERT INTO "Product2" VALUES(4,'True','','False','','','','False','','','','Neo','','','Neo Smart Connect','2023','','SC_ALXA_2022','Premium 7" Full HD 1080 Touch Screen Car Multimedia Player with Car Stereo','Spares','','Smart Connect','','NEO-0002344','','','False','','','','2','');
+INSERT INTO "Product2" VALUES(5,'True','','False','','','','False','','','','Neo','','','CRV','2022','','Neo_CRV_2022_ZXi','','SUV','','Neo CRV 2022 ZXi','Sell','NEO-0000069','Bundle','','True','','ZXi','','3','');
+INSERT INTO "Product2" VALUES(6,'True','','False','','','','False','','','','Neo','','','Petrol Spark-Ignition Internal Combustion','2022','','i-VTEC_DOHC_VTC','','Spares','','Engine 1.4L i-VTEC','','NEO-0000016','Base','','True','','','','2','');
+INSERT INTO "Product2" VALUES(7,'True','','False','','','','False','','','','Neo','','','Aptly','2022','','ALDF274382','','Spares','','Aluminium Diffuser','','','Base','','True','','','','2','');
+INSERT INTO "Product2" VALUES(8,'True','','False','','','','False','','','','','','','','','','ZN-VI-0010','','Spares','','Wiper Blades','Plan','','Base','','False','','','','','');
+INSERT INTO "Product2" VALUES(9,'True','','False','','','','False','','','','','','','','','','ZN-DL-0010','','Spares','','Car Door Lock','Sell','','','','False','','','','','');
+INSERT INTO "Product2" VALUES(10,'True','','False','','','','False','','','','','','','','','','ZN-WR-0010','','Spares','','Window Regulator','Sell','','','','False','','','','','');
 CREATE TABLE "ProductComponentGroup" (
 	id INTEGER NOT NULL, 
 	"Name" VARCHAR(255), 
@@ -692,8 +692,8 @@ CREATE TABLE "ProductRelatedMaterial" (
 	"QuantityUomId" VARCHAR(255), 
 	PRIMARY KEY (id)
 );
-INSERT INTO "ProductRelatedMaterial" VALUES(1,'','','','1.0','','Neo Ionic EV CD4 VXi Blue - Vipers','2.0','','1','','6','1','2');
-INSERT INTO "ProductRelatedMaterial" VALUES(2,'','','','1.0','','Neo Ionic EV CD4 VXi Blue - Diffuser','1.0','','1','','10','1','2');
+INSERT INTO "ProductRelatedMaterial" VALUES(1,'','','','1.0','','Neo Ionic EV CD4 VXi Blue - Vipers','2.0','','1','','8','1','2');
+INSERT INTO "ProductRelatedMaterial" VALUES(2,'','','','1.0','','Neo Ionic EV CD4 VXi Blue - Diffuser','1.0','','1','','7','1','2');
 CREATE TABLE "RecordAlert" (
 	id INTEGER NOT NULL, 
 	"IsActive" VARCHAR(255), 
@@ -837,14 +837,34 @@ CREATE TABLE "Skill" (
 	"DeveloperName" VARCHAR(255), 
 	"Language" VARCHAR(255), 
 	"MasterLabel" VARCHAR(255), 
+	"TypeId" VARCHAR(255), 
 	PRIMARY KEY (id)
 );
-INSERT INTO "Skill" VALUES(1,'','Accessories_Fitment_Specialist','en_US','Accessories Fitment Specialist');
-INSERT INTO "Skill" VALUES(2,'','Body_And_Paint','en_US','Body And Paint');
-INSERT INTO "Skill" VALUES(3,'','Periodic_Maintenance','en_US','Periodic Maintenance');
-INSERT INTO "Skill" VALUES(4,'','Value_Added_Service','en_US','Value Added Service');
-INSERT INTO "Skill" VALUES(5,'','Wax_Vehicles','en_US','Wax Vehicles');
-INSERT INTO "Skill" VALUES(6,'','Brae_Fluid_Change','en_US','Brae Fluid Change');
+INSERT INTO "Skill" VALUES(1,'','Accessories_Fitment_Specialist','en_US','Accessories Fitment Specialist','');
+INSERT INTO "Skill" VALUES(2,'','Body_And_Paint','en_US','Body And Paint','');
+INSERT INTO "Skill" VALUES(3,'','Periodic_Maintenance','en_US','Periodic Maintenance','');
+INSERT INTO "Skill" VALUES(4,'','Value_Added_Service','en_US','Value Added Service','');
+INSERT INTO "Skill" VALUES(5,'','Wax_Vehicles','en_US','Wax Vehicles','');
+INSERT INTO "Skill" VALUES(6,'','Brae_Fluid_Change','en_US','Brae Fluid Change','');
+CREATE TABLE "SkillRequirement" (
+	id INTEGER NOT NULL, 
+	"SkillLevel" VARCHAR(255), 
+	"SkillId" VARCHAR(255), 
+	PRIMARY KEY (id)
+);
+INSERT INTO "SkillRequirement" VALUES(1,'99.0','3');
+INSERT INTO "SkillRequirement" VALUES(2,'90.0','4');
+INSERT INTO "SkillRequirement" VALUES(3,'90.0','4');
+INSERT INTO "SkillRequirement" VALUES(4,'90.0','4');
+INSERT INTO "SkillRequirement" VALUES(5,'97.0','3');
+INSERT INTO "SkillRequirement" VALUES(6,'99.0','2');
+INSERT INTO "SkillRequirement" VALUES(7,'96.0','1');
+CREATE TABLE "SkillType" (
+	id INTEGER NOT NULL, 
+	"DeveloperName" VARCHAR(255), 
+	"MasterLabel" VARCHAR(255), 
+	PRIMARY KEY (id)
+);
 CREATE TABLE "UnitOfMeasure" (
 	id INTEGER NOT NULL, 
 	"Description" VARCHAR(255), 
@@ -962,7 +982,7 @@ CREATE TABLE "VehicleDefinition" (
 );
 INSERT INTO "VehicleDefinition" VALUES(1,'','','','Sedan','','','2','Scissor','','BS6','1.4L','','','','3.2L','Battery','','','','','','','','','New Jazz 2022 VXi','','200','Automatic','','','','','','','3');
 INSERT INTO "VehicleDefinition" VALUES(2,'6.3','Lithium-ion','35 KWH','Sedan','22','1280','4','Regular','AWD','BS6','1.4L','Petrol Spark-Ignition Internal Combustion','','20','26.5','Hybrid','1489','4549','Lithium-ion','280','1655','253','200','HEV','Neo Ionic EV CD4 2022 VXi','143','93','Automatic','24','VXi','Hybrid Electric Vehicle','2600','1748','1','1');
-INSERT INTO "VehicleDefinition" VALUES(3,'7.1','Lithium-ion','35 KWh','SUV','18','1480','4','Regular','AWD','BS6','1.4L','Petrol Spark-Ignition Internal Combustion','','20','26.5','Gasoline','1573','4549','Lithium-ion','','1655','140','','City','Neo City 2022 ZXi','145','89','Automatic','18','ZXi','Petrol Vehicle','2600','1848','1','4');
+INSERT INTO "VehicleDefinition" VALUES(3,'7.1','Lithium-ion','35 KWh','SUV','18','1480','4','Regular','AWD','BS6','1.4L','Petrol Spark-Ignition Internal Combustion','','20','26.5','Gasoline','1573','4549','Lithium-ion','','1655','140','','City','Neo City 2022 ZXi','145','89','Automatic','18','ZXi','Petrol Vehicle','2600','1848','1','5');
 INSERT INTO "VehicleDefinition" VALUES(4,'','','','Sedan','','','4','Regular','AWD','BS6','1.4L','','','','','Hybrid','','','Lithium-ion','','','','','','Neo_Ionic_EV_CD4_VXi_2018','14-8','','Automatic','','VXi','Hybrid Electric Vehicle','','','2','2');
 CREATE TABLE "WorkOrder" (
 	id INTEGER NOT NULL, 
