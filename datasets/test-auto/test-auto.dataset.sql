@@ -279,7 +279,7 @@ CREATE TABLE "Contact" (
 );
 INSERT INTO "Contact" VALUES(1,'','541- 754-3345','','','','False','swilliam@digidealer.com','','','False','False','Sean','','','William','','','','','','','','','','','','','','','','','','','','','Mr.','President','6','');
 INSERT INTO "Contact" VALUES(2,'','408-540-1785','','','','False','vinouye@aol.com','','','False','False','Veronika','','','Inouye','','San Jose','USA','','','','CA','6 Greenleaf Ave','95111','','','','','','','','','','','','Ms.','Service Manager','1','');
-INSERT INTO "Contact" VALUES(3,'','(905) 555-1212','','','','False','sgrandhi@salesforce.com','','','False','False','bijayita','','','user1','','Toronto','Canada','','','','Ontario','150 Chestnut Street','L4B 1Y3','','','','','','','','','','','','','','13','');
+INSERT INTO "Contact" VALUES(3,'','(905) 555-1212','','','','False','user1@geoff.com','','','False','False','Josh','','','Miller','','Toronto','Canada','','','','Ontario','150 Chestnut Street','L4B 1Y3','','','','','','','','','','','','','','13','');
 INSERT INTO "Contact" VALUES(4,'','434-748-1330','','','','False','','','','False','False','Diana','','','Oslan','','','','','','','','','','','','','','','','','','','','','Mr.','Dealer Rep','7','');
 INSERT INTO "Contact" VALUES(5,'','987654567879','','','','False','linda@eniaccars.com','','','False','False','Linda','','','Jonas','','San Francisco','United States','','','','CA','346 California Street','94104','987654567879','','','','','','','','','','','Mrs.','','12','');
 INSERT INTO "Contact" VALUES(6,'','504-621-8927','','','','False','max.igleas@gmail.com','','','False','False','Max','','','Igleas','','San Jose','','','','','CA','7 W Jackson Blvd','','504-621-8927','','','','','','','','','','','Mr.','Lead Dealer','11','');
