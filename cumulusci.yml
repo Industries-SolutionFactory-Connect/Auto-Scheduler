@@ -53,24 +53,29 @@ flows:
                 ui_options:
                     name: Deploy permissionsets       
 
-            # 3:
-            #     task: assign_permission_sets
-            #     options:
-            #         api_names: ActionPlans, AutomotiveFoundationUserPsl, AutomotiveSchedulerPsl, LifeEventsAccessPSL, ClaimsManagementFoundationPsl, CriteriaBasedSearchAndFilterPsl, AnalyticsStoreUser, IndustriesVisit, IndustriesServiceExcellence, OmniStudioAdmin, OmniStudioUser, ManufacturingPartnerLeadMgmtPsl, ManufacturingPartnerPerformanceMgmtPsl, ManufacturingPartnerVisitMgmtPsl, RebateManagementAdminPsl, RebateManagementUserPsl, Salesforce_Scheduler_for_Automotive, WarrantyLifecycleMgmtPsl
-            #         user_alias: UUser, AUser
-            #     ui_options:
-            #         name: Adding Permission Set to Admin User
-            
-
+            3:
+                task: assign_permission_sets
+                options:
+                    api_names: ActionPlans, AutomotiveFoundationUserPsl, AutomotiveSchedulerPsl, LifeEventsAccessPSL, ClaimsManagementFoundationPsl, CriteriaBasedSearchAndFilterPsl, AnalyticsStoreUser, IndustriesVisit, IndustriesServiceExcellence, OmniStudioAdmin, OmniStudioUser, ManufacturingPartnerLeadMgmtPsl, ManufacturingPartnerPerformanceMgmtPsl, ManufacturingPartnerVisitMgmtPsl, RebateManagementAdminPsl, RebateManagementUserPsl, Salesforce_Scheduler_for_Automotive, WarrantyLifecycleMgmtPsl
+                    user_alias: UUser, AUser
+                ui_options:
+                    name: Adding Permission Set to Admin User
             4:
                 task: deploy
                 options:
                     path: force-app/main/default/
                 ui_options:
-                    name: Deploy the metadata
-
+                    name: Deploy the metadata            
 
             5:
+                task: deploy
+                options:
+                    path: force-experience/
+                ui_options:
+                    name: Deploy the metadata for experience bundle
+
+
+            6:
                 task: load_dataset
                 options:
                     mapping: datasets/test-auto/test-auto.mapping.yml
@@ -83,24 +88,24 @@ flows:
             # Account: Enable few accounts as Partner
             # ActionPlanTemplate: Change status to Final
 
-            6:
-                task: query
-                options:
-                    object: ActionPlanTemplateVersion
-                    query: select Id from ActionPlanTemplateVersion where Name = 'Inspection'
-                    result_file: snowfakery/ActionPlanTemplateVersion.csv
+#             7:
+#                 task: query
+#                 options:
+#                     object: ActionPlanTemplateVersion
+#                     query: select Id from ActionPlanTemplateVersion where Name = 'Inspection'
+#                     result_file: snowfakery/ActionPlanTemplateVersion.csv
 
-            7:
-                task: query
-                options:
-                    object: Vehicle
-                    query: select Id from Vehicle where Name = 'Neo City 2022 ZXi Grey'
-                    result_file: snowfakery/Vehicle.csv
+#             8:
+#                 task: query
+#                 options:
+#                     object: Vehicle
+#                     query: select Id from Vehicle where Name = 'Neo City 2022 ZXi Grey'
+#                     result_file: snowfakery/Vehicle.csv
 
-            8:
-                task: generate_and_load_from_yaml
-                options:
-                    generator_yaml: snowfakery/actionPlan.recipe.yml
+#             9:
+#                 task: generate_and_load_from_yaml
+#                 options:
+#                     generator_yaml: snowfakery/actionPlan.recipe.yml
             
 
 
