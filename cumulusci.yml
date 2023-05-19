@@ -39,44 +39,44 @@ tasks:
 flows:
     auto-sch-setup:
         steps:
-            # 1: 
-            #     task: org_settings
-            #     options:
-            #         definition_file: orgs/dev.json
-            #     ui_options:
-            #         name: Enabling Org Settings
+            1: 
+                task: org_settings
+                options:
+                    definition_file: orgs/dev.json
+                ui_options:
+                    name: Enabling Org Settings
 
-            # 2: 
-            #     task: deploy
-            #     options:
-            #         path: force-app/main/default/permissionsets
-            #     ui_options:
-            #         name: Deploy permissionsets       
+            2: 
+                task: deploy
+                options:
+                    path: force-app/main/default/permissionsets
+                ui_options:
+                    name: Deploy permissionsets       
 
             # 3:
             #     task: assign_permission_sets
             #     options:
-            #         api_names: ActionPlans, LifeEventsAccessPSL, AnalyticsStoreUser, IndustriesVisit, IndustriesServiceExcellence, ManufacturingPartnerLeadMgmtPsl, ManufacturingPartnerPerformanceMgmtPsl, ManufacturingPartnerVisitMgmtPsl, RebateManagementAdminPsl, RebateManagementUserPsl, Salesforce_Scheduler_for_Automotive
+            #         api_names: ActionPlans, AutomotiveFoundationUserPsl, AutomotiveSchedulerPsl, LifeEventsAccessPSL, ClaimsManagementFoundationPsl, CriteriaBasedSearchAndFilterPsl, AnalyticsStoreUser, IndustriesVisit, IndustriesServiceExcellence, OmniStudioAdmin, OmniStudioUser, ManufacturingPartnerLeadMgmtPsl, ManufacturingPartnerPerformanceMgmtPsl, ManufacturingPartnerVisitMgmtPsl, RebateManagementAdminPsl, RebateManagementUserPsl, Salesforce_Scheduler_for_Automotive, WarrantyLifecycleMgmtPsl
             #         user_alias: UUser, AUser
             #     ui_options:
             #         name: Adding Permission Set to Admin User
             
 
-            # 4:
-            #     task: deploy
-            #     options:
-            #         path: force-app/main/default/
-            #     ui_options:
-            #         name: Deploy the Profiles Metadata to create partner profiles
+            4:
+                task: deploy
+                options:
+                    path: force-app/main/default/
+                ui_options:
+                    name: Deploy the metadata
 
 
-            # 5:
-            #     task: load_dataset
-            #     options:
-            #         mapping: datasets/test-auto/test-auto.mapping.yml
-            #         sql_path: datasets/test-auto/test-auto.dataset.sql
-            #     ui_options:
-            #         name: Load Data records
+            5:
+                task: load_dataset
+                options:
+                    mapping: datasets/test-auto/test-auto.mapping.yml
+                    sql_path: datasets/test-auto/test-auto.dataset.sql
+                ui_options:
+                    name: Load Data records
 
             # Update few records via update task
             # Order: change status for few orders
@@ -84,56 +84,23 @@ flows:
             # ActionPlanTemplate: Change status to Final
 
             6:
-                task: generate_and_load_from_yaml
+                task: query
                 options:
-                    generator_yaml: snowfakery/actionPlanTemplate.recipe.yml
+                    object: ActionPlanTemplateVersion
+                    query: select Id from ActionPlanTemplateVersion where Name = 'Inspection'
+                    result_file: snowfakery/ActionPlanTemplateVersion.csv
 
             7:
                 task: query
                 options:
-                    object: ActionPlanTemplateVersion
-                    query: select Id from ActionPlanTemplateVersion where Name = 'Inspection1'
-                    result_file: snowfakery/ActionPlanTemplateVersion.csv
+                    object: Vehicle
+                    query: select Id from Vehicle where Name = 'Neo City 2022 ZXi Grey'
+                    result_file: snowfakery/Vehicle.csv
 
             8:
                 task: generate_and_load_from_yaml
                 options:
-                    generator_yaml: snowfakery/actionPlanTemplateItem.recipe.yml
-
-            # 6:
-            #     task: update_data
-            #     options:
-            #         object: ActionPlanTemplateVersion
-            #         where: Name = 'Inspection1'
-            #         recipe: snowfakery/updateActionPlanTempStatus.recipe.yml
-
-            # 6:
-            #     task: update_data
-            #     options:
-            #         object: Accounts
-            #         where: Name = 'Minor Household' Or Name = 'Dream Motors Auto California' Or Name = 'Eniac Auto Dealer' Or Name = 'Geoff Minor'
-            #         recipe: updateAccountPartner.recipe.yml
-
-            # create remaining data via snowfakery
-            # ActionPlans, ActionPlanItems
-            # PricebookEntry, WorkOrder
-
-
-            7:
-                task: generate_and_load_from_yaml
-                options:
-                    generator_yaml: snowfakery/actionPlanTemplate.recipe.yml
-            # 8:
-            #     task: query
-            #     options:
-            #         object: Vehicle
-            #         query: select Id from Vehicle where Name = 'Neo City 2022 ZXi Grey'
-            #         result_file: snowfakery/Vehicle.csv
-
-            # 9:
-            #     task: generate_and_load_from_yaml
-            #     options:
-            #         generator_yaml: snowfakery/actionPlan.recipe.yml
+                    generator_yaml: snowfakery/actionPlan.recipe.yml
             
 
 
