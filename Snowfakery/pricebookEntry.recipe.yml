@@ -1,0 +1,15 @@
+- plugin: snowfakery.standard_plugins.datasets.Dataset
+- object: PricebookEntry
+  count: 6
+  fields:
+    __profile: 
+      Dataset.shuffle:
+        dataset: profiles.csv
+    IsActive: true
+    UnitPrice:
+      fake: last_name
+    Pricebook2Id: 
+      fake: username
+    Product2Id:
+      fake: alias
+    

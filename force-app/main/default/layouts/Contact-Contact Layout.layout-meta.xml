@@ -226,7 +226,6 @@
     </relatedContent>
     <relatedLists>
         <fields>Name</fields>
-        <fields>Contact</fields>
         <fields>StakeholderRole</fields>
         <fields>EffectiveStartDate</fields>
         <fields>EffectiveEndDate</fields>

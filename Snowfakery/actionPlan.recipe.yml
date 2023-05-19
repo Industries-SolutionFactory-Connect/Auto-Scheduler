@@ -1,0 +1,16 @@
+- plugin: snowfakery.standard_plugins.datasets.Dataset
+- object: ActionPlan
+  count: 1
+  fields:
+    __apTempVersion: 
+      Dataset.shuffle:
+        dataset: ActionPlanTemplateVersion.csv
+    __vehicle: 
+      Dataset.shuffle:
+        dataset: Vehicle.csv
+    ActionPlanType: Industries
+    Name: Vehicle Inspection
+    IsUsingHolidayHours: true
+    ActionPlanState: Not Started
+    ActionPlanTemplateVersionId: ${{__apTempVersion.Id}}
+    TargetId: ${{__vehicle.Id}}

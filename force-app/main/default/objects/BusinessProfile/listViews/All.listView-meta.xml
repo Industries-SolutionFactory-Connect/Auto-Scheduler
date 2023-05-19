@@ -8,6 +8,6 @@
     <columns>BusinessPartnerType</columns>
     <columns>ServiceType</columns>
     <columns>RegionName</columns>
-    <filterScope>Mine</filterScope>
+    <filterScope>Everything</filterScope>
     <label>All Business Profiles</label>
 </ListView>

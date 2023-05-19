@@ -203,7 +203,6 @@
     </relatedLists>
     <relatedLists>
         <fields>Name</fields>
-        <fields>Account</fields>
         <fields>StakeholderRole</fields>
         <fields>EffectiveStartDate</fields>
         <fields>EffectiveEndDate</fields>

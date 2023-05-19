@@ -1,0 +1,901 @@
+Insert Pricebook2:
+  sf_object: Pricebook2
+  table: Pricebook2
+  fields:
+  - Description
+  - IsActive
+  - Name
+Insert OperatingHours:
+  sf_object: OperatingHours
+  table: OperatingHours
+  fields:
+  - Description
+  - Name
+  - TimeZone
+Insert BusinessBrand:
+  sf_object: BusinessBrand
+  table: BusinessBrand
+  fields:
+  - Name
+  - OrgId
+Insert UnitOfMeasure:
+  sf_object: UnitOfMeasure
+  table: UnitOfMeasure
+  fields:
+  - Description
+  - Name
+  - Type
+  - UnitCode
+Insert GeoCountry:
+  sf_object: GeoCountry
+  table: GeoCountry
+  fields:
+  - Description
+  - IsoCode
+  - Name
+
+Insert Pricebook2:
+  sf_object: Pricebook2
+  table: Pricebook2
+  fields:
+  - Description
+  - IsActive
+  - Name
+Insert WorkTypeGroup:
+  sf_object: WorkTypeGroup
+  table: WorkTypeGroup
+  fields:
+  - IsActive
+  - AdditionalInformation
+  - Category
+  - Description
+  - GroupType
+  - Name
+Insert WorkType:
+  sf_object: WorkType
+  table: WorkType
+  fields:
+  - ApptStartTimeIntvlInMin
+  - BlockTimeAfterAppointment
+  - BlockTimeAfterUnit
+  - BlockTimeBeforeAppointment
+  - BlockTimeBeforeUnit
+  - DefaultAppointmentType
+  - Description
+  - DurationType
+  - EstimatedDuration
+  - TimeFrameEndUnit
+  - TimeFrameStartUnit
+  - TimeframeEnd
+  - TimeframeStart
+  - Name
+  lookups:
+    OperatingHoursId:
+      table: OperatingHours
+      key_field: OperatingHoursId
+Insert Account:
+  sf_object: Account
+  table: Account
+  fields:
+  - Description
+  - Fax
+  - Name
+  - AccountNumber
+  - Phone
+  - Rating
+  - Site
+  - AccountSource
+  - Type
+  - AnnualRevenue
+  - BillingCity
+  - BillingCountry
+  - BillingGeocodeAccuracy
+  - BillingLatitude
+  - BillingLongitude
+  - BillingState
+  - BillingStreet
+  - BillingPostalCode
+  - Jigsaw
+  - NumberOfEmployees
+  - Industry
+  - Ownership
+  - ShippingCity
+  - ShippingCountry
+  - ShippingGeocodeAccuracy
+  - ShippingLatitude
+  - ShippingLongitude
+  - ShippingState
+  - ShippingStreet
+  - ShippingPostalCode
+  - Sic
+  - SicDesc
+  - TickerSymbol
+  - Website
+  lookups:
+    OperatingHoursId:
+      table: OperatingHours
+      key_field: OperatingHoursId
+    ParentId:
+      table: Account
+      key_field: ParentId
+      after: Insert Account
+Insert ServiceTerritory:
+  sf_object: ServiceTerritory
+  table: ServiceTerritory
+  fields:
+  - City
+  - Country
+  - Description
+  - GeocodeAccuracy
+  - IsActive
+  - Latitude
+  - Longitude
+  - Name
+  - PostalCode
+  - State
+  - Street
+  - TypicalInTerritoryTravelTime
+  lookups:
+    OperatingHoursId:
+      table: OperatingHours
+      key_field: OperatingHoursId
+    ParentTerritoryId:
+      table: ServiceTerritory
+      key_field: ParentTerritoryId
+      after: Insert ServiceTerritory
+Insert Lead:
+  sf_object: Lead
+  table: Lead
+  fields:
+  - AnnualRevenue
+  - City
+  - Company
+  - IsConverted
+  - Country
+  - Jigsaw
+  - Description
+  - DoNotCall
+  - Email
+  - HasOptedOutOfEmail
+  - NumberOfEmployees
+  - Fax
+  - HasOptedOutOfFax
+  - FirstName
+  - GenderIdentity
+  - GeocodeAccuracy
+  - Industry
+  - LastName
+  - Latitude
+  - LeadSource
+  - Longitude
+  - MobilePhone
+  - Phone
+  - Pronouns
+  - Rating
+  - Salutation
+  - State
+  - Status
+  - Street
+  - Title
+  - IsUnreadByOwner
+  - Website
+  - PostalCode
+Insert Contact:
+  sf_object: Contact
+  table: Contact
+  fields:
+  - Fax
+  - Phone
+  - Description
+  - Jigsaw
+  - Department
+  - DoNotCall
+  - Email
+  - EmailBouncedDate
+  - EmailBouncedReason
+  - HasOptedOutOfEmail
+  - HasOptedOutOfFax
+  - FirstName
+  - GenderIdentity
+  - HomePhone
+  - LastName
+  - LeadSource
+  - MailingCity
+  - MailingCountry
+  - MailingGeocodeAccuracy
+  - MailingLatitude
+  - MailingLongitude
+  - MailingState
+  - MailingStreet
+  - MailingPostalCode
+  - MobilePhone
+  - OtherCity
+  - OtherCountry
+  - OtherGeocodeAccuracy
+  - OtherLatitude
+  - OtherLongitude
+  - OtherPhone
+  - OtherState
+  - OtherStreet
+  - OtherPostalCode
+  - Pronouns
+  - Salutation
+  - Title
+  lookups:
+    AccountId:
+      table: Account
+      key_field: AccountId
+    ReportsToId:
+      table: Contact
+      key_field: ReportsToId
+      after: Insert Contact
+Insert BusinessProfile:
+  sf_object: BusinessProfile
+  table: BusinessProfile
+  fields:
+  - BusinessOperatingName
+  - BusinessPartnerCode
+  - BusinessPartnerRegisteredName
+  - BusinessPartnerType
+  - BusinessTaxIdentifier
+  - ExternalReferenceNumber
+  - RegionName
+  - ServiceType
+  lookups:
+    AccountId:
+      table: Account
+      key_field: AccountId
+    ServiceTerritoryId:
+      table: ServiceTerritory
+      key_field: ServiceTerritoryId
+Insert Contract:
+  sf_object: Contract
+  table: Contract
+  fields:
+  - BillingCity
+  - BillingCountry
+  - BillingGeocodeAccuracy
+  - BillingLatitude
+  - BillingLongitude
+  - BillingPostalCode
+  - BillingState
+  - BillingStreet
+  - CompanySignedDate
+  - ContractTerm
+  - CustomerSignedDate
+  - CustomerSignedTitle
+  - Description
+  - OwnerExpirationNotice
+  - ShippingCity
+  - ShippingCountry
+  - ShippingGeocodeAccuracy
+  - ShippingLatitude
+  - ShippingLongitude
+  - ShippingPostalCode
+  - ShippingState
+  - ShippingStreet
+  - SpecialTerms
+  - StartDate
+  - Status
+  lookups:
+    AccountId:
+      table: Account
+      key_field: AccountId
+
+Insert Case:
+  sf_object: Case
+  table: Case
+  fields:
+  - Comments
+  - Description
+  - IsEscalated
+  - Origin
+  - Priority
+  - Reason
+  - Status
+  - Subject
+  - SuppliedCompany
+  - SuppliedEmail
+  - SuppliedName
+  - SuppliedPhone
+  - Type
+  lookups:
+    AccountId:
+      table: Account
+      key_field: AccountId
+    ContactId:
+      table: Contact
+      key_field: ContactId
+
+Insert Order:
+  sf_object: Order
+  table: Order
+  fields:
+  - BillingCity
+  - BillingCountry
+  - BillingGeocodeAccuracy
+  - BillingLatitude
+  - BillingLongitude
+  - BillingState
+  - BillingStreet
+  - BillingPostalCode
+  - Description
+  - EndDate
+  - EffectiveDate
+  - Type
+  - IsReductionOrder
+  - ShippingCity
+  - ShippingCountry
+  - ShippingGeocodeAccuracy
+  - ShippingLatitude
+  - ShippingLongitude
+  - ShippingState
+  - ShippingStreet
+  - ShippingPostalCode
+  - Status
+  lookups:
+    AccountId:
+      table: Account
+      key_field: AccountId
+    ContractId:
+      table: Contract
+      key_field: ContractId
+    CustomerAuthorizedById:
+      table: Contact
+      key_field: CustomerAuthorizedById
+    OriginalOrderId:
+      table: Order
+      key_field: OriginalOrderId
+      after: Insert Order
+    Pricebook2Id:
+      table: Pricebook2
+      key_field: Pricebook2Id
+Insert Opportunity:
+  sf_object: Opportunity
+  table: Opportunity
+  fields:
+  - Amount
+  - CloseDate
+  - Description
+  - ForecastCategoryName
+  - LeadSource
+  - Name
+  - NextStep
+  - Type
+  - IsPrivate
+  - Probability
+  - TotalOpportunityQuantity
+  - StageName
+  lookups:
+    AccountId:
+      table: Account
+      key_field: AccountId
+    ContactId:
+      table: Contact
+      key_field: ContactId
+    ContractId:
+      table: Contract
+      key_field: ContractId
+    Pricebook2Id:
+      table: Pricebook2
+      key_field: Pricebook2Id
+
+Insert Location:
+  sf_object: Location
+  table: Location
+  fields:
+  - IsInventoryLocation
+  - IsMobile
+  - Latitude
+  - LocationType
+  - Longitude
+  - Name
+  - OpenDate
+  - PossessionDate
+  - RemodelEndDate
+  - RemodelStartDate
+  - TimeZone
+  lookups:
+    VisitorAddressId:
+      table: Address
+      key_field: VisitorAddressId
+      after: Insert Address
+Insert Address:
+  sf_object: Address
+  table: Address
+  fields:
+  - AddressType
+  - City
+  - Country
+  - Description
+  - DrivingDirections
+  - GeocodeAccuracy
+  - Latitude
+  - LocationType
+  - Longitude
+  - PostalCode
+  - State
+  - Street
+  - TimeZone
+  lookups:
+    ParentId:
+      table: Location
+      key_field: ParentId
+Insert Asset:
+  sf_object: Asset
+  table: Asset
+  fields:
+  - Name
+  - City
+  - IsCompetitorProduct
+  - Country
+  - Description
+  - GeocodeAccuracy
+  - InstallDate
+  - IsInternal
+  - Latitude
+  - Longitude
+  - PostalCode
+  - Price
+  - PurchaseDate
+  - Quantity
+  - SerialNumber
+  - State
+  - Status
+  - Street
+  - UsageEndDate
+  lookups:
+    AccountId:
+      table: Account
+      key_field: AccountId
+    AssetProvidedById:
+      table: Account
+      key_field: AssetProvidedById
+    AssetServicedById:
+      table: Account
+      key_field: AssetServicedById
+    ContactId:
+      table: Contact
+      key_field: ContactId
+    ParentId:
+      table: Asset
+      key_field: ParentId
+      after: Insert Asset
+    Product2Id:
+      table: Product2
+      key_field: Product2Id
+      after: Insert Product2
+Insert WorkOrder:
+  sf_object: WorkOrder
+  table: WorkOrder
+  fields:
+  - City
+  - Country
+  - Description
+  - Duration
+  - DurationType
+  - EndDate
+  - GeocodeAccuracy
+  - Labor_Amount__c
+  - Latitude
+  - Longitude
+  - Parts_Amount__c
+  - Priority
+  - Repair_Date__c
+  - StartDate
+  - State
+  - Status
+  - Street
+  - Subject
+  - Tax
+  - PostalCode
+  lookups:
+    AccountId:
+      table: Account
+      key_field: AccountId
+    AssetId:
+      table: Asset
+      key_field: AssetId
+    CaseId:
+      table: Case
+      key_field: CaseId
+    ContactId:
+      table: Contact
+      key_field: ContactId
+    LocationId:
+      table: Location
+      key_field: LocationId
+    Pricebook2Id:
+      table: Pricebook2
+      key_field: Pricebook2Id
+Insert ServiceResource:
+  sf_object: ServiceResource
+  table: ServiceResource
+  fields:
+  - IsActive
+  - Description
+  - IsPrimary
+  - Name
+  - ResourceType
+  lookups:
+    AccountId:
+      table: Account
+      key_field: AccountId
+    AssetId:
+      table: Asset
+      key_field: AssetId
+    LocationId:
+      table: Location
+      key_field: LocationId
+
+
+Insert Skill:
+  sf_object: Skill
+  table: Skill
+  fields:
+  - Description
+  - DeveloperName
+  - Language
+  - MasterLabel
+
+Insert SkillRequirement:
+  sf_object: SkillRequirement
+  table: SkillRequirement
+  fields:
+    - SkillLevel
+  lookups:
+    SkillId:
+      table: Skill
+      key_field: SkillId
+    RelatedRecordId:
+      table: WorkType
+      key_field: WorkTypeId
+  soql_filter: "Skill.MasterLabel = 'Accessories Fitment Specialist' OR Skill.MasterLabel = 'Body And Paint' OR Skill.MasterLabel = 'Periodic Maintenance' OR Skill.MasterLabel = 'Value Added Service' OR Skill.MasterLabel = 'Wax Vehicles' OR Skill.MasterLabel = 'Brae Fluid Change'"
+
+Insert ServiceResourceSkill:
+  sf_object: ServiceResourceSkill
+  table: ServiceResourceSkill
+  fields:
+  - EffectiveEndDate
+  - SkillLevel
+  - EffectiveStartDate
+  lookups:
+    ServiceResourceId:
+      table: ServiceResource
+      key_field: ServiceResourceId
+    SkillId:
+      table: Skill
+      key_field: SkillId
+
+Insert AssetAccountParticipant:
+  sf_object: AssetAccountParticipant
+  table: AssetAccountParticipant
+  fields:
+  - IsActive
+  - EffectiveEndDate
+  - EffectiveStartDate
+  - Name
+  - StakeholderRole
+  - UsageType
+  lookups:
+    AccountId:
+      table: Account
+      key_field: AccountId
+    AssetId:
+      table: Asset
+      key_field: AssetId
+    VehicleId:
+      table: Vehicle
+      key_field: VehicleId
+      after: Insert Vehicle
+Insert AssetContactParticipant:
+  sf_object: AssetContactParticipant
+  table: AssetContactParticipant
+  fields:
+  - IsActive
+  - EffectiveEndDate
+  - EffectiveStartDate
+  - Name
+  - StakeholderRole
+  - UsageType
+  lookups:
+    AssetId:
+      table: Asset
+      key_field: AssetId
+    ContactId:
+      table: Contact
+      key_field: ContactId
+    VehicleId:
+      table: Vehicle
+      key_field: VehicleId
+      after: Insert Vehicle
+Insert AssetMilestone:
+  sf_object: AssetMilestone
+  table: AssetMilestone
+  fields:
+  - Name
+  - City
+  - Country
+  - Description
+  - ExpiredDate
+  - GeocodeAccuracy
+  - Latitude
+  - Longitude
+  - MilestoneDate
+  - MilestoneType
+  - PostalCode
+  - SourceSystemIdentifier
+  - SourceSystemName
+  - Stage
+  - StageComment
+  - State
+  - Street
+  - UsageType
+  lookups:
+    AssetId:
+      table: Asset
+      key_field: AssetId
+    LocationId:
+      table: Location
+      key_field: LocationId
+    VehicleId:
+      table: Vehicle
+      key_field: VehicleId
+      after: Insert Vehicle
+
+Insert ServiceAppointment:
+  sf_object: ServiceAppointment
+  table: ServiceAppointment
+  fields:
+  - ActualDuration
+  - ActualEndTime
+  - ActualStartTime
+  - AdditionalInformation
+  - IsAnonymousBooking
+  - ApptBookingInfoUrl
+  - AppointmentType
+  - ArrivalWindowEndTime
+  - ArrivalWindowStartTime
+  - CancellationReason
+  - City
+  - Comments
+  - Country
+  - Description
+  - DueDate
+  - Duration
+  - DurationType
+  - EarliestStartTime
+  - Email
+  - GeocodeAccuracy
+  - Latitude
+  - Longitude
+  - IsOffsiteAppointment
+  - Phone
+  - SchedEndTime
+  - SchedStartTime
+  - ServiceNote
+  - State
+  - Status
+  - Street
+  - Subject
+  - PostalCode
+  lookups:
+    ParentRecordId:
+      table: Asset
+      key_field: Id
+    ContactId:
+      table: Contact
+      key_field: ContactId
+    ServiceTerritoryId:
+      table: ServiceTerritory
+      key_field: ServiceTerritoryId
+    WorkTypeId:
+      table: WorkType
+      key_field: WorkTypeId
+      
+
+Insert Product2:
+  sf_object: Product2
+  table: Product2
+  fields:
+  - IsActive
+  - AvailabilityDate
+  - IsCertified
+  - ConfigureDuringSale
+  - DiscontinuedDate
+  - DisplayUrl
+  - IsEnvrPrtcRegCompliant
+  - ExternalId
+  - HarmonizedSystemCode
+  - HarmonizedTariffSchedCode
+  - MakeName
+  - ManufacturerPartNumber
+  - ManufacturerName
+  - ModelName
+  - ModelYear
+  - ProductCategoryCode
+  - ProductCode
+  - Description
+  - Family
+  - ProductLineCode
+  - Name
+  - Product_Purpose__c
+  - StockKeepingUnit
+  - Type
+  - QuantityUnitOfMeasure
+  - IsSerialized
+  - UniversalProductCode
+  - VehicleTrimLevel
+  - VersionName
+  lookups:
+    BusinessBrandId:
+      table: BusinessBrand
+      key_field: BusinessBrandId
+    Vehicle_Definition__c:
+      table: VehicleDefinition
+      key_field: Vehicle_Definition__c
+      after: Insert VehicleDefinition
+
+
+      
+Insert VehicleDefinition:
+  sf_object: VehicleDefinition
+  table: VehicleDefinition
+  fields:
+  - AccelerationTime
+  - AuxiliaryBatteryType
+  - BatteryCapacity
+  - BodyType
+  - CombinedFuelEconomy
+  - CurbWeight
+  - DoorCount
+  - DoorStyleType
+  - DrivetrainType
+  - EmissionStandard
+  - EngineCubicCapacity
+  - EngineName
+  - ExternalReferenceNumber
+  - ExtraUrbanFuelEconomy
+  - FuelTankCapacity
+  - FuelType
+  - Height
+  - Length
+  - MainBatteryType
+  - MaximumBatteryRange
+  - MaximumGrossWeight
+  - MaximumTorque
+  - MinimumBatteryRange
+  - ModelCode
+  - Name
+  - TopSpeed
+  - TotalPower
+  - TransmissionType
+  - UrbanFuelEconomy
+  - VariantName
+  - VehicleClass
+  - Wheelbase
+  - Width
+  lookups:
+    GeoCountryId:
+      table: GeoCountry
+      key_field: GeoCountryId
+    ProductId:
+      table: Product2
+      key_field: ProductId
+Insert ProductRelatedMaterial:
+  sf_object: ProductRelatedMaterial
+  table: ProductRelatedMaterial
+  fields:
+  - Description
+  - EffectiveEndDate
+  - EffectiveStartDate
+  - LeadTime
+  - MinimumEligibleQuantity
+  - Name
+  - QuantityPerProductUnit
+  - UsageCategory
+  lookups:
+    ProductComponentId:
+      table: Product2
+      key_field: ProductComponentId
+    ProductId:
+      table: Product2
+      key_field: ProductId
+    LeadTimeUomId:
+      table: UnitOfMeasure
+      key_field: LeadTimeUomId
+    MinimumEligibleQuantityUomId:
+      table: UnitOfMeasure
+      key_field: MinimumEligibleQuantityUomId
+    QuantityUomId:
+      table: UnitOfMeasure
+      key_field: QuantityUomId
+
+Insert Vehicle:
+  sf_object: Vehicle
+  table: Vehicle
+  fields:
+  - ActiveRecallCount
+  - ActiveServiceContractCount
+  - ActiveSubscriptionCount
+  - ActiveWarrantyCount
+  - AverageMarketValue
+  - ChassisNumber
+  - LocationCity
+  - ConditionType
+  - LocationCountry
+  - CylinderCount
+  - EngineNumber
+  - ExteriorColor
+  - FrontRimSize
+  - FrontTireSize
+  - GearBoxType
+  - LocationGeocodeAccuracy
+  - HeadUnitName
+  - HeadUnitSecurityCode
+  - HighestMarketValue
+  - IgnitionKeyCode
+  - InteriorColor
+  - IsRecallOpen
+  - LastOdometerReading
+  - LastServiceDate
+  - LatestResidualValue
+  - LatestResidualValueDate
+  - LocationLatitude
+  - LocationLongitude
+  - LowestMarketValue
+  - ManufacturedDate
+  - ManufacturerWarrantyEndDate
+  - ManufacturerWarrantyStartDt
+  - ManufacturingBatchNumber
+  - ManufacturingPlantName
+  - MarketPrice
+  - MarketPriceDate
+  - MarketPriceSource
+  - OdometerReadingDate
+  - OdometerStatus
+  - LocationPostalCode
+  - RearRimSize
+  - RearTireSize
+  - RegistrationRegionCode
+  - RegistrationValidityDate
+  - LocationState
+  - Status
+  - SteeringType
+  - StockCode
+  - LocationStreet
+  - IsTelematicsServiceActive
+  - UpholsteryColor
+  - UpholsteryType
+  - VehicleIdentificationNumber
+  - Name
+  - VehicleRegistrationNumber
+  lookups:
+    CurrentOwnerId:
+      table: Account
+      key_field: CurrentOwnerId
+    AssetId:
+      table: Asset
+      key_field: AssetId
+    OdometerReadingUomId:
+      table: UnitOfMeasure
+      key_field: OdometerReadingUomId
+    VehicleDefinitionId:
+      table: VehicleDefinition
+      key_field: VehicleDefinitionId
+Insert RecordAlert:
+  sf_object: RecordAlert
+  table: RecordAlert
+  fields:
+  - IsActive
+  - Description
+  - EffectiveDate
+  - Severity
+  - SnoozeUntilDate
+  - SourceSystemIdentifier
+  - Subject
+  - ValidUntilDate
+  lookups:
+    WhatId:
+      table: Vehicle
+      key_field: Id

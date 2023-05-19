@@ -1,0 +1,11 @@
+{
+  "cmsSettings" : { },
+  "currentThemeId" : "ef9382a4-0c93-4580-88b5-b13650847b75",
+  "headMarkup" : null,
+  "id" : "b256b234-1981-4762-8da1-d52128900aae",
+  "isLockerServiceEnabled" : true,
+  "isRelaxedCSPLevel" : false,
+  "label" : "main",
+  "templateName" : "Automotive Template",
+  "type" : "appPage"
+}
