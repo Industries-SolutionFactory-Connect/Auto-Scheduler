@@ -1,0 +1,34 @@
+- plugin: snowfakery.standard_plugins.datasets.Dataset
+- object: PricebookEntry
+  count: 4
+  fields:
+    __stdpricebook: 
+      Dataset.shuffle:
+        dataset: data/StandardPricebook.csv
+    __product: 
+      Dataset.shuffle:
+        dataset: data/Products.csv
+    IsActive: true
+    UnitPrice:
+      random_number:
+        min: 26000
+        max: 40000
+    Pricebook2Id: ${{__stdpricebook.id}}
+    Product2Id: ${{__product.id}}
+    
+- object: PricebookEntry
+  count: 4
+  fields:
+    __digipricebook: 
+      Dataset.shuffle:
+        dataset: data/DigiPricebook.csv
+    __product: 
+      Dataset.shuffle:
+        dataset: data/Products.csv
+    IsActive: true
+    UnitPrice:
+      random_number:
+        min: 26000
+        max: 40000
+    Pricebook2Id: ${{__digipricebook.id}}
+    Product2Id: ${{__product.id}}

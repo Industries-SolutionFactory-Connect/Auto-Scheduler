@@ -1,0 +1,16 @@
+- plugin: snowfakery.standard_plugins.datasets.Dataset
+- object: OrderItem
+  count: 6
+  fields:
+    __pricebookEntry: 
+      Dataset.shuffle:
+        dataset: data/PricebookEntry.csv
+    __orders: 
+      Dataset.shuffle:
+        dataset: data/Orders.csv
+    OrderId: ${{__orders.id}}
+    PricebookEntryId: ${{__pricebookEntry.id}}
+    UnitPrice: ${{__pricebookEntry.UnitPrice}}
+    ListPrice: ${{__pricebookEntry.UnitPrice}}
+    Quantity: 1
+    Product2Id: ${{__pricebookEntry.product2id}}

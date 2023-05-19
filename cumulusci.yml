@@ -89,7 +89,6 @@ flows:
             # ActionPlanTemplate: Change status to Final
 
 #             7:
-#                 task: query
 #                 options:
 #                     object: ActionPlanTemplateVersion
 #                     query: select Id from ActionPlanTemplateVersion where Name = 'Inspection'

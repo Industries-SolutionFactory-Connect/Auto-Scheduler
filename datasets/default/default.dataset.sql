@@ -482,7 +482,6 @@ CREATE TABLE "Pricebook2" (
 	"Name" VARCHAR(255), 
 	PRIMARY KEY (id)
 );
-INSERT INTO "Pricebook2" VALUES(1,'','True','Standard Price Book');
 INSERT INTO "Pricebook2" VALUES(2,'','True','Digi Cars and EV');
 
 
