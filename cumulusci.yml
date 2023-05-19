@@ -56,7 +56,7 @@ flows:
             # 3:
             #     task: assign_permission_sets
             #     options:
-            #         api_names: ActionPlans, AutomotiveFoundationUserPsl, AutomotiveSchedulerPsl, LifeEventsAccessPSL, ClaimsManagementFoundationPsl, CriteriaBasedSearchAndFilterPsl, AnalyticsStoreUser, IndustriesVisit, IndustriesServiceExcellence, OmniStudioAdmin, OmniStudioUser, ManufacturingPartnerLeadMgmtPsl, ManufacturingPartnerPerformanceMgmtPsl, ManufacturingPartnerVisitMgmtPsl, RebateManagementAdminPsl, RebateManagementUserPsl, Salesforce_Scheduler_for_Automotive, WarrantyLifecycleMgmtPsl
+            #         api_names: ActionPlans, LifeEventsAccessPSL, AnalyticsStoreUser, IndustriesVisit, IndustriesServiceExcellence, ManufacturingPartnerLeadMgmtPsl, ManufacturingPartnerPerformanceMgmtPsl, ManufacturingPartnerVisitMgmtPsl, RebateManagementAdminPsl, RebateManagementUserPsl, Salesforce_Scheduler_for_Automotive
             #         user_alias: UUser, AUser
             #     ui_options:
             #         name: Adding Permission Set to Admin User
@@ -78,32 +78,64 @@ flows:
             #     ui_options:
             #         name: Load Data records
 
-            # create remaining data via snowfakery
-            # ActionPlans, ActionPlanItems
-            # PricebookEntry, WorkOrder
+            # Update few records via update task
+            # Order: change status for few orders
+            # Account: Enable few accounts as Partner
+            # ActionPlanTemplate: Change status to Final
 
             6:
-                task: query
+                task: generate_and_load_from_yaml
                 options:
-                    object: ActionPlanTemplateVersion
-                    query: select Id from ActionPlanTemplateVersion where Name = 'Inspection'
-                    result_file: snowfakery/ActionPlanTemplateVersion.csv
+                    generator_yaml: snowfakery/actionPlanTemplate.recipe.yml
 
             7:
                 task: query
                 options:
-                    object: Vehicle
-                    query: select Id from Vehicle where Name = 'Neo City 2022 ZXi Grey'
-                    result_file: snowfakery/Vehicle.csv
+                    object: ActionPlanTemplateVersion
+                    query: select Id from ActionPlanTemplateVersion where Name = 'Inspection1'
+                    result_file: snowfakery/ActionPlanTemplateVersion.csv
 
             8:
                 task: generate_and_load_from_yaml
                 options:
-                    generator_yaml: snowfakery/actionPlan.recipe.yml
+                    generator_yaml: snowfakery/actionPlanTemplateItem.recipe.yml
+
+            # 6:
+            #     task: update_data
+            #     options:
+            #         object: ActionPlanTemplateVersion
+            #         where: Name = 'Inspection1'
+            #         recipe: snowfakery/updateActionPlanTempStatus.recipe.yml
+
+            # 6:
+            #     task: update_data
+            #     options:
+            #         object: Accounts
+            #         where: Name = 'Minor Household' Or Name = 'Dream Motors Auto California' Or Name = 'Eniac Auto Dealer' Or Name = 'Geoff Minor'
+            #         recipe: updateAccountPartner.recipe.yml
+
+            # create remaining data via snowfakery
+            # ActionPlans, ActionPlanItems
+            # PricebookEntry, WorkOrder
+
+
+            7:
+                task: generate_and_load_from_yaml
+                options:
+                    generator_yaml: snowfakery/actionPlanTemplate.recipe.yml
+            # 8:
+            #     task: query
+            #     options:
+            #         object: Vehicle
+            #         query: select Id from Vehicle where Name = 'Neo City 2022 ZXi Grey'
+            #         result_file: snowfakery/Vehicle.csv
+
+            # 9:
+            #     task: generate_and_load_from_yaml
+            #     options:
+            #         generator_yaml: snowfakery/actionPlan.recipe.yml
             
-            # Update few records via update task
-            # Order: change status for few orders
-            # Account: Enable few accounts as Partner
+
 
 
 

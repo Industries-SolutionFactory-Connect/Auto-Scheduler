@@ -1,0 +1,8 @@
+- plugin: snowfakery.standard_plugins.datasets.Dataset
+- object: ActionPlanTemplate
+  count: 1
+  fields:
+    ActionPlanType: Industries
+    Name: Inspection1
+    UniqueName: Inspection_${{unique_alpha_code}}_${{int(now.timestamp())}}
+    TargetEntityType: Vehicle

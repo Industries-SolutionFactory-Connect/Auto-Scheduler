@@ -14,3 +14,5 @@
     ActionPlanState: Not Started
     ActionPlanTemplateVersionId: ${{__apTempVersion.Id}}
     TargetId: ${{__vehicle.Id}}
+    StartDate: ${{today}}
+
