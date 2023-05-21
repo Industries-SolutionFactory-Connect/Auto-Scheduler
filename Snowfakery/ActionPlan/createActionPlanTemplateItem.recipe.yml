@@ -1,0 +1,17 @@
+- plugin: snowfakery.standard_plugins.datasets.Dataset
+
+- object: ActionPlanTemplateItem
+  count: 2
+  fields:
+    __templateVersion:
+      Dataset.iterate:
+        dataset: data/ActionPlanTemplateVersion.csv
+    __item:
+      Dataset.iterate:
+        dataset: data/ActionPlanTemplateItem.csv       
+    ActionPlanTemplateVersionId: ${{__templateVersion.Id}}
+    ItemEntityType: Task
+    IsRequired: True
+    IsActive: True
+    Name: ${{__item.Name}}
+    UniqueName: ${{__item.UniqueName}}_${{unique_alpha_code}}_${{int(now.timestamp())}}

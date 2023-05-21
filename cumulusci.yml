@@ -28,14 +28,6 @@ tasks:
         options:
             required_org_code_coverage_percent: 75
 
-    create_scheduler_permset:
-        description: Create Saelsforce Scheduler permission set
-        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
-        options:
-            path: force-app/main/default/apex/SalesforceSchedulerPerm.apex
-        ui_options:
-            name: Create Saelsforce Scheduler permission set
-
 flows:
     auto-sch-setup:
         steps:
@@ -74,40 +66,138 @@ flows:
                 ui_options:
                     name: Deploy the metadata for experience bundle
 
-
             6:
                 task: load_dataset
                 options:
-                    mapping: datasets/test-auto/test-auto.mapping.yml
-                    sql_path: datasets/test-auto/test-auto.dataset.sql
+                    mapping: datasets/default/default.mapping.yml
+                    sql_path: datasets/default/default.dataset.sql
                 ui_options:
                     name: Load Data records
 
-            # Update few records via update task
-            # Order: change status for few orders
-            # Account: Enable few accounts as Partner
-            # ActionPlanTemplate: Change status to Final
+            # Update Account: Enable few accounts as Partner
+            7:
+                task: update_data
+                options:
+                    object: Account
+                    where: Name = 'Minor Household' Or Name = 'Dream Motors Auto California' Or Name = 'Eniac Auto Dealer' Or Name = 'Geoff Minor'
+                    recipe: snowfakery/updateAccountPartner.recipe.yml
 
-#             7:
-#                 options:
-#                     object: ActionPlanTemplateVersion
-#                     query: select Id from ActionPlanTemplateVersion where Name = 'Inspection'
-#                     result_file: snowfakery/ActionPlanTemplateVersion.csv
+            # Create PricebookEntry and OrderItem
+            8:
+                task: query
+                options:
+                    object: Pricebook2
+                    query: select Id from Pricebook2 where Name like 'Standard%'
+                    result_file: snowfakery/data/StandardPricebook.csv
 
-#             8:
-#                 task: query
-#                 options:
-#                     object: Vehicle
-#                     query: select Id from Vehicle where Name = 'Neo City 2022 ZXi Grey'
-#                     result_file: snowfakery/Vehicle.csv
+            9:
+                task: query
+                options:
+                    object: Pricebook2
+                    query: select Id from Pricebook2 where Name like 'Digi%'
+                    result_file: snowfakery/data/DigiPricebook.csv
+            10:
+                task: query
+                options:
+                    object: Product2
+                    query: select Id, Name from Product2 where Name='Neo Ionic EV CD4 2022 VXi' Or Name='Neo CRV 2022 ZXi' Or Name='Neo_Ionic_EV_CD4_VXi_2018' Or Name='Neo Jazz 2022 VXi'
+                    result_file: snowfakery/data/Products.csv
 
-#             9:
-#                 task: generate_and_load_from_yaml
-#                 options:
-#                     generator_yaml: snowfakery/actionPlan.recipe.yml
+            11:
+                task: generate_and_load_from_yaml
+                options:
+                    generator_yaml: snowfakery/createPricebookEntry.recipe.yml
             
+            12:
+                task: query
+                options:
+                    object: PricebookEntry
+                    query: select Id, Name, Pricebook2Id, Product2Id, UnitPrice from PricebookEntry where Pricebook2.Name like 'Digi%'
+                    result_file: snowfakery/data/PricebookEntry.csv
+
+            13:
+                task: query
+                options:
+                    object: Order
+                    query: select Id from Order
+                    result_file: snowfakery/data/Orders.csv
+
+            14:
+                task: update_data
+                options:
+                    object: Order
+                    recipe: snowfakery/updateOrders.recipe.yml
+
+            15:
+                task: generate_and_load_from_yaml
+                options:
+                    generator_yaml: snowfakery/createOrderItem.recipe.yml
+
+            # Order: Set status as Activated for few orders
+            16:
+                task: update_data
+                options:
+                    object: Order
+                    where: Account.Name = 'Geoff Minor' Or Account.Name = 'Minor Household' Or Account.name= 'Xenith Autodealer Dallas'
+                    recipe: snowfakery/updateOrderStatus.recipe.yml
 
 
+            # Create Action Plan (ActionPlanTemplate, ActionPlanTemplateItem, ActionPlanTemplateItemValue, ActionPlan)
+            17:
+                task: generate_and_load_from_yaml
+                options:
+                    generator_yaml: snowfakery/ActionPlan/createActionPlanTemplate.recipe.yml
+
+            18:
+                task: query
+                options:
+                    object: ActionPlanTemplateVersion
+                    query: select Id from ActionPlanTemplateVersion where Name = 'Inspection'
+                    result_file: snowfakery/ActionPlan/data/ActionPlanTemplateVersion.csv
+
+            19:
+                task: generate_and_load_from_yaml
+                options:
+                    generator_yaml: snowfakery/ActionPlan/createActionPlanTemplateItem.recipe.yml
+
+
+            20:
+                task: query
+                options:
+                    object: ActionPlanTemplateItem
+                    query: select Id, Name from ActionPlanTemplateItem where Name like 'Overall%'
+                    result_file: snowfakery/ActionPlan/data/ActionPlanTemplateItemOverall.csv
+
+            21:
+                task: query
+                options:
+                    object: ActionPlanTemplateItem
+                    query: select Id, Name from ActionPlanTemplateItem where Name like 'Engine%'
+                    result_file: snowfakery/ActionPlan/data/ActionPlanTemplateItemEngine.csv
+
+            22:
+                task: generate_and_load_from_yaml
+                options:
+                    generator_yaml: snowfakery/ActionPlan/createAPTempItemValue.recipe.yml
+
+            23:
+                task: update_data
+                options:
+                    object: ActionPlanTemplateVersion
+                    where: Name = 'Inspection'
+                    recipe: snowfakery/ActionPlan/updateActionPlanTempStatus.recipe.yml
+
+            24:
+                task: query
+                options:
+                    object: Vehicle
+                    query: select Id from Vehicle where Name = 'Neo City 2022 ZXi Grey'
+                    result_file: snowfakery/ActionPlan/data/Vehicle.csv
+
+            25:
+                task: generate_and_load_from_yaml
+                options:
+                    generator_yaml: snowfakery/ActionPlan/createActionPlan.recipe.yml
 
 
 

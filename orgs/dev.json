@@ -37,8 +37,15 @@
     },
     "InterestTaggingSettings": {
       "enableInterestTagging": true
+    },
+    "SharingSettings": {
+      "enableAccountRoleOptimization": true,
+      "enableAssetSharing": true,
+      "enableExternalSharingModel": true,
+      "enablePortalUserCaseSharing": true,
+      "enableRestrictAccessLookupRecords": true,
+      "enableStandardReportVisibility": true
     }
-  
 
   }
 }

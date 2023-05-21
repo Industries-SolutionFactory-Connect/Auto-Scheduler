@@ -1,0 +1,6 @@
+ItemEntityFieldName,Name,ValueFormula,ValueLiteral
+Task.Subject,Subject,,"Overall Car Performance Evaluation"
+Task.Priority,Priority,,High
+Task.ActivityDate,ActivityDate,"StartDate + 1",
+Task.IsReminderSet,IsReminderSet,,true
+Task.ReminderDateTime,ReminderDateTime,"StartDate + 1 - 0 + 08:00:00.000",

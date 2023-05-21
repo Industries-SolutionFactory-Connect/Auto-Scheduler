@@ -3,11 +3,11 @@
   count: 1
   fields:
     __apTempVersion: 
-      Dataset.shuffle:
-        dataset: ActionPlanTemplateVersion.csv
+      Dataset.iterate:
+        dataset: data/ActionPlanTemplateVersion.csv
     __vehicle: 
-      Dataset.shuffle:
-        dataset: Vehicle.csv
+      Dataset.iterate:
+        dataset: data/Vehicle.csv
     ActionPlanType: Industries
     Name: Vehicle Inspection
     IsUsingHolidayHours: true
