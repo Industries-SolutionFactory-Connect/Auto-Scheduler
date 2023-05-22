@@ -54,12 +54,12 @@ flows:
                 ui_options:
                     name: Adding Permission Set to Admin User
 
-            5:
-                task: deploy
-                options:
-                    path: force-app/main/experiences
-                ui_options:
-                    name: Deploy the metadata for experience bundle
+            # 5:
+            #     task: deploy
+            #     options:
+            #         path: force-app/main/experiences
+            #     ui_options:
+            #         name: Deploy the metadata for experience bundle
 
     update_data_post_load:
         steps:
@@ -189,7 +189,13 @@ flows:
                     generator_yaml: snowfakery/ActionPlan/createActionPlan.recipe.yml
     dev_org:
         steps:
-            3.1: 
+            3.1:
+                task: deploy
+                options:
+                    path: force-app/main/experiences
+                ui_options:
+                    name: Deploy the metadata for experience bundle
+            3.2: 
                 flow: update_data_post_load
 
 
@@ -216,20 +222,20 @@ flows:
                     user_alias: UUser, AUser
                 ui_options:
                     name: Adding Permission Set to Admin User
-
-            4:
-                task: deploy
-                options:
-                    path: force-app/main/experiences
-                ui_options:
-                    name: Deploy the metadata for experience bundle
         
-            5:
+            4:
                 task: deploy
                 options:
                     path: force-app/main/default/
                 ui_options:
                     name: Deploy the metadata            
+
+            5:
+                task: deploy
+                options:
+                    path: force-app/main/experiences
+                ui_options:
+                    name: Deploy the metadata for experience bundle
 
             6:
                 task: load_dataset
@@ -364,7 +370,12 @@ flows:
                 options:
                     generator_yaml: snowfakery/ActionPlan/createActionPlan.recipe.yml
 
-
+    test-flow:
+        steps:
+            1:
+                task: generate_and_load_from_yaml
+                options:
+                    generator_yaml: snowfakery/InterestTag/createInterestTag.recipe.yml
 plans:
     install:
         slug: install
