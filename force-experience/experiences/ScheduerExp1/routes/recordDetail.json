@@ -1,0 +1,10 @@
+{
+  "activeViewId" : "7846aa3a-c47b-4589-84ad-c5cbdb61318e",
+  "appPageId" : "b256b234-1981-4762-8da1-d52128900aae",
+  "configurationTags" : [ ],
+  "id" : "82eb90d1-a13b-48dc-b50b-9855d8ca61bd",
+  "label" : "Record Detail",
+  "routeType" : "detail",
+  "type" : "route",
+  "urlPrefix" : "detail"
+}

@@ -1,0 +1,7 @@
+- plugin: snowfakery.standard_plugins.datasets.Dataset
+- object: Order
+  fields:
+    __digipricebook: 
+      Dataset.shuffle:
+        dataset: data/DigiPricebook.csv
+    Pricebook2Id: ${{__digipricebook.id}}

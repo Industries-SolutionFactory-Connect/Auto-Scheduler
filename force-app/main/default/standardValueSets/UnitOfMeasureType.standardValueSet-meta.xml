@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Miles</fullName>
+        <default>false</default>
+        <label>Miles</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Kilometers</fullName>
+        <default>false</default>
+        <label>Kilometers</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Unit</fullName>
+        <default>false</default>
+        <label>Unit</label>
+    </standardValue>
+</StandardValueSet>

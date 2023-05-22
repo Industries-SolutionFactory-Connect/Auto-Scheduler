@@ -1,12 +1,19 @@
 {
   "orgName": "Auto-Scheduler - Dev Org",
-  "template": "0TTB0000001g2Qs",
+  "template": "0TTB0000001px5m",
   "settings": {
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true
     },
     "chatterSettings": {
       "enableChatter": true
+    },
+    "communitiesSettings": {
+      "enableNetworksEnabled": true,
+      "enableOotbProfExtUserOpsEnable": true
+    },
+    "experienceBundleSettings": {
+      "enableExperienceBundleMetadata": true
     },
     "userManagementSettings": {
       "enableNewProfileUI": true
@@ -19,6 +26,26 @@
     },
     "languageSettings": {
       "enableTranslationWorkbench": true
+    },
+    "IndustriesAutomotiveSettings": {
+      "enableAutomotiveCloud": true,
+      "enableAutomotiveScheduler": true
+    },
+    "IndustriesSettings": {
+      "enableMultiResourceOrgPref": true,
+      "enableTimelinePref": true
+    },
+    "InterestTaggingSettings": {
+      "enableInterestTagging": true
+    },
+    "SharingSettings": {
+      "enableAccountRoleOptimization": true,
+      "enableAssetSharing": true,
+      "enableExternalSharingModel": true,
+      "enablePortalUserCaseSharing": true,
+      "enableRestrictAccessLookupRecords": true,
+      "enableStandardReportVisibility": true
     }
+
   }
 }

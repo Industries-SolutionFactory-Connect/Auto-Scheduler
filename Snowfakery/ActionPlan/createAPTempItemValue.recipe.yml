@@ -1,0 +1,32 @@
+- plugin: snowfakery.standard_plugins.datasets.Dataset
+- object: ActionPlanTemplateItemValue
+  count: 5
+  fields:
+    __apTempItem: 
+      Dataset.iterate:
+        dataset: data/ActionPlanTemplateItemOverall.csv
+    __itemValue: 
+      Dataset.iterate:
+        dataset: data/Overall_Item.csv
+    ActionPlanTemplateItemId: ${{__apTempItem.id}}
+    IsActive: True
+    ItemEntityFieldName: ${{__itemValue.ItemEntityFieldName}}
+    Name: ${{__itemValue.Name}}
+    ValueFormula: ${{__itemValue.ValueFormula}}
+    ValueLiteral: ${{__itemValue.ValueLiteral}}
+
+- object: ActionPlanTemplateItemValue
+  count: 5
+  fields:
+    __apTempItem: 
+      Dataset.iterate:
+        dataset: data/ActionPlanTemplateItemEngine.csv
+    __itemValue: 
+      Dataset.iterate:
+        dataset: data/Engine_Item.csv
+    ActionPlanTemplateItemId: ${{__apTempItem.id}}
+    IsActive: True
+    ItemEntityFieldName: ${{__itemValue.ItemEntityFieldName}}
+    Name: ${{__itemValue.Name}}
+    ValueFormula: ${{__itemValue.ValueFormula}}
+    ValueLiteral: ${{__itemValue.ValueLiteral}}

@@ -1,0 +1,4 @@
+- plugin: snowfakery.standard_plugins.datasets.Dataset
+- object: ActionPlanTemplateVersion
+  fields:
+    Status: Final
