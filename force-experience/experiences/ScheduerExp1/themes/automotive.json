@@ -1,0 +1,418 @@
+{
+  "activeBrandingSetId" : "eaa5aa7d-47dd-4507-9817-a031449dcc9d",
+  "customCSS" : "",
+  "developerName" : "automotive",
+  "id" : "ef9382a4-0c93-4580-88b5-b13650847b75",
+  "label" : "Automotive",
+  "layouts" : {
+    "Home" : "2a41b01c-bb65-4d51-8349-7c08698ebf14",
+    "Inner" : "f1a72e54-c3cd-48ca-933a-9227730d824b",
+    "Login" : "1ac55a3d-3abd-4154-abf3-662f71b61eec",
+    "ServiceNotAvailable" : "a3c37e80-5488-44fc-bc53-ba3c507b13ab"
+  },
+  "type" : "theme",
+  "views" : [ {
+    "componentAttributes" : { },
+    "componentName" : "salesforceIdentity:loginBody2",
+    "id" : "1ac55a3d-3abd-4154-abf3-662f71b61eec",
+    "label" : "Login",
+    "regions" : [ {
+      "id" : "1941a503-5458-4e34-9979-b88771811b96",
+      "regionName" : "header",
+      "type" : "region"
+    }, {
+      "id" : "502370f7-fd39-432c-ad4e-ba59b20b2554",
+      "regionName" : "content",
+      "type" : "region"
+    }, {
+      "id" : "d2719c63-4074-4c78-ac5e-51eb71c2ba61",
+      "regionName" : "footer",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : {
+      "fixedPageWidth" : 1170,
+      "headerBgColor" : "rgba(0, 0, 0, 0)",
+      "isHeaderPinned" : false,
+      "isHeroUnderHeader" : false,
+      "isPageWidthFixed" : true,
+      "showHeader" : true,
+      "showHero" : true
+    },
+    "componentName" : "siteforce:automotiveLayoutStarter",
+    "id" : "f1a72e54-c3cd-48ca-933a-9227730d824b",
+    "label" : "Default",
+    "regions" : [ {
+      "components" : [ {
+        "componentAttributes" : {
+          "background" : "background: #FFFFFF",
+          "backgroundOverlayColor" : "rgba(0, 0, 0, 0)",
+          "borderBottomColor" : "rgb(0, 95, 178)",
+          "borderTopColor" : "rgba(0, 0, 0, 0)",
+          "bottomRowHeight" : 8,
+          "bottomRowOverlayColor" : "rgba(0, 0, 0, 0)",
+          "containHeader" : true,
+          "containHeaderWidth" : 1440,
+          "dropdownBackgroundColor" : "rgb(255, 255, 255)",
+          "dropdownBackgroundHoverColor" : "",
+          "dropdownBorderColor" : "rgb(240, 240, 240)",
+          "dropdownTextColor" : "",
+          "dropdownTextHoverColor" : "",
+          "iconLinkColor" : "rgb(44, 46, 55)",
+          "iconLinkHoverColor" : "rgb(145, 145, 145)",
+          "iconLinkTextShadowColor" : "rgba(0, 0, 0, 0)",
+          "linkActiveBorderColor" : "#005FB2",
+          "linkColor" : "rgb(6, 28, 63)",
+          "linkHoverColor" : "#005FB2",
+          "linkTextShadowColor" : "rgba(0, 0, 0, 0)",
+          "logoWidth" : 180,
+          "searchPosition" : "right",
+          "searchStyle" : "expanded",
+          "showAppLauncher" : false,
+          "showNotifications" : true,
+          "showProfileMenu" : true,
+          "showSearch" : true,
+          "topRowHeight" : 40
+        },
+        "componentName" : "forceCommunity:themeHeaderAuto",
+        "id" : "b0c208ab-bf08-4004-95d6-44a34b472687",
+        "regions" : [ {
+          "components" : [ {
+            "componentAttributes" : {
+              "accountManagementLabel" : "Account Management",
+              "buttonBackgroundColor" : "",
+              "buttonBackgroundHoverColor" : "",
+              "buttonBorderColor" : "rgba(0, 0, 0, 0)",
+              "buttonBorderRadius" : 4,
+              "buttonText" : "Log in",
+              "buttonTextColor" : "",
+              "buttonTextHoverColor" : "",
+              "communityBuilderLabel" : "Experience Builder",
+              "communitySetupLabel" : "Salesforce Setup",
+              "contactSupportLabel" : "Contact Support",
+              "filterName" : "MyCases",
+              "homeLabel" : "Home",
+              "logoutLabel" : "Logout",
+              "menuStyle" : "iconAndName",
+              "messagesLabel" : "Messages",
+              "myAccountLabel" : "My Account",
+              "showAccountManagement" : false,
+              "showContactSupport" : false,
+              "showMessages" : false,
+              "showUserSettings" : false,
+              "userSettingsLabel" : "My Settings",
+              "viewProfileLabel" : "My Profile"
+            },
+            "componentName" : "forceCommunity:themeProfileMenu",
+            "id" : "8a6fefc2-acb9-4e3b-a3d1-3feaff13caca",
+            "renditionMap" : { },
+            "type" : "component"
+          } ],
+          "id" : "2ebffe40-163f-472e-ad52-adf04d2fa4ba",
+          "regionName" : "themeHeaderProfileMenu",
+          "type" : "region"
+        }, {
+          "components" : [ {
+            "componentAttributes" : {
+              "maxAutoCompleteResults" : 5,
+              "searchLabel" : "Search...",
+              "searchObjects" : [ {
+                "isPublic" : false,
+                "name" : "Vehicle"
+              }, {
+                "isPublic" : false,
+                "name" : "VehicleDefinition"
+              }, {
+                "isPublic" : false,
+                "name" : "Asset"
+              }, {
+                "isPublic" : false,
+                "name" : "AssetAccountParticipant"
+              }, {
+                "isPublic" : false,
+                "name" : "AssetContactParticipant"
+              }, {
+                "isPublic" : false,
+                "name" : "AssetMilestone"
+              }, {
+                "isPublic" : false,
+                "name" : "Lead"
+              }, {
+                "isPublic" : false,
+                "name" : "Opportunity"
+              }, {
+                "isPublic" : false,
+                "name" : "Product2"
+              }, {
+                "isPublic" : false,
+                "name" : "Order"
+              } ]
+            },
+            "componentName" : "forceCommunity:globalSearchInput",
+            "id" : "50654cff-0c61-4654-8a28-06d5b8088b89",
+            "renditionMap" : { },
+            "type" : "component"
+          } ],
+          "id" : "aaf92be2-3093-4b35-9047-a0ec848dae78",
+          "regionName" : "search",
+          "type" : "region"
+        }, {
+          "components" : [ {
+            "componentAttributes" : {
+              "navAlignment" : "left",
+              "navItemThreshold" : 7,
+              "navigationMenuEditorRefresh" : ""
+            },
+            "componentName" : "forceCommunity:themeNav",
+            "id" : "dab1e965-7c31-4e81-930f-254b8710c1f8",
+            "renditionMap" : { },
+            "type" : "component"
+          } ],
+          "id" : "831af063-cb61-484b-9d3a-3ad8810c8254",
+          "regionName" : "nav",
+          "type" : "region"
+        } ],
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "59fe2f7f-4b76-4fc2-b327-84f25c8b60f8",
+      "regionName" : "themeHeader",
+      "type" : "region"
+    }, {
+      "id" : "015f814e-d832-4424-858c-cbfa69add449",
+      "regionName" : "themeHero",
+      "type" : "region"
+    }, {
+      "id" : "5bffb626-8c7b-4b2c-bcee-18b27fc9284f",
+      "regionName" : "themeFooter",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : {
+      "fixedPageWidth" : 1440,
+      "headerBgColor" : "rgba(0, 0, 0, 0)",
+      "isHeaderPinned" : false,
+      "isHeroUnderHeader" : false,
+      "isPageWidthFixed" : true,
+      "showHeader" : true,
+      "showHero" : true
+    },
+    "componentName" : "siteforce:automotiveLayoutStarter",
+    "id" : "2a41b01c-bb65-4d51-8349-7c08698ebf14",
+    "label" : "Home",
+    "regions" : [ {
+      "components" : [ {
+        "componentAttributes" : {
+          "background" : "background: #FFFFFF",
+          "backgroundOverlayColor" : "rgba(0, 0, 0, 0)",
+          "borderBottomColor" : "rgb(0, 95, 178)",
+          "borderTopColor" : "rgba(0, 0, 0, 0)",
+          "bottomRowHeight" : 8,
+          "bottomRowOverlayColor" : "rgba(0, 0, 0, 0)",
+          "containHeader" : true,
+          "containHeaderWidth" : 1440,
+          "dropdownBackgroundColor" : "rgb(255, 255, 255)",
+          "dropdownBackgroundHoverColor" : "",
+          "dropdownBorderColor" : "rgb(240, 240, 240)",
+          "dropdownTextColor" : "",
+          "dropdownTextHoverColor" : "",
+          "iconLinkColor" : "rgb(44, 46, 55)",
+          "iconLinkHoverColor" : "rgb(145, 145, 145)",
+          "iconLinkTextShadowColor" : "rgba(0, 0, 0, 0)",
+          "linkActiveBorderColor" : "#005FB2",
+          "linkColor" : "rgb(6, 28, 63)",
+          "linkHoverColor" : "#005FB2",
+          "linkTextShadowColor" : "rgba(0, 0, 0, 0)",
+          "logoWidth" : 180,
+          "searchPosition" : "right",
+          "searchStyle" : "expanded",
+          "showAppLauncher" : false,
+          "showNotifications" : true,
+          "showProfileMenu" : true,
+          "showSearch" : true,
+          "topRowHeight" : 40
+        },
+        "componentName" : "forceCommunity:themeHeaderAuto",
+        "id" : "59d9687b-541f-473b-b137-25751add570c",
+        "regions" : [ {
+          "components" : [ {
+            "componentAttributes" : {
+              "accountManagementLabel" : "Account Management",
+              "buttonBackgroundColor" : "",
+              "buttonBackgroundHoverColor" : "",
+              "buttonBorderColor" : "rgba(0, 0, 0, 0)",
+              "buttonBorderRadius" : 4,
+              "buttonText" : "Log in",
+              "buttonTextColor" : "",
+              "buttonTextHoverColor" : "",
+              "communityBuilderLabel" : "Experience Builder",
+              "communitySetupLabel" : "Salesforce Setup",
+              "contactSupportLabel" : "Contact Support",
+              "filterName" : "MyCases",
+              "homeLabel" : "Home",
+              "logoutLabel" : "Logout",
+              "menuStyle" : "iconAndName",
+              "messagesLabel" : "Messages",
+              "myAccountLabel" : "My Account",
+              "showAccountManagement" : false,
+              "showContactSupport" : false,
+              "showMessages" : false,
+              "showUserSettings" : false,
+              "userSettingsLabel" : "My Settings",
+              "viewProfileLabel" : "My Profile"
+            },
+            "componentName" : "forceCommunity:themeProfileMenu",
+            "id" : "aef3f029-0157-4bc5-9284-f45c14c11f0d",
+            "renditionMap" : { },
+            "type" : "component"
+          } ],
+          "id" : "40362395-dcb7-4968-a67a-2ffc798e8792",
+          "regionName" : "themeHeaderProfileMenu",
+          "type" : "region"
+        }, {
+          "components" : [ {
+            "componentAttributes" : {
+              "maxAutoCompleteResults" : 5,
+              "searchLabel" : "Search...",
+              "searchObjects" : [ {
+                "isPublic" : false,
+                "name" : "Vehicle"
+              }, {
+                "isPublic" : false,
+                "name" : "VehicleDefinition"
+              }, {
+                "isPublic" : false,
+                "name" : "Asset"
+              }, {
+                "isPublic" : false,
+                "name" : "AssetAccountParticipant"
+              }, {
+                "isPublic" : false,
+                "name" : "AssetContactParticipant"
+              }, {
+                "isPublic" : false,
+                "name" : "AssetMilestone"
+              }, {
+                "isPublic" : false,
+                "name" : "Lead"
+              }, {
+                "isPublic" : false,
+                "name" : "Opportunity"
+              }, {
+                "isPublic" : false,
+                "name" : "Product2"
+              }, {
+                "isPublic" : false,
+                "name" : "Order"
+              } ]
+            },
+            "componentName" : "forceCommunity:globalSearchInput",
+            "id" : "cdf44c01-0053-48d0-8ab9-cb00dedc7963",
+            "renditionMap" : { },
+            "type" : "component"
+          } ],
+          "id" : "9f27cbc5-9a7a-403d-91c3-e4373d093ea9",
+          "regionName" : "search",
+          "type" : "region"
+        }, {
+          "components" : [ {
+            "componentAttributes" : {
+              "navAlignment" : "left",
+              "navItemThreshold" : 7,
+              "navigationMenuEditorRefresh" : "Default_Navigation"
+            },
+            "componentName" : "forceCommunity:themeNav",
+            "id" : "c49395fd-324d-4cdb-a4f0-1d9072fa5ae2",
+            "renditionMap" : { },
+            "type" : "component"
+          } ],
+          "id" : "876c9514-9433-484c-8edf-50847750f54b",
+          "regionName" : "nav",
+          "type" : "region"
+        } ],
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "30122d8d-c711-4c2f-8972-471efcae72fa",
+      "regionName" : "themeHeader",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "bgImage" : "background: rgba(255,255,255) url(/sfsites/assets/themes/automotive-BgHero.png) center center /cover",
+          "bgOverlayColor" : "rgba(0, 0, 0, 0)",
+          "captionText" : "Welcome!",
+          "captionTextColor" : "rgb(44, 46, 55)",
+          "captionTextShadowColor" : "rgba(0, 0, 0, 0)",
+          "contentAlignment" : "left",
+          "contentWidth" : 38,
+          "ctaBtnOneBgColor" : "rgba(0, 0, 0, 1)",
+          "ctaBtnOneBgHoverColor" : "rgba(0, 0, 255, 1)",
+          "ctaBtnOneBorderColor" : "rgba(0, 0, 0, 1)",
+          "ctaBtnOneOpenNewTab" : false,
+          "ctaBtnOneText" : "Let's go!",
+          "ctaBtnOneTextColor" : "rgba(255, 255, 255, 1)",
+          "ctaBtnOneTextHoverColor" : "rgba(255, 255, 255, 1)",
+          "ctaBtnOneUrl" : "",
+          "ctaBtnRadius" : 0,
+          "ctaBtnTwoBgColor" : "rgba(255, 255, 255, 1)",
+          "ctaBtnTwoBgHoverColor" : "rgba(0, 0, 255, 1)",
+          "ctaBtnTwoBorderColor" : "rgba(0, 0, 0, 1)",
+          "ctaBtnTwoOpenNewTab" : false,
+          "ctaBtnTwoText" : "Help",
+          "ctaBtnTwoTextColor" : "rgba(0, 0, 0, 1)",
+          "ctaBtnTwoTextHoverColor" : "rgba(255, 255, 255, 1)",
+          "ctaBtnTwoUrl" : "",
+          "ctaShowBtnOne" : false,
+          "ctaShowBtnTwo" : false,
+          "fixedHeroWidth" : true,
+          "heroHeight" : 42,
+          "heroWidth" : 1401,
+          "showCaption" : true,
+          "showSubtitle" : true,
+          "showTitle" : true,
+          "subtitleText" : "Are you ready?",
+          "subtitleTextColor" : "rgba(255, 255, 255, 1)",
+          "subtitleTextShadowColor" : "rgba(0, 0, 0, 0)",
+          "titleText" : "Explore deals, vehicles, and more.",
+          "titleTextColor" : "rgb(44, 46, 55)",
+          "titleTextShadowColor" : "rgba(0, 0, 0, 0)",
+          "type" : "showSearch"
+        },
+        "componentName" : "forceCommunity:themeHeroStarter",
+        "id" : "498d0565-36a4-422d-96cb-bc4037a07a37",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "2d78d013-2e68-413a-835e-1d85504b54cd",
+      "regionName" : "themeHero",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : {
+      "fixedPageWidth" : 1170,
+      "headerBgColor" : "rgba(0, 0, 0, 0)",
+      "isHeaderPinned" : false,
+      "isHeroUnderHeader" : false,
+      "isPageWidthFixed" : true,
+      "showHeader" : true,
+      "showHero" : true
+    },
+    "componentName" : "siteforce:themeLayoutStarter",
+    "id" : "a3c37e80-5488-44fc-bc53-ba3c507b13ab",
+    "label" : "ServiceNotAvailable",
+    "regions" : [ {
+      "id" : "839ca122-db89-44b4-a28c-78071dbb05b4",
+      "regionName" : "themeHeader",
+      "type" : "region"
+    }, {
+      "id" : "bebd9aa4-ffec-4ae6-b105-7126f448e1b0",
+      "regionName" : "themeFooter",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  } ]
+}

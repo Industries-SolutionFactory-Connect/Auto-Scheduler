@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Region</fullName>
+        <default>false</default>
+        <label>Region</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Country</fullName>
+        <default>false</default>
+        <label>Country</label>
+    </standardValue>
+    <standardValue>
+        <fullName>State</fullName>
+        <default>false</default>
+        <label>State</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Secondary</fullName>
+        <default>false</default>
+        <label>Secondary</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Warehouse</fullName>
+        <default>false</default>
+        <label>Warehouse</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Virtual</fullName>
+        <default>false</default>
+        <label>Virtual</label>
+    </standardValue>
+</StandardValueSet>

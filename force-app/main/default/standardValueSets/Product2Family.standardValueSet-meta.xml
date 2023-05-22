@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>EV</fullName>
+        <default>false</default>
+        <label>EV</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hatchback</fullName>
+        <default>false</default>
+        <label>Hatchback</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sedan</fullName>
+        <default>false</default>
+        <label>Sedan</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SUV</fullName>
+        <default>false</default>
+        <label>SUV</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Trucks</fullName>
+        <default>false</default>
+        <label>Trucks</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Spares</fullName>
+        <default>false</default>
+        <label>Spares</label>
+    </standardValue>
+</StandardValueSet>

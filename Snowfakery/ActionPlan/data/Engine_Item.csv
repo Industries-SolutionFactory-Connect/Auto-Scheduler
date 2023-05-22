@@ -1,0 +1,6 @@
+ItemEntityFieldName,Name,ValueFormula,ValueLiteral
+Task.Subject,Subject,,"Engine Evaluation"
+Task.Priority,Priority,,High
+Task.ActivityDate,ActivityDate,"StartDate + 2",
+Task.IsReminderSet,IsReminderSet,,true
+Task.ReminderDateTime,ReminderDateTime,"StartDate + 2 - 0 + 08:00:00.000",

@@ -1,0 +1,10 @@
+{
+  "activeViewId" : "3a17007f-6888-42db-9788-0312656567f8",
+  "appPageId" : "b256b234-1981-4762-8da1-d52128900aae",
+  "configurationTags" : [ ],
+  "id" : "8c8e3502-85fa-4626-a85b-595ce6e14400",
+  "label" : "Vehicle Detail",
+  "routeType" : "detail-0vL",
+  "type" : "route",
+  "urlPrefix" : "vehicle"
+}
