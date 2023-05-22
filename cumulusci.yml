@@ -28,6 +28,7 @@ tasks:
         options:
             required_org_code_coverage_percent: 75
 
+
 flows:
     auto-sch-setup:
         steps:
@@ -198,7 +199,6 @@ flows:
                 task: generate_and_load_from_yaml
                 options:
                     generator_yaml: snowfakery/ActionPlan/createActionPlan.recipe.yml
-
 
 
 plans:
