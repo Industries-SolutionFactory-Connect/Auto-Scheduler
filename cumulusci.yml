@@ -42,7 +42,7 @@ flows:
             3: 
                 task: deploy
                 options:
-                    path: force-app/main/permissionsets
+                    path: force-permissionsets
                 ui_options:
                     name: Deploy permissionsets       
 
@@ -57,7 +57,7 @@ flows:
             # 5:
             #     task: deploy
             #     options:
-            #         path: force-app/main/experiences
+            #         path: force-experience
             #     ui_options:
             #         name: Deploy the metadata for experience bundle
 
@@ -192,7 +192,7 @@ flows:
             3.1:
                 task: deploy
                 options:
-                    path: force-app/main/experiences
+                    path: force-experience
                 ui_options:
                     name: Deploy the metadata for experience bundle
             3.2: 
@@ -211,7 +211,7 @@ flows:
             2: 
                 task: deploy
                 options:
-                    path: force-app/main/permissionsets
+                    path: force-permissionsets
                 ui_options:
                     name: Deploy permissionsets       
 
@@ -233,7 +233,7 @@ flows:
             5:
                 task: deploy
                 options:
-                    path: force-app/main/experiences
+                    path: force-experience
                 ui_options:
                     name: Deploy the metadata for experience bundle
 
