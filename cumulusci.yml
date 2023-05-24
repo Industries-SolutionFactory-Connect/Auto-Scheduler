@@ -202,7 +202,20 @@ flows:
                     name: ScheduerExp
                 ui_options:
                     name: Publish Guest Community                  
-            3.3: 
+            3.3:
+                task: query
+                options:
+                    object: UserRole
+                    query: select Id from UserRole where Name = 'OEM'
+                    result_file: snowfakery/data/Role.csv
+
+            3.4:
+                task: update_data
+                options:
+                    object: User
+                    where: Profile.Name = 'System Administrator'
+                    recipe: snowfakery/updateUserRole.recipe.yml 
+            3.5: 
                 flow: update_data_post_load
 
 
@@ -384,6 +397,19 @@ flows:
                 options:
                     generator_yaml: Snowfakery/ActionPlan/createActionPlan.recipe.yml
 
+            27:
+                task: query
+                options:
+                    object: UserRole
+                    query: select Id from UserRole where Name = 'OEM'
+                    result_file: snowfakery/data/Role.csv
+
+            28:
+                task: update_data
+                options:
+                    object: User
+                    where: Profile.Name = 'System Administrator'
+                    recipe: snowfakery/updateUserRole.recipe.yml 
     test-flow:
         steps:
             # 1:
