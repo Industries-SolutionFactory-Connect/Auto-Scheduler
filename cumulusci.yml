@@ -70,7 +70,7 @@ flows:
             3:
                 task: publish_community
                 options:
-                    name: ScheduerExp
+                    name: SchedulerExp
                 ui_options:
                     name: Publish Guest Community   
             4:
@@ -281,7 +281,7 @@ flows:
             8:
                 task: publish_community
                 options:
-                    name: ScheduerExp
+                    name: SchedulerExp
                 ui_options:
                     name: Publish Guest Community 
 
