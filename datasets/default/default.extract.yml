@@ -68,15 +68,9 @@ extract:
   Contact:
     fields:
     - AccountId
-    - Fax
     - Phone
-    - Description
-    - Jigsaw
-    - Department
     - DoNotCall
     - Email
-    - EmailBouncedDate
-    - EmailBouncedReason
     - HasOptedOutOfEmail
     - HasOptedOutOfFax
     - FirstName
@@ -109,20 +103,11 @@ extract:
   Product2:
     fields:
     - IsActive
-    - AvailabilityDate
     - BusinessBrandId
     - IsCertified
-    - ConfigureDuringSale
-    - DiscontinuedDate
-    - DisplayUrl
     - IsEnvrPrtcRegCompliant
     - ExternalDataSourceId
-    - ExternalId
-    - HarmonizedSystemCode
-    - HarmonizedTariffSchedCode
     - MakeName
-    - ManufacturerPartNumber
-    - ManufacturerName
     - ModelName
     - ModelYear
     - ProductCategoryCode
@@ -284,7 +269,6 @@ extract:
     fields:
     - AccountId
     - AssetId
-    - CaseId
     - City
     - ContactId
     - Country
@@ -312,23 +296,7 @@ extract:
     - WorkTypeId
     - PostalCode
   
-  Case:
-    fields:
-    - Comments
-    - Description
-    - IsEscalated
-    - Origin
-    - Priority
-    - Reason
-    - Status
-    - Subject
-    - SuppliedCompany
-    - SuppliedEmail
-    - SuppliedName
-    - SuppliedPhone
-    - Type
-    - AccountId
-    - ContactId
+
   Location:
     fields:
     - IsInventoryLocation
@@ -406,13 +374,7 @@ extract:
     - EffectiveStartDate
   ServiceAppointment:
     fields:
-    - ActualDuration
-    - ActualEndTime
-    - ActualStartTime
-    - AdditionalInformation
     - IsAnonymousBooking
-    - ApptBookingInfoUrl
-    - AppointmentType
     - ArrivalWindowEndTime
     - ArrivalWindowStartTime
     - CancellationReason
@@ -495,14 +457,7 @@ extract:
     fields:
     - AssetId
     - Name
-    - City
-    - Country
-    - Description
-    - ExpiredDate
-    - GeocodeAccuracy
-    - Latitude
     - LocationId
-    - Longitude
     - MilestoneDate
     - MilestoneType
     - PostalCode
@@ -526,7 +481,6 @@ extract:
     - BillingStreet
     - BillingPostalCode
     - CompanyAuthorizedById
-    - ContractId
     - CustomerAuthorizedById
     - Description
     - EndDate
@@ -544,95 +498,10 @@ extract:
     - ShippingStreet
     - ShippingPostalCode
     - Status
-  Contract:
-    fields:
-    - BillingCity
-    - BillingCountry
-    - BillingGeocodeAccuracy
-    - BillingLatitude
-    - BillingLongitude
-    - BillingPostalCode
-    - BillingState
-    - BillingStreet
-    - CompanySignedDate
-    - ContractTerm
-    - CustomerSignedDate
-    - CustomerSignedTitle
-    - Description
-    - OwnerExpirationNotice
-    - ShippingCity
-    - ShippingCountry
-    - ShippingGeocodeAccuracy
-    - ShippingLatitude
-    - ShippingLongitude
-    - ShippingPostalCode
-    - ShippingState
-    - ShippingStreet
-    - SpecialTerms
-    - StartDate
-    - Status
-  Lead:
-    fields:
-    - AnnualRevenue
-    - City
-    - Company
-    - IsConverted
-    - Country
-    - Jigsaw
-    - Description
-    - DoNotCall
-    - Email
-    - HasOptedOutOfEmail
-    - NumberOfEmployees
-    - Fax
-    - HasOptedOutOfFax
-    - FirstName
-    - GenderIdentity
-    - GeocodeAccuracy
-    - Industry
-    - LastName
-    - Latitude
-    - LeadSource
-    - Longitude
-    - MobilePhone
-    - Phone
-    - Pronouns
-    - Rating
-    - Salutation
-    - State
-    - Status
-    - Street
-    - Title
-    - IsUnreadByOwner
-    - Website
-    - PostalCode
-  Opportunity:
-    fields:
-    - AccountId
-    - Amount
-    - CampaignId
-    - CloseDate
-    - ContactId
-    - ContractId
-    - Description
-    - ForecastCategoryName
-    - LeadSource
-    - Name
-    - NextStep
-    - Type
-    - Pricebook2Id
-    - IsPrivate
-    - Probability
-    - TotalOpportunityQuantity
-    - SourceId
-    - StageName
+  
   ProductRelatedMaterial:
     fields:
-    - Description
-    - EffectiveEndDate
-    - EffectiveStartDate
     - LeadTime
-    - MinimumEligibleQuantity
     - Name
     - ProductComponentId
     - ProductId

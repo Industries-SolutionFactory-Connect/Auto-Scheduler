@@ -143,56 +143,14 @@ Insert ServiceTerritory:
       table: ServiceTerritory
       key_field: ParentTerritoryId
       after: Insert ServiceTerritory
-Insert Lead:
-  sf_object: Lead
-  table: Lead
-  fields:
-  - AnnualRevenue
-  - City
-  - Company
-  - IsConverted
-  - Country
-  - Jigsaw
-  - Description
-  - DoNotCall
-  - Email
-  - HasOptedOutOfEmail
-  - NumberOfEmployees
-  - Fax
-  - HasOptedOutOfFax
-  - FirstName
-  - GenderIdentity
-  - GeocodeAccuracy
-  - Industry
-  - LastName
-  - Latitude
-  - LeadSource
-  - Longitude
-  - MobilePhone
-  - Phone
-  - Pronouns
-  - Rating
-  - Salutation
-  - State
-  - Status
-  - Street
-  - Title
-  - IsUnreadByOwner
-  - Website
-  - PostalCode
+
 Insert Contact:
   sf_object: Contact
   table: Contact
   fields:
-  - Fax
   - Phone
-  - Description
-  - Jigsaw
-  - Department
   - DoNotCall
   - Email
-  - EmailBouncedDate
-  - EmailBouncedReason
   - HasOptedOutOfEmail
   - HasOptedOutOfFax
   - FirstName
@@ -248,64 +206,6 @@ Insert BusinessProfile:
     ServiceTerritoryId:
       table: ServiceTerritory
       key_field: ServiceTerritoryId
-Insert Contract:
-  sf_object: Contract
-  table: Contract
-  fields:
-  - BillingCity
-  - BillingCountry
-  - BillingGeocodeAccuracy
-  - BillingLatitude
-  - BillingLongitude
-  - BillingPostalCode
-  - BillingState
-  - BillingStreet
-  - CompanySignedDate
-  - ContractTerm
-  - CustomerSignedDate
-  - CustomerSignedTitle
-  - Description
-  - OwnerExpirationNotice
-  - ShippingCity
-  - ShippingCountry
-  - ShippingGeocodeAccuracy
-  - ShippingLatitude
-  - ShippingLongitude
-  - ShippingPostalCode
-  - ShippingState
-  - ShippingStreet
-  - SpecialTerms
-  - StartDate
-  - Status
-  lookups:
-    AccountId:
-      table: Account
-      key_field: AccountId
-
-Insert Case:
-  sf_object: Case
-  table: Case
-  fields:
-  - Comments
-  - Description
-  - IsEscalated
-  - Origin
-  - Priority
-  - Reason
-  - Status
-  - Subject
-  - SuppliedCompany
-  - SuppliedEmail
-  - SuppliedName
-  - SuppliedPhone
-  - Type
-  lookups:
-    AccountId:
-      table: Account
-      key_field: AccountId
-    ContactId:
-      table: Contact
-      key_field: ContactId
 
 Insert Order:
   sf_object: Order
@@ -337,9 +237,6 @@ Insert Order:
     AccountId:
       table: Account
       key_field: AccountId
-    ContractId:
-      table: Contract
-      key_field: ContractId
     CustomerAuthorizedById:
       table: Contact
       key_field: CustomerAuthorizedById
@@ -347,35 +244,6 @@ Insert Order:
       table: Order
       key_field: OriginalOrderId
       after: Insert Order
-    Pricebook2Id:
-      table: Pricebook2
-      key_field: Pricebook2Id
-Insert Opportunity:
-  sf_object: Opportunity
-  table: Opportunity
-  fields:
-  - Amount
-  - CloseDate
-  - Description
-  - ForecastCategoryName
-  - LeadSource
-  - Name
-  - NextStep
-  - Type
-  - IsPrivate
-  - Probability
-  - TotalOpportunityQuantity
-  - StageName
-  lookups:
-    AccountId:
-      table: Account
-      key_field: AccountId
-    ContactId:
-      table: Contact
-      key_field: ContactId
-    ContractId:
-      table: Contract
-      key_field: ContractId
     Pricebook2Id:
       table: Pricebook2
       key_field: Pricebook2Id
@@ -496,9 +364,6 @@ Insert WorkOrder:
     AssetId:
       table: Asset
       key_field: AssetId
-    CaseId:
-      table: Case
-      key_field: CaseId
     ContactId:
       table: Contact
       key_field: ContactId
@@ -614,13 +479,6 @@ Insert AssetMilestone:
   table: AssetMilestone
   fields:
   - Name
-  - City
-  - Country
-  - Description
-  - ExpiredDate
-  - GeocodeAccuracy
-  - Latitude
-  - Longitude
   - MilestoneDate
   - MilestoneType
   - PostalCode
@@ -647,13 +505,7 @@ Insert ServiceAppointment:
   sf_object: ServiceAppointment
   table: ServiceAppointment
   fields:
-  - ActualDuration
-  - ActualEndTime
-  - ActualStartTime
-  - AdditionalInformation
   - IsAnonymousBooking
-  - ApptBookingInfoUrl
-  - AppointmentType
   - ArrivalWindowEndTime
   - ArrivalWindowStartTime
   - CancellationReason
@@ -699,18 +551,9 @@ Insert Product2:
   table: Product2
   fields:
   - IsActive
-  - AvailabilityDate
   - IsCertified
-  - ConfigureDuringSale
-  - DiscontinuedDate
-  - DisplayUrl
   - IsEnvrPrtcRegCompliant
-  - ExternalId
-  - HarmonizedSystemCode
-  - HarmonizedTariffSchedCode
   - MakeName
-  - ManufacturerPartNumber
-  - ManufacturerName
   - ModelName
   - ModelYear
   - ProductCategoryCode
@@ -786,11 +629,7 @@ Insert ProductRelatedMaterial:
   sf_object: ProductRelatedMaterial
   table: ProductRelatedMaterial
   fields:
-  - Description
-  - EffectiveEndDate
-  - EffectiveStartDate
   - LeadTime
-  - MinimumEligibleQuantity
   - Name
   - QuantityPerProductUnit
   - UsageCategory
