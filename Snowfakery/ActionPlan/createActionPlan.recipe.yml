@@ -1,18 +1,18 @@
-- plugin: snowfakery.standard_plugins.datasets.Dataset
+- plugin: snowfakery.standard_plugins.Salesforce.SalesforceQuery
 - object: ActionPlan
   count: 1
   fields:
-    __apTempVersion: 
-      Dataset.iterate:
-        dataset: data/ActionPlanTemplateVersion.csv
-    __vehicle: 
-      Dataset.iterate:
-        dataset: data/Vehicle.csv
     ActionPlanType: Industries
     Name: Vehicle Inspection
     IsUsingHolidayHours: true
     ActionPlanState: Not Started
-    ActionPlanTemplateVersionId: ${{__apTempVersion.Id}}
-    TargetId: ${{__vehicle.Id}}
+    ActionPlanTemplateVersionId:
+      SalesforceQuery.find_record:
+        from: ActionPlanTemplateVersion
+        where: Name = 'Inspection'
+    TargetId:
+      SalesforceQuery.find_record:
+        from: Vehicle   
+        where: Name = 'Neo City 2022 ZXi Grey'
     StartDate: ${{today}}
 

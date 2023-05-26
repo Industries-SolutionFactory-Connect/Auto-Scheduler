@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuthProvider xmlns="http://soap.sforce.com/2006/04/metadata">
+    <authorizeUrl>replaceMyURL/services/oauth2/authorize</authorizeUrl>
+    <consumerKey>Placeholder_Value</consumerKey>
+    <consumerSecret>Placeholder_Value</consumerSecret>
+    <defaultScopes>refresh_token full</defaultScopes>
+    <friendlyName>AutoAuthProvider</friendlyName>
+    <includeOrgIdInIdentifier>true</includeOrgIdInIdentifier>
+    <providerType>Salesforce</providerType>
+    <sendAccessTokenInHeader>false</sendAccessTokenInHeader>
+    <sendClientCredentialsInHeader>false</sendClientCredentialsInHeader>
+    <sendSecretInApis>true</sendSecretInApis>
+    <tokenUrl>replaceMyURL/services/oauth2/token</tokenUrl>
+</AuthProvider>

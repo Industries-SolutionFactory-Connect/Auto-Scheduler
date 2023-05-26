@@ -1,15 +1,15 @@
 - plugin: snowfakery.standard_plugins.datasets.Dataset
-
+- plugin: snowfakery.standard_plugins.Salesforce.SalesforceQuery
 - object: ActionPlanTemplateItem
   count: 2
   fields:
-    __templateVersion:
-      Dataset.iterate:
-        dataset: data/ActionPlanTemplateVersion.csv
     __item:
       Dataset.iterate:
         dataset: data/ActionPlanTemplateItem.csv       
-    ActionPlanTemplateVersionId: ${{__templateVersion.Id}}
+    ActionPlanTemplateVersionId:
+      SalesforceQuery.find_record:
+        from: ActionPlanTemplateVersion
+        where: Name = 'Inspection'    
     ItemEntityType: Task
     IsRequired: True
     IsActive: True

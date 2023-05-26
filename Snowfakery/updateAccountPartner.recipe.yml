@@ -1,4 +1,3 @@
-- plugin: snowfakery.standard_plugins.datasets.Dataset
 - object: Account
   fields:
     IsPartner: True
