@@ -1,7 +1,7 @@
-- plugin: snowfakery.standard_plugins.datasets.Dataset
+- plugin: snowfakery.standard_plugins.Salesforce.SalesforceQuery
 - object: Order
   fields:
-    __digipricebook: 
-      Dataset.shuffle:
-        dataset: data/DigiPricebook.csv
-    Pricebook2Id: ${{__digipricebook.id}}
+    Pricebook2Id:
+      SalesforceQuery.find_record:
+        from: Pricebook2
+        where: Name like 'Digi%'
