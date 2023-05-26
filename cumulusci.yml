@@ -54,13 +54,6 @@ flows:
                 ui_options:
                     name: Adding Permission Set to Admin User
 
-            # 5:
-            #     task: deploy
-            #     options:
-            #         path: force-custom/experiences
-            #     ui_options:
-            #         name: Deploy the metadata for experience bundle
-
     update_custom_metadata:
         steps:
             1:
@@ -69,14 +62,8 @@ flows:
                     path: force-custom/experiences
                 ui_options:
                     name: Deploy the metadata for experience bundle
-
+               
             2:
-                task: publish_community
-                options:
-                    name: ScheduerExp
-                ui_options:
-                    name: Publish Guest Community                  
-            3:
                 task: deploy
                 options:
                     path: force-custom/connectedApps
@@ -88,6 +75,12 @@ flows:
                                   inject_org_url: True
                                 - find: replaceMyEmail
                                   inject_username: True
+           3:
+                task: publish_community
+                options:
+                    name: ScheduerExp
+                ui_options:
+                    name: Publish Guest Community   
 
             4:
                 task: deploy
