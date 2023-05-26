@@ -75,7 +75,7 @@ flows:
                                   inject_org_url: True
                                 - find: replaceMyEmail
                                   inject_username: True
-           3:
+            3:
                 task: publish_community
                 options:
                     name: ScheduerExp
