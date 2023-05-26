@@ -5,8 +5,8 @@
     <changePasswordTemplate>unfiled$public/CommunityChangePasswordEmailTemplate</changePasswordTemplate>
     <communityRoles/>
     <disableReputationRecordConversations>true</disableReputationRecordConversations>
-    <emailSenderAddress>scheduerexp@salesforce.com</emailSenderAddress>
-    <emailSenderName>ScheduerExp</emailSenderName>
+    <emailSenderAddress>SchedulerExp@salesforce.com</emailSenderAddress>
+    <emailSenderName>SchedulerExp</emailSenderName>
     <enableApexCDNCaching>true</enableApexCDNCaching>
     <enableCustomVFErrorPageOverrides>false</enableCustomVFErrorPageOverrides>
     <enableDirectMessages>true</enableDirectMessages>
@@ -43,10 +43,10 @@
         <loginPageOverrideSetting>Designer</loginPageOverrideSetting>
         <selfRegProfilePageOverrideSetting>Designer</selfRegProfilePageOverrideSetting>
     </networkPageOverrides>
-    <picassoSite>ScheduerExp1</picassoSite>
+    <picassoSite>SchedulerExp1</picassoSite>
     <selfRegistration>true</selfRegistration>
     <sendWelcomeEmail>true</sendWelcomeEmail>
-    <site>ScheduerExp</site>
+    <site>SchedulerExp</site>
     <siteArchiveStatus>NotArchived</siteArchiveStatus>
     <status>Live</status>
     <tabs>
