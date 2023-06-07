@@ -349,7 +349,7 @@ flows:
                                 - find: replaceMyURL
                                   inject_org_url: True
 
-        auto-sch-data:
+    auto-sch-data:
         steps:                          
             12:
                 task: load_dataset
