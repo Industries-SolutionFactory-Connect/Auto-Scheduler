@@ -1,0 +1,97 @@
+- plugin: snowfakery.standard_plugins.Salesforce
+- plugin: snowfakery.standard_plugins.UniqueId
+- plugin: snowfakery.standard_plugins.Salesforce.SalesforceQuery
+- object: User 
+  count: 1
+  fields: 
+    FirstName: Jeffrey  
+    LastName: Dugal
+    Username: jeffrey@eniacorg.com
+    Email: jeffrey@eniacorg.com
+    Alias: jdugal
+    TimeZoneSidKey: America/Los_Angeles
+    LocaleSidKey: en_US
+    EmailEncodingKey: UTF-8
+    LanguageLocaleKey: en_US
+    ProfileId: 
+      Salesforce.ProfileId: Partner Community User 1
+    ContactId:
+      SalesforceQuery.find_record:
+        from: Contact
+        where: FirstName = 'Jeffrey'  
+- object: User 
+  count: 1
+  fields: 
+    FirstName: Samantha  
+    LastName: Blaine
+    Username: samantha.blaine@example.com
+    Email: samantha.blaine@example.com
+    Alias: sblaine
+    TimeZoneSidKey: America/Los_Angeles
+    LocaleSidKey: en_US
+    EmailEncodingKey: UTF-8
+    LanguageLocaleKey: en_US
+    ProfileId: 
+      Salesforce.ProfileId: Partner Community User 1
+    ContactId:
+      SalesforceQuery.find_record:
+        from: Contact
+        where: FirstName = 'Samantha'  
+- object: User 
+  count: 1
+  fields: 
+    FirstName: Harry  
+    LastName: Minor
+    Username: hminor@gmail.com
+    Email: hminor@gmail.com
+    Alias: hminor
+    TimeZoneSidKey: America/Los_Angeles
+    LocaleSidKey: en_US
+    EmailEncodingKey: UTF-8
+    LanguageLocaleKey: en_US
+    ProfileId: 
+      Salesforce.ProfileId: Partner Community User 1
+    ContactId:
+      SalesforceQuery.find_record:
+        from: Contact
+        where: FirstName = 'Harry'  
+    UserRoleId:
+      SalesforceQuery.find_record:
+        from: UserRole
+        where: Name = 'Dealer'
+- object: User 
+  count: 1
+  fields: 
+    FirstName: Josh  
+    LastName: Miller
+    Username: josh@geoff.com
+    Email: josh@geoff.com
+    Alias: jmiller
+    TimeZoneSidKey: America/Los_Angeles
+    LocaleSidKey: en_US
+    EmailEncodingKey: UTF-8
+    LanguageLocaleKey: en_US
+    ProfileId: 
+      Salesforce.ProfileId: Partner Community User 1
+    ContactId:
+      SalesforceQuery.find_record:
+        from: Contact
+        where: FirstName = 'Josh'  
+- object: User 
+  count: 1
+  fields: 
+    FirstName: Linda  
+    LastName: Jonas
+    Username: linda@eniaccars.com
+    Email: linda@eniaccars.com
+    Alias: ljonas
+    TimeZoneSidKey: America/Los_Angeles
+    LocaleSidKey: en_US
+    EmailEncodingKey: UTF-8
+    LanguageLocaleKey: en_US
+    ProfileId: 
+      Salesforce.ProfileId: Partner Community User 1
+    ContactId:
+      SalesforceQuery.find_record:
+        from: Contact
+        where: FirstName = 'Linda'  

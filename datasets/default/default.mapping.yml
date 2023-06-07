@@ -34,13 +34,6 @@ Insert GeoCountry:
   - IsoCode
   - Name
 
-Insert Pricebook2:
-  sf_object: Pricebook2
-  table: Pricebook2
-  fields:
-  - Description
-  - IsActive
-  - Name
 Insert WorkTypeGroup:
   sf_object: WorkTypeGroup
   table: WorkTypeGroup
@@ -119,6 +112,19 @@ Insert Account:
       table: Account
       key_field: ParentId
       after: Insert Account
+
+Insert Contract:
+  sf_object: Contract
+  table: Contract
+  fields:
+  - ContractTerm
+  - StartDate
+  - Status
+  lookups:
+    AccountId:
+      table: Account
+      key_field: AccountId
+
 Insert ServiceTerritory:
   sf_object: ServiceTerritory
   table: ServiceTerritory
@@ -143,7 +149,57 @@ Insert ServiceTerritory:
       table: ServiceTerritory
       key_field: ParentTerritoryId
       after: Insert ServiceTerritory
-
+Insert Lead:
+  sf_object: Lead
+  table: Lead
+  fields:
+  - AnnualRevenue
+  - City
+  - Company
+  - IsConverted
+  - Country
+  - Jigsaw
+  - Description
+  - DoNotCall
+  - Email
+  - HasOptedOutOfEmail
+  - NumberOfEmployees
+  - Fax
+  - HasOptedOutOfFax
+  - FirstName
+  - GenderIdentity
+  - GeocodeAccuracy
+  - Industry
+  - LastName
+  - Latitude
+  - LeadSource
+  - Longitude
+  - MobilePhone
+  - Phone
+  - Pronouns
+  - Rating
+  - Salutation
+  - State
+  - Status
+  - Street
+  - Title
+  - IsUnreadByOwner
+  - Website
+  - PostalCode
+Insert Opportunity:
+  sf_object: Opportunity
+  table: Opportunity
+  fields:
+  - CloseDate
+  - Name
+  - StageName
+  lookups:
+    Pricebook2Id:
+      table: Pricebook2
+      key_field: Pricebook2Id
+    AccountId:
+      table: Account
+      key_field: AccountId
 Insert Contact:
   sf_object: Contact
   table: Contact
@@ -187,6 +243,29 @@ Insert Contact:
       table: Contact
       key_field: ReportsToId
       after: Insert Contact
+Insert Case:
+  sf_object: Case
+  table: Case
+  fields:
+  - Comments
+  - Description
+  - IsEscalated
+  - Origin
+  - Priority
+  - Reason
+  - Status
+  - Subject
+  lookups:
+    AccountId:
+      table: Account
+      key_field: AccountId
+    ContactId:
+      table: Contact
+      key_field: ContactId
+    ParentId:
+      table: Case
+      key_field: ParentId
+      after: Insert Case
 Insert BusinessProfile:
   sf_object: BusinessProfile
   table: BusinessProfile
@@ -534,7 +613,7 @@ Insert ServiceAppointment:
   lookups:
     ParentRecordId:
       table: Asset
-      key_field: Id
+      key_field: AssetId
     ContactId:
       table: Contact
       key_field: ContactId
@@ -649,7 +728,36 @@ Insert ProductRelatedMaterial:
     QuantityUomId:
       table: UnitOfMeasure
       key_field: QuantityUomId
-
+Insert ProductRelationshipType:
+  sf_object: ProductRelationshipType
+  table: ProductRelationshipType
+  fields:
+  - AssociatedProductRoleCat
+  - MainProductRoleCat
+  - Name
+Insert ProductRelatedComponent:
+  sf_object: ProductRelatedComponent
+  table: ProductRelatedComponent
+  fields:
+  - IsQuantityEditable
+  - IsDefaultComponent
+  - MaxQuantity
+  - MinQuantity
+  - DoesBundlePriceIncludeChild
+  - Quantity
+  - QuantityScaleMethod
+  - IsComponentRequired
+  - Sequence
+  lookups:
+    ChildProductId:
+      table: Product2
+      key_field: ChildProductId
+    ParentProductId:
+      table: Product2
+      key_field: ParentProductId
+    ProductRelationshipTypeId:
+      table: ProductRelationshipType
+      key_field: ProductRelationshipTypeId
 Insert Vehicle:
   sf_object: Vehicle
   table: Vehicle

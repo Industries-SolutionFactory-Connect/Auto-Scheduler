@@ -510,8 +510,74 @@ extract:
     - MinimumEligibleQuantityUomId
     - QuantityUomId
     - UsageCategory
+  ProductRelationshipType:
+    fields:
+    - AssociatedProductRoleCat
+    - MainProductRoleCat
+    - Name
   SkillRequirement:
     fields:
     - RelatedRecordId
     - SkillId
     - SkillLevel
+  Opportunity:
+    fields:
+    - Pricebook2Id
+    -	CloseDate
+	  - Name
+	  - StageName
+	  - AccountId
+  Case:
+    fields:
+    - Comments
+    - Description
+    - IsEscalated
+    - Origin
+    - Priority
+    - Reason
+    - Status
+    - Subject
+    - AccountId
+    - ContactId
+    - ParentId
+  Lead:
+    fields:
+    - AnnualRevenue
+    - City
+    - Company
+    - IsConverted
+    - Country
+    - Jigsaw
+    - Description
+    - DoNotCall
+    - Email
+    - HasOptedOutOfEmail
+    - NumberOfEmployees
+    - Fax
+    - HasOptedOutOfFax
+    - FirstName
+    - GenderIdentity
+    - GeocodeAccuracy
+    - Industry
+    - LastName
+    - Latitude
+    - LeadSource
+    - Longitude
+    - MobilePhone
+    - Phone
+    - Pronouns
+    - Rating
+    - Salutation
+    - State
+    - Status
+    - Street
+    - Title
+    - IsUnreadByOwner
+    - Website
+    - PostalCode
+  Contract:
+    fields:
+    - ContractTerm
+    - SpecialTerms
+    - StartDate
+    - Status
