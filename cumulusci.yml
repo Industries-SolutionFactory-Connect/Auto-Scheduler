@@ -52,7 +52,7 @@ flows:
                     api_names: ActionPlans, AutomotiveFoundationUserPsl, AutomotiveSchedulerPsl, LifeEventsAccessPSL, ClaimsManagementFoundationPsl, CriteriaBasedSearchAndFilterPsl, AnalyticsStoreUser, IndustriesVisit, IndustriesServiceExcellence, OmniStudioAdmin, OmniStudioUser, ManufacturingPartnerLeadMgmtPsl, ManufacturingPartnerPerformanceMgmtPsl, ManufacturingPartnerVisitMgmtPsl, RebateManagementAdminPsl, RebateManagementUserPsl, Salesforce_Scheduler_for_Automotive, WarrantyLifecycleMgmtPsl
                     user_alias: UUser, AUser
                 ui_options:
-                    name: Adding Permission Set to Admin User
+                    name: Assigning Permission Sets to Admin User
 
     update_custom_metadata:
         steps:
@@ -66,7 +66,7 @@ flows:
             2:
                 task: util_sleep
                 options:
-                    seconds: 60
+                    seconds: 240
             3:
                 task: publish_community
                 options:
@@ -114,7 +114,7 @@ flows:
                 options:
                     object: User
                     where: Profile.Name = 'System Administrator'
-                    recipe: Snowfakery/updateUserRole.recipe.yml 
+                    recipe: Snowfakery/updateUserRole.recipe.yml
 
             # Update Account: Enable few accounts as Partner
             2:
@@ -220,6 +220,35 @@ flows:
                     path: force-custom/flexipages
                 ui_options:
                     name: Deploy the Vehicle record page metadata 
+
+            18:
+                task: generate_and_load_from_yaml
+                options:
+                    generator_yaml: Snowfakery/ServiceResource/createPartnerUser.recipe.yml
+                ui_options:
+                    name: Create Partner Users for Partner Accounts
+
+            19:
+                task: generate_and_load_from_yaml
+                options:
+                    generator_yaml: Snowfakery/ServiceResource/createServiceResource.recipe.yml
+                ui_options:
+                    name: Create Service Resources
+
+            20:
+                task: generate_and_load_from_yaml
+                options:
+                    generator_yaml: Snowfakery/ServiceResource/createServiceResourceSkill.recipe.yml
+                ui_options:
+                    name: Create Service Resources Skills
+
+            21:
+                task: assign_permission_sets
+                options:
+                    api_names: AutomotiveInExperienceCloudPsl, AutomotiveSchedulerInExprcCloudPsl, LeadMngmntInExperienceCloudPsl, VisitMgmntInExperienceCloudPsl
+                    user_alias: jdugal, sblaine, hminor, jmiller, ljonas
+                ui_options:
+                    name: Assigning Permission Sets to Partner Users
     dev_org:
         steps:
             3.1: 
@@ -250,7 +279,7 @@ flows:
                     api_names: ActionPlans, AutomotiveFoundationUserPsl, AutomotiveSchedulerPsl, LifeEventsAccessPSL, ClaimsManagementFoundationPsl, CriteriaBasedSearchAndFilterPsl, AnalyticsStoreUser, IndustriesVisit, IndustriesServiceExcellence, OmniStudioAdmin, OmniStudioUser, ManufacturingPartnerLeadMgmtPsl, ManufacturingPartnerPerformanceMgmtPsl, ManufacturingPartnerVisitMgmtPsl, RebateManagementAdminPsl, RebateManagementUserPsl, Salesforce_Scheduler_for_Automotive, WarrantyLifecycleMgmtPsl
                     user_alias: UUser, AUser
                 ui_options:
-                    name: Adding Permission Set to Admin User
+                    name: Assigning Permission Sets to Admin User
         
             4:
                 task: deploy
@@ -276,7 +305,7 @@ flows:
             7:
                 task: util_sleep
                 options:
-                    seconds: 60
+                    seconds: 240
 
             8:
                 task: publish_community
@@ -319,7 +348,9 @@ flows:
                             patterns:
                                 - find: replaceMyURL
                                   inject_org_url: True
-                                  
+
+        auto-sch-data:
+        steps:                          
             12:
                 task: load_dataset
                 options:
@@ -424,6 +455,8 @@ flows:
                 task: generate_and_load_from_yaml
                 options:
                     generator_yaml: Snowfakery/ActionPlan/createActionPlan.recipe.yml
+                ui_options:
+                    name: Create Action Plan                  
 
             28:
                 task: deploy
@@ -432,14 +465,86 @@ flows:
                 ui_options:
                     name: Deploy the Vehicle record page metadata 
 
+            29:
+                task: generate_and_load_from_yaml
+                options:
+                    generator_yaml: Snowfakery/ServiceResource/createPartnerUser.recipe.yml
+                ui_options:
+                    name: Create Partner Users for Partner Accounts
+
+            30:
+                task: generate_and_load_from_yaml
+                options:
+                    generator_yaml: Snowfakery/ServiceResource/createServiceResource.recipe.yml
+                ui_options:
+                    name: Create Service Resources
+
+            31:
+                task: query
+                options:
+                    object: Skill
+                    query: select Id Skill where DeveloperName like 'Accessories%' or DeveloperName like 'Value%' or DeveloperName like 'Brae%'
+                    result_file: Snowfakery/ServiceResource/data/SR1.csv
+            32:
+                task: query
+                options:
+                    object: Skill
+                    query: select Id Skill where DeveloperName like 'Accessories%' or DeveloperName like 'Value%' or DeveloperName like 'Wax%' or DeveloperName like 'Brae%'
+                    result_file: Snowfakery/ServiceResource/data/SR2.csv
+            
+            33:
+                task: query
+                options:
+                    object: Skill
+                    query: select Id Skill whereDeveloperName like 'Body%' or DeveloperName like 'Value%' or DeveloperName like 'Periodic%' or DeveloperName like 'Brae%'
+                    result_file: Snowfakery/ServiceResource/data/SR3.csv
+            
+            34:
+                task: query
+                options:
+                    object: Skill
+                    query: select Id Skill where DeveloperName like 'Accessories%' or DeveloperName like 'Value%' or DeveloperName like 'Periodic%' or DeveloperName like 'Brae%'
+                    result_file: Snowfakery/ServiceResource/data/SR4.csv
+            35:
+                task: generate_and_load_from_yaml
+                options:
+                    generator_yaml: Snowfakery/ServiceResource/createServiceResourceSkill.recipe.yml
+                ui_options:
+                    name: Create Service Resources Skills
+            36:
+                task: assign_permission_sets
+                options:
+                    api_names: AutomotiveInExperienceCloudPsl, AutomotiveSchedulerInExprcCloudPsl, LeadMngmntInExperienceCloudPsl, VisitMgmntInExperienceCloudPsl
+                    user_alias: jdugal, sblaine, hminor, jmiller, ljonas
+                ui_options:
+                    name: Assigning Permission Sets to Admin User            
+
+    test-flow:
+        steps:
+
+            # 4:
+            #     task: delete_data
+            #     options:
+            #         no-prompt: true
+            #         objects:  ProductRelationshipType, ProductRelatedMaterial, Product2, BusinessProfile, VehicleDefinition, ProductRelatedMaterial, AssetMilestone, AssetContactParticipant, AssetAccountParticipant, ServiceAppointment, WorkOrder, Address, Location, Opportunity, Order, Case, Contract, Lead, ServiceTerritory, OperatingHours,UnitOfMeasure,GeoCountry,WorkTypeGroup, WorkType, Contact 
+            #     ui_options:
+            #         name: Delete recently created objects
+
+            36:
+                task: assign_permission_sets
+                options:
+                    api_names: AutomotiveInExperienceCloudPsl, AutomotiveSchedulerInExprcCloudPsl, LeadMngmntInExperienceCloudPsl, VisitMgmntInExperienceCloudPsl
+                    user_alias: jdugal, sblaine, hminor, jmiller, ljonas
+                ui_options:
+                    name: Assigning Permission Sets to Partner Users   
 
 plans:
     install:
         slug: install
-        title: Automotive Scheduler
+        title: Scheduler for Automotive Configuration
         tier: primary
         is_listed: True
-        preflight_message: "This will install Automotive Scheduler Module"
+        preflight_message: "Installs metadata configurations that help you get your org up and running with scheduler based flows and features. Recommended for Customers"
         post_install_message: "Thanks for installing Automotive Scheduler Module. "
         error_message: "To get help with this error, go to [help.salesforce.com](https://help.salesforce.com/), find the Support & Services area and log a technical support ticket with Salesforce. Include “PMM” in the subject line and include in your comment the installation link shown here."
         checks:
@@ -449,6 +554,41 @@ plans:
             - when: "'AutomotiveSchedulerInExprcCloudPsl' not in tasks.get_available_permission_set_licenses()"
               action: error
               message: "You need AutomotiveSchedulerInExprcCloudPsl licence to use this feature. Contact your Administrator."
+            - when: "'OmniStudioRuntime' not in tasks.get_available_permission_set_licenses()"
+              action: error
+              message: "You need OmniStudioRuntime licence to use this feature. Contact your Administrator."
+            - when: "'OmniStudioRuntimeCC' not in tasks.get_available_permission_set_licenses()"
+              action: error
+              message: "You need OmniStudioRuntimeCC licence to use this feature. Contact your Administrator."
+            - when: "'CriteriaBasedSearchAndFilterPsl' not in tasks.get_available_permission_set_licenses()"
+              action: error
+              message: "You need CriteriaBasedSearchAndFilterPsl licence to use this feature. Contact your Administrator."
+            - when: "'LightningSchedulerPsl' not in tasks.get_available_permission_set_licenses()"
+              action: error
+              message: "You need LightningSchedulerPsl licence to use this feature. Contact your Administrator."
+            - when: "'WarrantyLifecycleMgmtPsl' not in tasks.get_available_permission_set_licenses()"
+              action: error
+              message: "You need WarrantyLifecycleMgmtPsl licence to use this feature. Contact your Administrator."
+            - when: "'ActionPlansPsl' not in tasks.get_available_permission_set_licenses()"
+              action: error
+              message: "You need ActionPlansPsl licence to use this feature. Contact your Administrator."                                                                                    
+            - when: "'PID_Partner_Community' not in tasks.get_available_licenses()"
+              action: error
+              message: "You need Partner_Community licence to use this feature. Contact your Administrator."
+            - when: "'PID_Partner_Community_Login' not in tasks.get_available_licenses()"
+              action: error
+              message: "You need Partner_Community_Login licence to use this feature. Contact your Administrator."     
         steps:
             1:
                 flow: auto-sch-setup
+    data:
+        slug: install
+        title: Sample Data Plan
+        tier: primary
+        is_listed: True
+        preflight_message: "Installs sample data. This sample data is dependent on the configuration plan, please install that first before installing this. Recommended for partners."
+        post_install_message: "Thanks for delpoying Automotive Scheduler Data "
+        error_message: "To get help with this error, go to [help.salesforce.com](https://help.salesforce.com/), find the Support & Services area and log a technical support ticket with Salesforce. Include “PMM” in the subject line and include in your comment the installation link shown here."
+        steps:
+            1:
+                flow: auto-sch-data

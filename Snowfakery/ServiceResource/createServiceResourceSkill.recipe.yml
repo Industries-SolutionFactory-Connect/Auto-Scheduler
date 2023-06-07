@@ -1,0 +1,66 @@
+- plugin: snowfakery.standard_plugins.datasets.Dataset
+- plugin: snowfakery.standard_plugins.Salesforce.SalesforceQuery
+- object: ServiceResourceSkill 
+  count: 3
+  fields: 
+    __skills:
+      Dataset.iterate:
+        dataset: data/SR1.csv
+    SkillId: ${{__skills.Id}}
+    EffectiveStartDate: 2022-02-02
+    ServiceResourceId: 
+      SalesforceQuery.find_record:
+        from: ServiceResource
+        where: Name like 'Jeffrey%'  
+    SkillLevel:
+      random_number:
+        min: 98
+        max: 99
+- object: ServiceResourceSkill 
+  count: 4
+  fields: 
+    __skills:
+      Dataset.iterate:
+        dataset: data/SR2.csv
+    SkillId: ${{__skills.Id}}
+    EffectiveStartDate: 2023-03-05
+    ServiceResourceId: 
+      SalesforceQuery.find_record:
+        from: ServiceResource
+        where: Name like 'Josh%'  
+    SkillLevel:
+      random_number:
+        min: 98
+        max: 99
+- object: ServiceResourceSkill 
+  count: 4
+  fields: 
+    __skills:
+      Dataset.iterate:
+        dataset: data/SR3.csv
+    SkillId: ${{__skills.Id}}
+    EffectiveStartDate: 2022-07-15
+    ServiceResourceId: 
+      SalesforceQuery.find_record:
+        from: ServiceResource
+        where: Name like 'Samantha%'  
+    SkillLevel:
+      random_number:
+        min: 98
+        max: 99
+- object: ServiceResourceSkill 
+  count: 4
+  fields: 
+    __skills:
+      Dataset.iterate:
+        dataset: data/SR4.csv
+    SkillId: ${{__skills.Id}}
+    EffectiveStartDate: 2023-01-10
+    ServiceResourceId: 
+      SalesforceQuery.find_record:
+        from: ServiceResource
+        where: Name like 'Harry%'  
+    SkillLevel:
+      random_number:
+        min: 98
+        max: 99          

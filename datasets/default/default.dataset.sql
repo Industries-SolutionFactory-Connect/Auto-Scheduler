@@ -244,7 +244,7 @@ CREATE TABLE "Contact" (
 );
 INSERT INTO "Contact" VALUES(1,'541- 754-3345','False','swilliam@digidealer.com','False','False','Sean','','','William','','','','','','','','','','','','','','','','','','','','','Mr.','President','6','');
 INSERT INTO "Contact" VALUES(2,'408-540-1785','False','vinouye@aol.com','False','False','Veronika','','','Inouye','','San Jose','USA','','','','CA','6 Greenleaf Ave','95111','','','','','','','','','','','','Ms.','Service Manager','1','');
-INSERT INTO "Contact" VALUES(3,'(905) 555-1212','False','user1@geoff.com','False','False','Josh','','','Miller','','Toronto','Canada','','','','Ontario','150 Chestnut Street','L4B 1Y3','','','','','','','','','','','','','','12','');
+INSERT INTO "Contact" VALUES(3,'(905) 555-1212','False','josh@geoff.com','False','False','Josh','','','Miller','','Toronto','Canada','','','','Ontario','150 Chestnut Street','L4B 1Y3','','','','','','','','','','','','','','12','');
 INSERT INTO "Contact" VALUES(4,'434-748-1330','False','','False','False','Diana','','','Oslan','','','','','','','','','','','','','','','','','','','','','Mr.','Dealer Rep','7','');
 INSERT INTO "Contact" VALUES(5,'987654567879','False','linda@eniaccars.com','False','False','Linda','','','Jonas','','San Francisco','United States','','','','CA','346 California Street','94104','987654567879','','','','','','','','','','','Mrs.','','11','');
 INSERT INTO "Contact" VALUES(6,'504-621-8927','False','max.igleas@gmail.com','False','False','Max','','','Igleas','','San Jose','','','','','CA','7 W Jackson Blvd','','504-621-8927','','','','','','','','','','','Mr.','Lead Dealer','10','');
@@ -254,7 +254,12 @@ INSERT INTO "Contact" VALUES(9,'987654567455','False','brendon@eniaccars.com','F
 INSERT INTO "Contact" VALUES(10,'987654567870','False','jeffrey@eniacorg.com','False','False','Jeffrey','','','Dugal','','San Francisco','United States','','','','CA','234 California Street','91060','','','','','','','','','','','','Mr.','','11','');
 INSERT INTO "Contact" VALUES(11,'956-537-6195','False','kate_keneipp@yahoo.com','False','False','Kate','','','Keneipp','','Dallas','','','','','TX','56 E Morehead St','75032','','','','','','','','','','','','Mrs.','','2','');
 INSERT INTO "Contact" VALUES(12,'913-645-8918','False','doldroyd@aol.com','False','False','Dylan','','','Jane','','San Jose','USA','','','','CA','7 W Jackson Blvd','','','','','','','','','','','','','Mr.','Sales Representative','6','');
-INSERT INTO "Contact" VALUES(13,'434-748-1374','False','','False','False','Samantha','','','Blaine','','Los Angeles','','','','','CA','25 E 75th St #69','90034','','','','','','','','','','','','Ms.','','5','');
+INSERT INTO "Contact" VALUES(13,'434-748-1374','False','samantha.blaine@example.com','False','False','Samantha','','','Blaine','','Los Angeles','','','','','CA','25 E 75th St #69','90034','','','','','','','','','','','','Ms.','','5','');
+INSERT INTO "Contact" VALUES(14,'(212) 891-1921','False','edward@acme.com','False','False','Edward','','','Stamos','','New York City','USA','','','','NY','10 Main Rd.','31349','','New York City','USA','','','','','NY','10 Main Rd.','31349','','','President and CEO','8','');
+INSERT INTO "Contact" VALUES(15,'(212) 589-2232','False','howard@acme.com','False','False','Howard','','','Jones','','New York','USA','','','','NY','10 Main Rd.','31349','','','','','','','','','','','','','Buyer','8','');
+INSERT INTO "Contact" VALUES(16,'(212) 529-8290','False','leanne@acme.com','False','False','Leanne','','','Tomlin','','New York','USA','','','','NY','10 Main Rd.','31349','','','','','','','','','','','','','VP Customer Support','8','');
+INSERT INTO "Contact" VALUES(17,'(415) 521-1212','False','carole@global.com','False','False','Carole','','','White','Employee Referral','Toronto','Canada','','','','Ontario','150 Chestnut Street','L4B 1Y3','','','','','','','','','','','','','VP Sales','9','');
+INSERT INTO "Contact" VALUES(18,'(555) 254-1542','False','jon@global.com','False','False','Jon','','','Amos','','Toronto','Canada','','','','Ontario','150 Chestnut Street','L4B 1Y3','','','','','','','','','','','','','Sales Manager','9','10');
 
 CREATE TABLE "GeoCountry" (
 	id INTEGER NOT NULL, 
@@ -342,7 +347,7 @@ CREATE TABLE "Pricebook2" (
 	PRIMARY KEY (id)
 );
 
-INSERT INTO "Pricebook2" VALUES(2,'','True','Digi Cars and EV');
+INSERT INTO "Pricebook2" VALUES(1,'','True','Digi Cars and EV');
 
 
 
@@ -381,9 +386,30 @@ INSERT INTO "Product2" VALUES(6,'True','False','False','','','','','ZN-DL-0010',
 INSERT INTO "Product2" VALUES(7,'True','False','False','','','','','ZN-WR-0010','','Spares','','Window Regulator','Sell','','','','False','','','','','');
 INSERT INTO "Product2" VALUES(8,'True','False','False','Neo','Neo Smart Connect','2023','','SC_ALXA_2022','Premium 7" Full HD 1080 Touch Screen Car Multimedia Player with Car Stereo','Spares','','Smart Connect','','NEO-0002344','','','False','','','','2','');
 INSERT INTO "Product2" VALUES(9,'True','False','False','Neo','CRV','2022','','Neo_CRV_2022_ZXi','','SUV','','Neo CRV 2022 ZXi','Sell','NEO-0000069','Bundle','','True','','ZXi','','3','');
-INSERT INTO "Product2" VALUES(10,'True','False','False','Neo','Aptly','2022','','ALDF274382','','Spares','','Aluminium Diffuser','','','Base','','True','','','','2','');
+INSERT INTO "Product2" VALUES(10,'True','False','False','Neo','Aptly','2022','','ALDF274382','','Spares','','Aluminium Diffuser','','','Bundle','','True','','','','2','');
 
-
+CREATE TABLE "ProductRelatedComponent" (
+	id INTEGER NOT NULL, 
+	"IsQuantityEditable" VARCHAR(255), 
+	"IsDefaultComponent" VARCHAR(255), 
+	"MaxQuantity" VARCHAR(255), 
+	"MinQuantity" VARCHAR(255), 
+	"DoesBundlePriceIncludeChild" VARCHAR(255), 
+	"Quantity" VARCHAR(255), 
+	"QuantityScaleMethod" VARCHAR(255), 
+	"IsComponentRequired" VARCHAR(255), 
+	"Sequence" VARCHAR(255), 
+	"ChildProductId" VARCHAR(255), 
+	"ParentProductId" VARCHAR(255), 
+	"ProductComponentGroupId" VARCHAR(255), 
+	"ProductRelationshipTypeId" VARCHAR(255), 
+	PRIMARY KEY (id)
+);
+INSERT INTO "ProductRelatedComponent" VALUES(1,'False','False','','','True','1.0','Proportional','False','','7','10','','1');
+INSERT INTO "ProductRelatedComponent" VALUES(2,'False','False','','','True','1.0','Proportional','False','','8','10','','1');
+INSERT INTO "ProductRelatedComponent" VALUES(3,'False','False','','','True','1.0','Proportional','False','','7','1','','1');
+INSERT INTO "ProductRelatedComponent" VALUES(4,'False','False','','','True','1.0','Proportional','False','','8','1','','1');
+INSERT INTO "ProductRelatedComponent" VALUES(5,'False','False','','','True','1.0','Proportional','False','','9','1','','1');
 CREATE TABLE "ProductRelatedMaterial" (
 	id INTEGER NOT NULL, 
 	"LeadTime" VARCHAR(255), 
@@ -399,7 +425,17 @@ CREATE TABLE "ProductRelatedMaterial" (
 );
 INSERT INTO "ProductRelatedMaterial" VALUES(1,'1.0','Neo Ionic EV CD4 VXi Blue - Vipers','2.0','','1','','5','1','2');
 INSERT INTO "ProductRelatedMaterial" VALUES(2,'1.0','Neo Ionic EV CD4 VXi Blue - Diffuser','1.0','','1','','10','1','2');
+INSERT INTO "ProductRelatedMaterial" VALUES(3,'','','','1.0','','Neo CRV 2022 ZXi - Engine','2.0','','1','','4','9','2');
+INSERT INTO "ProductRelatedMaterial" VALUES(4,'','','','1.0','','Neo CRV 2022 ZXi - Diffuser','1.0','','1','','5','9','2');
 
+CREATE TABLE "ProductRelationshipType" (
+	id INTEGER NOT NULL, 
+	"AssociatedProductRoleCat" VARCHAR(255), 
+	"MainProductRoleCat" VARCHAR(255), 
+	"Name" VARCHAR(255), 
+	PRIMARY KEY (id)
+);
+INSERT INTO "ProductRelationshipType" VALUES(1,'BundleComponent','Bundle','Zenith-Z1-Series');
 CREATE TABLE "ServiceAppointment" (
 	id INTEGER NOT NULL, 
 	"IsAnonymousBooking" VARCHAR(255), 
@@ -435,10 +471,12 @@ CREATE TABLE "ServiceAppointment" (
 	PRIMARY KEY (id)
 );
 INSERT INTO "ServiceAppointment" VALUES(1,'False','2023-05-05T00:00:00.000+0000','2023-05-04T21:00:00.000+0000','','Los Angeles','','USA','','2023-05-11T14:06:37.000+0000','180.0','Minutes','2023-05-04T14:06:37.000+0000','','Zip','34.0901','-118.294','False','','2023-05-05T00:00:00.000+0000','2023-05-04T21:00:00.000+0000','','CA','Scheduled','3443  Southside Lane','Vehicle Service Appointment','90029','','5','5','1');
-INSERT INTO "ServiceAppointment" VALUES(2,'False','2023-06-08T22:30:00.000+0000','2023-06-08T17:00:00.000+0000','','Los Angeles','','USA','','2023-06-08T22:00:00.000+0000','3.0','Hours','2023-06-07T17:00:00.000+0000','','Zip','34.0901','-118.294','False','','2023-06-08T22:00:00.000+0000','2023-06-08T18:00:00.000+0000','','CA','Scheduled','3443  Southside Lane','Accessories Fitting','90029','7','','7','1');
-INSERT INTO "ServiceAppointment" VALUES(3,'False','2023-05-30T19:30:00.000+0000','2023-05-30T15:00:00.000+0000','','Los Angeles','','USA','','2023-05-30T07:30:00.000+0000','','Hours','2023-05-29T16:30:00.000+0000','','Zip','34.0901','-118.294','False','','2023-05-30T19:30:00.000+0000','2023-05-30T15:00:00.000+0000','','CA','Scheduled','3443 Southside Lane','Vehicle Service Appointment','90029','7','','5','2');
+INSERT INTO "ServiceAppointment" VALUES(2,'False','2023-06-08T22:30:00.000+0000','2023-06-08T17:00:00.000+0000','','Los Angeles','','USA','','2023-06-08T22:00:00.000+0000','3.0','Hours','2023-06-07T17:00:00.000+0000','','Zip','34.0901','-118.294','False','','2023-06-08T22:00:00.000+0000','2023-06-08T18:00:00.000+0000','','CA','Scheduled','3443  Southside Lane','Accessories Fitting','90029','3','','7','1');
+INSERT INTO "ServiceAppointment" VALUES(3,'False','2023-05-30T19:30:00.000+0000','2023-05-30T15:00:00.000+0000','','Los Angeles','','USA','','2023-05-30T07:30:00.000+0000','','Hours','2023-05-29T16:30:00.000+0000','','Zip','34.0901','-118.294','False','','2023-05-30T19:30:00.000+0000','2023-05-30T15:00:00.000+0000','','CA','Scheduled','3443 Southside Lane','Vehicle Service Appointment','90029','13','','5','2');
 INSERT INTO "ServiceAppointment" VALUES(4,'False','2023-05-04T19:00:00.000+0000','2023-05-04T16:00:00.000+0000','','Los Angeles','Timely arrival is needed','USA','','2023-05-11T13:58:34.000+0000','180.0','Minutes','2023-05-04T13:58:34.000+0000','','Zip','34.0901','-118.294','False','','2023-05-04T19:00:00.000+0000','2023-05-04T16:00:00.000+0000','','CA','Scheduled','3443  Southside Lane','Vehicle Service Appointment','90029','','5','5','1');
-INSERT INTO "ServiceAppointment" VALUES(5,'False','2023-04-28T19:00:00.000+0000','2023-04-28T16:00:00.000+0000','','Los Angeles','','United States','','2023-05-31T19:00:00.000+0000','3.0','Hours','2023-04-28T19:00:00.000+0000','','Zip','34.0901','-118.294','False','','2023-04-28T19:00:00.000+0000','2023-04-28T16:00:00.000+0000','','CA','Scheduled','3443  Southside Lane','Vehicle Service Appointment','90029','','','5','2');
+INSERT INTO "ServiceAppointment" VALUES(5,'False','2023-04-28T19:00:00.000+0000','2023-04-28T16:00:00.000+0000','','Los Angeles','','United States','','2023-05-31T19:00:00.000+0000','3.0','Hours','2023-04-28T19:00:00.000+0000','','Zip','34.0901','-118.294','False','','2023-04-28T19:00:00.000+0000','2023-04-28T16:00:00.000+0000','','CA','Scheduled','3443  Southside Lane','Vehicle Service Appointment','90029','10','','5','2');
+INSERT INTO "ServiceAppointment" VALUES(6,'False','2023-04-28T19:00:00.000+0000','2023-04-28T16:00:00.000+0000','','Los Angeles','','United States','','2023-05-31T19:00:00.000+0000','3.0','Hours','2023-04-28T19:00:00.000+0000','','Zip','34.0901','-118.294','False','','2023-04-28T19:00:00.000+0000','2023-04-28T16:00:00.000+0000','','CA','Scheduled','3443  Southside Lane','Vehicle Service Appointment','90029','7','','5','2');
+
 CREATE TABLE "ServiceResource" (
 	id INTEGER NOT NULL, 
 	"IsActive" VARCHAR(255), 
@@ -451,8 +489,8 @@ CREATE TABLE "ServiceResource" (
 	"LocationId" VARCHAR(255), 
 	PRIMARY KEY (id)
 );
-INSERT INTO "ServiceResource" VALUES(4,'True','','False','Asset-Neo Ionic EV CD4 VXi Blue','S','','2','');
-INSERT INTO "ServiceResource" VALUES(6,'True','','False','Asset-New Jazz 2022 VXi','S','','4','');
+INSERT INTO "ServiceResource" VALUES(1,'True','','False','Asset-Neo Ionic EV CD4 VXi Blue','S','','2','');
+INSERT INTO "ServiceResource" VALUES(2,'True','','False','Asset-New Jazz 2022 VXi','S','','4','');
 
 CREATE TABLE "Skill" (
 	id INTEGER NOT NULL, 
@@ -494,9 +532,6 @@ CREATE TABLE "ServiceResourceSkill" (
 	"SkillId" VARCHAR(255), 
 	PRIMARY KEY (id)
 );
-INSERT INTO "ServiceResourceSkill" VALUES(1,'','96.0','2022-01-03T20:00:00.000+0000','6','1');
-INSERT INTO "ServiceResourceSkill" VALUES(2,'','99.0','2022-01-03T20:00:00.000+0000','6','3');
-INSERT INTO "ServiceResourceSkill" VALUES(3,'','85.0','2022-01-03T20:00:00.000+0000','6','4');
 
 CREATE TABLE "ServiceTerritory" (
 	id INTEGER NOT NULL, 
@@ -731,5 +766,92 @@ INSERT INTO "RecordAlert" VALUES(1,'True','','2023-04-01T19:00:00.000+0000','Inf
 INSERT INTO "RecordAlert" VALUES(2,'True','','2023-04-01T19:00:00.000+0000','Warning','','','Engine Overheating','2023-12-31T20:00:00.000+0000','2');
 INSERT INTO "RecordAlert" VALUES(3,'True','Pollution Check Expiring','2022-02-21T20:00:00.000+0000','Info','','','Pollution Check Expiring','2024-02-20T20:00:00.000+0000','1');
 INSERT INTO "RecordAlert" VALUES(4,'True','Engine Over Heating','2022-02-21T20:00:00.000+0000','Warning','','','Engine Overheating','2023-12-31T20:00:00.000+0000','1');
+
+CREATE TABLE "Lead" (
+	id INTEGER NOT NULL, 
+	"AnnualRevenue" VARCHAR(255), 
+	"City" VARCHAR(255), 
+	"Company" VARCHAR(255), 
+	"IsConverted" VARCHAR(255), 
+	"Country" VARCHAR(255), 
+	"Jigsaw" VARCHAR(255), 
+	"Description" VARCHAR(255), 
+	"DoNotCall" VARCHAR(255), 
+	"Email" VARCHAR(255), 
+	"HasOptedOutOfEmail" VARCHAR(255), 
+	"NumberOfEmployees" VARCHAR(255), 
+	"Fax" VARCHAR(255), 
+	"HasOptedOutOfFax" VARCHAR(255), 
+	"FirstName" VARCHAR(255), 
+	"GenderIdentity" VARCHAR(255), 
+	"GeocodeAccuracy" VARCHAR(255), 
+	"Industry" VARCHAR(255), 
+	"LastName" VARCHAR(255), 
+	"Latitude" VARCHAR(255), 
+	"LeadSource" VARCHAR(255), 
+	"Longitude" VARCHAR(255), 
+	"MobilePhone" VARCHAR(255), 
+	"Phone" VARCHAR(255), 
+	"Pronouns" VARCHAR(255), 
+	"Rating" VARCHAR(255), 
+	"Salutation" VARCHAR(255), 
+	"State" VARCHAR(255), 
+	"Status" VARCHAR(255), 
+	"Street" VARCHAR(255), 
+	"Title" VARCHAR(255), 
+	"IsUnreadByOwner" VARCHAR(255), 
+	"Website" VARCHAR(255), 
+	"PostalCode" VARCHAR(255), 
+	PRIMARY KEY (id)
+);
+INSERT INTO "Lead" VALUES(1,'33147.0','New York','MedLite, Inc.','False','United States','','','False','sloehr@medlite.com','False','48500','','False','Sarah','','','Insurance','Loehr','','Employee Referral','','','(555) 555-1212','','','','New York','Contacted','One Jones Avenue','System Administrator','True','','10010');
+INSERT INTO "Lead" VALUES(2,'16867.0','Marlborough','3C Systems','False','United States','','','False','john@3csystems.com','False','87200','','False','John','','','Aerospace & Defense','Gardner','','Other','','','(555) 555-1212','','','Mr.','Massachusetts','New','1 Boston Rd','Exec VP','True','','1752');
+INSERT INTO "Lead" VALUES(3,'28212.0','Hartford','Universal Technologies','False','United States','','','False','andy@unitech.com','False','155000','','False','Andy','','','Aerospace & Defense','Smith','','Advertisement','','','(555) 555-1212','','','Mr.','Connecticut','New','Universal Building','Vice President','False','','6103');
+INSERT INTO "Lead" VALUES(4,'19879.0','Hartford','BigLife Inc.','False','United States','','','False','jim@biglife.com','False','28000','','False','Jim','','','Insurance','Steele','','Employee Referral','','','(555) 555-1212','','','','Connecticut','New','11 Farm Avenue','Senior VP','True','','6156');
+
+CREATE TABLE "Opportunity" (
+	id INTEGER NOT NULL, 
+	"CloseDate" VARCHAR(255), 
+	"Name" VARCHAR(255), 
+	"StageName" VARCHAR(255), 
+	"Pricebook2Id" VARCHAR(255), 
+	"AccountId" VARCHAR(255), 
+	PRIMARY KEY (id)
+);
+INSERT INTO "Opportunity" VALUES(1,'2021-01-02','Global Media - 5000 Widgets','Closed Won','1','9');
+INSERT INTO "Opportunity" VALUES(2,'2021-01-02','Global Media - 500 Widgets','Closed Won','1','0');
+INSERT INTO "Opportunity" VALUES(3,'2021-03-05','Global Media - 400 Widgets','Id. Decision Makers','1','9');
+INSERT INTO "Opportunity" VALUES(4,'2021-02-04','Acme - 1,200 Widgets','Value Proposition','1','8');
+INSERT INTO "Opportunity" VALUES(5,'2021-04-02','Acme - 600 Widgets','Needs Analysis','1','8');
+INSERT INTO "Opportunity" VALUES(6,'2021-06-05','Acme - 200 Widgets','Prospecting','1','8');
+
+CREATE TABLE "Contract" (
+	id INTEGER NOT NULL, 
+	"ContractTerm" VARCHAR(255), 
+	"StartDate" VARCHAR(255), 
+	"Status" VARCHAR(255), 
+	"AccountId" VARCHAR(255), 
+	PRIMARY KEY (id)
+);
+INSERT INTO "Contract" VALUES(1,'12','2021-03-23','Draft','5');
+
+CREATE TABLE "Case" (
+	id INTEGER NOT NULL, 
+	"Comments" VARCHAR(255), 
+	"Description" VARCHAR(255), 
+	"IsEscalated" VARCHAR(255), 
+	"Origin" VARCHAR(255), 
+	"Priority" VARCHAR(255), 
+	"Reason" VARCHAR(255), 
+	"Status" VARCHAR(255), 
+	"Subject" VARCHAR(255), 
+	"AccountId" VARCHAR(255), 
+	"ContactId" VARCHAR(255), 
+	"ParentId" VARCHAR(255), 
+	PRIMARY KEY (id)
+);
+INSERT INTO "Case" VALUES(1,'','','False','Phone','High','Instructions not clear','New','Sample Case 2: The widgets we received are the wrong size.','8','14','');
+INSERT INTO "Case" VALUES(2,'','','False','Phone','Low','','On Hold','Sample Case 3: Cannot track our order.','8','14','');
+INSERT INTO "Case" VALUES(3,'','','False','Phone','High','','Escalated','Sample Case: Our Widgets have not been delivered.','9','17','');
 
 COMMIT;

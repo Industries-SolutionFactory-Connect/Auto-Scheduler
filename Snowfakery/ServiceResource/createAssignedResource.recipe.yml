@@ -1,0 +1,45 @@
+- plugin: snowfakery.standard_plugins.Salesforce.SalesforceQuery
+- object: AssignedResource 
+  count: 1
+  fields: 
+    ServiceResourceId: 
+      SalesforceQuery.find_record:
+        from: ServiceResource
+        where: Name = 'Jeffrey Dugal'
+    ServiceAppointmentId: 
+      SalesforceQuery.find_record:
+        from: ServiceAppointment
+        where: Contact.Name = 'Jeffrey Dugal'
+- object: AssignedResource 
+  count: 1
+  fields: 
+    ServiceResourceId: 
+      SalesforceQuery.find_record:
+        from: ServiceResource
+        where: Name = 'Samantha Blaine'
+    ServiceAppointmentId: 
+      SalesforceQuery.find_record:
+        from: ServiceAppointment
+        where: Contact.Name = 'Samantha Blaine'
+- object: AssignedResource 
+  count: 1
+  fields: 
+    ServiceResourceId: 
+      SalesforceQuery.find_record:
+        from: ServiceResource
+        where: Name = 'Harry Minor'
+    ServiceAppointmentId: 
+      SalesforceQuery.find_record:
+        from: ServiceAppointment
+        where: Contact.Name = 'Harry Minor'
+- object: AssignedResource 
+  count: 1
+  fields: 
+    ServiceResourceId: 
+      SalesforceQuery.find_record:
+        from: ServiceResource
+        where: Name = 'Josh Miller'
+    ServiceAppointmentId: 
+      SalesforceQuery.find_record:
+        from: ServiceAppointment
+        where: Contact.Name = 'Josh Miller'

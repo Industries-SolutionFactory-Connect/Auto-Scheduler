@@ -1,0 +1,26 @@
+- plugin: snowfakery.standard_plugins.Salesforce
+- plugin: snowfakery.standard_plugins.UniqueId
+- plugin: snowfakery.standard_plugins.Salesforce.SalesforceQuery
+
+- object: User 
+  count: 1
+  fields: 
+    FirstName: Linda  
+    LastName: Jonas
+    Username: linda@eniaccars.com
+    Email: linda@eniaccars.com
+    Alias: ljonas
+    TimeZoneSidKey: America/Los_Angeles
+    LocaleSidKey: en_US
+    EmailEncodingKey: UTF-8
+    LanguageLocaleKey: en_US
+    ProfileId: 
+      Salesforce.ProfileId: Partner Community User 1
+    ContactId:
+      SalesforceQuery.find_record:
+        from: Contact
+        where: FirstName = 'Linda'  
+    UserRoleId:
+      SalesforceQuery.find_record:
+        from: UserRole
+        where: Name = 'Dealer'

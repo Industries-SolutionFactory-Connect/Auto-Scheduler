@@ -45,6 +45,9 @@
       "enablePortalUserCaseSharing": true,
       "enableRestrictAccessLookupRecords": true,
       "enableStandardReportVisibility": true
+    },
+    "UserManagementSettings": {
+      "enableNewProfileUI": false
     }
 
   }

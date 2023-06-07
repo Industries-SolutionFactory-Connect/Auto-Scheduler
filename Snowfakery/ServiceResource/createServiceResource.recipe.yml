@@ -1,0 +1,41 @@
+- plugin: snowfakery.standard_plugins.Salesforce.SalesforceQuery
+- object: ServiceResource 
+  count: 1
+  fields: 
+    Name: Jeffrey Dugal
+    RelatedRecordId: 
+      SalesforceQuery.find_record:
+        from: User
+        where: FirstName = 'Jeffrey'  
+    ResourceType: T
+    IsActive: true
+- object: ServiceResource 
+  count: 1
+  fields: 
+    Name: Samantha Blaine
+    RelatedRecordId: 
+      SalesforceQuery.find_record:
+        from: User
+        where: FirstName = 'Samantha'  
+    ResourceType: T
+    IsActive: true
+- object: ServiceResource 
+  count: 1
+  fields: 
+    Name: Harry Minor
+    RelatedRecordId: 
+      SalesforceQuery.find_record:
+        from: User
+        where: FirstName = 'Harry'  
+    ResourceType: T
+    IsActive: true
+- object: ServiceResource 
+  count: 1
+  fields: 
+    Name: Josh Miller
+    RelatedRecordId: 
+      SalesforceQuery.find_record:
+        from: User
+        where: FirstName = 'Josh'  
+    ResourceType: T
+    IsActive: true
