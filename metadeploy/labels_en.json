@@ -1,0 +1,164 @@
+{
+    "product": {
+        "title": {
+            "message": "Scheduler for Automotive",
+            "description": "name of product"
+        },
+        "short_description": {
+            "message": "Pre- configured Scheduler for Automotive solution",
+            "description": "tagline of product"
+        },
+        "description": {
+            "message": "Scheduler for Automotive solution brings in Salesforce Scheduler features in Automotive Cloud. Using this field supervisors/ managers can configure service territories, work types and work type groups, service resources etc. Users can also use the OmniScript-based scheduling flows to create test drive and vehicle service appointments and much more.\r\n\r\nIMPORTANT POINTS TO NOTE - \r\n\r\n* Salesforce does not recommend installing directly in production organizations. Instead, install in one of your free sandbox environments, or a developer organization first.\r\n* After the installation of the solution in the org, perform the post installation steps to complete the Named Crednetial creation \r\n    * Retrieve ConnectedApp credentials using Verification Code that will be sent to their email address\r\n    * Edit auth provider and enter valid consumer key and consumer secret details\r\n    * Open NamedCredentials \u2192 Save it in order to Authenticate the same",
+            "description": "shown on product detail page (markdown)"
+        }
+    },
+    "plan:install": {
+        "title": {
+            "message": "Scheduler for Automotive Configuration",
+            "description": "title of installation plan"
+        },
+        "preflight_message": {
+            "message": "Installs metadata configurations that help you get your org up and running with scheduler based flows and features. Recommended for Customers",
+            "description": "shown before user starts installation (markdown)"
+        },
+        "post_install_message": {
+            "message": "Thanks for installing Automotive Scheduler Module. ",
+            "description": "shown after successful installation (markdown)"
+        },
+        "error_message": {
+            "message": "To get help with this error, go to [help.salesforce.com](https://help.salesforce.com/), find the Support & Services area and log a technical support ticket with Salesforce. Include \u201cPMM\u201d in the subject line and include in your comment the installation link shown here.",
+            "description": "shown after failed installation (markdown)"
+        }
+    },
+    "checks": {
+        "You need AutomotiveSchedulerPsl licence to use this feature. Contact your Administrator.": {
+            "message": "You need AutomotiveSchedulerPsl licence to use this feature. Contact your Administrator.",
+            "description": "shown if validation fails"
+        },
+        "You need AutomotiveSchedulerInExprcCloudPsl licence to use this feature. Contact your Administrator.": {
+            "message": "You need AutomotiveSchedulerInExprcCloudPsl licence to use this feature. Contact your Administrator.",
+            "description": "shown if validation fails"
+        },
+        "You need OmniStudioRuntime licence to use this feature. Contact your Administrator.": {
+            "message": "You need OmniStudioRuntime licence to use this feature. Contact your Administrator.",
+            "description": "shown if validation fails"
+        },
+        "You need OmniStudioRuntimeCC licence to use this feature. Contact your Administrator.": {
+            "message": "You need OmniStudioRuntimeCC licence to use this feature. Contact your Administrator.",
+            "description": "shown if validation fails"
+        },
+        "You need CriteriaBasedSearchAndFilterPsl licence to use this feature. Contact your Administrator.": {
+            "message": "You need CriteriaBasedSearchAndFilterPsl licence to use this feature. Contact your Administrator.",
+            "description": "shown if validation fails"
+        },
+        "You need LightningSchedulerPsl licence to use this feature. Contact your Administrator.": {
+            "message": "You need LightningSchedulerPsl licence to use this feature. Contact your Administrator.",
+            "description": "shown if validation fails"
+        },
+        "You need WarrantyLifecycleMgmtPsl licence to use this feature. Contact your Administrator.": {
+            "message": "You need WarrantyLifecycleMgmtPsl licence to use this feature. Contact your Administrator.",
+            "description": "shown if validation fails"
+        },
+        "You need ActionPlansPsl licence to use this feature. Contact your Administrator.": {
+            "message": "You need ActionPlansPsl licence to use this feature. Contact your Administrator.",
+            "description": "shown if validation fails"
+        },
+        "You need Partner_Community licence to use this feature. Contact your Administrator.": {
+            "message": "You need Partner_Community licence to use this feature. Contact your Administrator.",
+            "description": "shown if validation fails"
+        },
+        "You need Partner_Community_Login licence to use this feature. Contact your Administrator.": {
+            "message": "You need Partner_Community_Login licence to use this feature. Contact your Administrator.",
+            "description": "shown if validation fails"
+        }
+    },
+    "steps": {
+        "Enabling Org Settings": {
+            "message": "Enabling Org Settings",
+            "description": "title of installation step"
+        },
+        "Deploy permissionsets": {
+            "message": "Deploy permissionsets",
+            "description": "title of installation step"
+        },
+        "Assigning Permission Sets to Admin User": {
+            "message": "Assigning Permission Sets to Admin User",
+            "description": "title of installation step"
+        },
+        "Deploy the metadata": {
+            "message": "Deploy the metadata",
+            "description": "title of installation step"
+        },
+        "update_data": {
+            "message": "update_data",
+            "description": "title of installation step"
+        },
+        "Deploy the metadata for experience bundle": {
+            "message": "Deploy the metadata for experience bundle",
+            "description": "title of installation step"
+        },
+        "util_sleep": {
+            "message": "util_sleep",
+            "description": "title of installation step"
+        },
+        "Publish Guest Community": {
+            "message": "Publish Guest Community",
+            "description": "title of installation step"
+        },
+        "deploy": {
+            "message": "deploy",
+            "description": "title of installation step"
+        },
+        "Load Data records": {
+            "message": "Load Data records",
+            "description": "title of installation step"
+        },
+        "query": {
+            "message": "query",
+            "description": "title of installation step"
+        },
+        "generate_and_load_from_yaml": {
+            "message": "generate_and_load_from_yaml",
+            "description": "title of installation step"
+        },
+        "Create Action Plan": {
+            "message": "Create Action Plan",
+            "description": "title of installation step"
+        },
+        "Deploy the Vehicle record page metadata": {
+            "message": "Deploy the Vehicle record page metadata",
+            "description": "title of installation step"
+        },
+        "Create Partner Users for Partner Accounts": {
+            "message": "Create Partner Users for Partner Accounts",
+            "description": "title of installation step"
+        },
+        "Create Service Resources": {
+            "message": "Create Service Resources",
+            "description": "title of installation step"
+        },
+        "Create Service Resources Skills": {
+            "message": "Create Service Resources Skills",
+            "description": "title of installation step"
+        }
+    },
+    "plan:data": {
+        "title": {
+            "message": "Sample Data Plan",
+            "description": "title of installation plan"
+        },
+        "preflight_message": {
+            "message": "Installs sample data. This sample data is dependent on the configuration plan, please install that first before installing this. Recommended for partners.",
+            "description": "shown before user starts installation (markdown)"
+        },
+        "post_install_message": {
+            "message": "Thanks for delpoying Automotive Scheduler Data ",
+            "description": "shown after successful installation (markdown)"
+        },
+        "error_message": {
+            "message": "To get help with this error, go to [help.salesforce.com](https://help.salesforce.com/), find the Support & Services area and log a technical support ticket with Salesforce. Include \u201cPMM\u201d in the subject line and include in your comment the installation link shown here.",
+            "description": "shown after failed installation (markdown)"
+        }
+    }
+}
