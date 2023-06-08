@@ -581,14 +581,45 @@ plans:
         steps:
             1:
                 flow: auto-sch-setup
-    data:
-        slug: install
+    install_data:
+        slug: install_data
         title: Sample Data Plan
-        tier: primary
+        tier: additional
         is_listed: True
         preflight_message: "Installs sample data. This sample data is dependent on the configuration plan, please install that first before installing this. Recommended for partners."
-        post_install_message: "Thanks for delpoying Automotive Scheduler Data "
+        post_install_message: "Thanks for delpoying Automotive Scheduler Data"
         error_message: "To get help with this error, go to [help.salesforce.com](https://help.salesforce.com/), find the Support & Services area and log a technical support ticket with Salesforce. Include “PMM” in the subject line and include in your comment the installation link shown here."
+        checks:
+            - when: "'AutomotiveSchedulerPsl' not in tasks.get_available_permission_set_licenses()"
+              action: error
+              message: "You need AutomotiveSchedulerPsl licence to use this feature. Contact your Administrator."
+            - when: "'AutomotiveSchedulerInExprcCloudPsl' not in tasks.get_available_permission_set_licenses()"
+              action: error
+              message: "You need AutomotiveSchedulerInExprcCloudPsl licence to use this feature. Contact your Administrator."
+            - when: "'OmniStudioRuntime' not in tasks.get_available_permission_set_licenses()"
+              action: error
+              message: "You need OmniStudioRuntime licence to use this feature. Contact your Administrator."
+            - when: "'OmniStudioRuntimeCC' not in tasks.get_available_permission_set_licenses()"
+              action: error
+              message: "You need OmniStudioRuntimeCC licence to use this feature. Contact your Administrator."
+            - when: "'CriteriaBasedSearchAndFilterPsl' not in tasks.get_available_permission_set_licenses()"
+              action: error
+              message: "You need CriteriaBasedSearchAndFilterPsl licence to use this feature. Contact your Administrator."
+            - when: "'LightningSchedulerPsl' not in tasks.get_available_permission_set_licenses()"
+              action: error
+              message: "You need LightningSchedulerPsl licence to use this feature. Contact your Administrator."
+            - when: "'WarrantyLifecycleMgmtPsl' not in tasks.get_available_permission_set_licenses()"
+              action: error
+              message: "You need WarrantyLifecycleMgmtPsl licence to use this feature. Contact your Administrator."
+            - when: "'ActionPlansPsl' not in tasks.get_available_permission_set_licenses()"
+              action: error
+              message: "You need ActionPlansPsl licence to use this feature. Contact your Administrator."                                                                                    
+            - when: "'PID_Partner_Community' not in tasks.get_available_licenses()"
+              action: error
+              message: "You need Partner_Community licence to use this feature. Contact your Administrator."
+            - when: "'PID_Partner_Community_Login' not in tasks.get_available_licenses()"
+              action: error
+              message: "You need Partner_Community_Login licence to use this feature. Contact your Administrator."
         steps:
             1:
                 flow: auto-sch-data
