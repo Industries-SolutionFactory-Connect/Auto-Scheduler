@@ -160,5 +160,23 @@
             "message": "To get help with this error, go to [help.salesforce.com](https://help.salesforce.com/), find the Support & Services area and log a technical support ticket with Salesforce. Include \u201cPMM\u201d in the subject line and include in your comment the installation link shown here.",
             "description": "shown after failed installation (markdown)"
         }
+    },
+    "plan:install_data": {
+        "title": {
+            "message": "Sample Data Plan",
+            "description": "title of installation plan"
+        },
+        "preflight_message": {
+            "message": "Installs sample data. This sample data is dependent on the configuration plan, please install that first before installing this. Recommended for partners.",
+            "description": "shown before user starts installation (markdown)"
+        },
+        "post_install_message": {
+            "message": "Thanks for delpoying Automotive Scheduler Data",
+            "description": "shown after successful installation (markdown)"
+        },
+        "error_message": {
+            "message": "To get help with this error, go to [help.salesforce.com](https://help.salesforce.com/), find the Support & Services area and log a technical support ticket with Salesforce. Include \u201cPMM\u201d in the subject line and include in your comment the installation link shown here.",
+            "description": "shown after failed installation (markdown)"
+        }
     }
 }
