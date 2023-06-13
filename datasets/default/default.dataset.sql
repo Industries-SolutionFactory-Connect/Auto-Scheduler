@@ -425,8 +425,8 @@ CREATE TABLE "ProductRelatedMaterial" (
 );
 INSERT INTO "ProductRelatedMaterial" VALUES(1,'1.0','Neo Ionic EV CD4 VXi Blue - Vipers','2.0','','1','','5','1','2');
 INSERT INTO "ProductRelatedMaterial" VALUES(2,'1.0','Neo Ionic EV CD4 VXi Blue - Diffuser','1.0','','1','','10','1','2');
-INSERT INTO "ProductRelatedMaterial" VALUES(3,'','','','1.0','','Neo CRV 2022 ZXi - Engine','2.0','','1','','4','9','2');
-INSERT INTO "ProductRelatedMaterial" VALUES(4,'','','','1.0','','Neo CRV 2022 ZXi - Diffuser','1.0','','1','','5','9','2');
+INSERT INTO "ProductRelatedMaterial" VALUES(3,'1.0','','Neo CRV 2022 ZXi - Engine','2.0','','1','','4','9','2');
+INSERT INTO "ProductRelatedMaterial" VALUES(4,'1.0','','Neo CRV 2022 ZXi - Diffuser','1.0','','1','','5','9','2');
 
 CREATE TABLE "ProductRelationshipType" (
 	id INTEGER NOT NULL, 
