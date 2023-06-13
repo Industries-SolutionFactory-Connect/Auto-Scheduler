@@ -214,12 +214,12 @@ flows:
                 options:
                     generator_yaml: Snowfakery/ActionPlan/createActionPlan.recipe.yml
 
-            17:
-                task: deploy
-                options:
-                    path: force-custom/flexipages
-                ui_options:
-                    name: Deploy the Vehicle record page metadata 
+            # 17:
+            #     task: deploy
+            #     options:
+            #         path: force-custom/flexipages
+            #     ui_options:
+            #         name: Deploy the Vehicle record page metadata 
 
             18:
                 task: generate_and_load_from_yaml
@@ -256,7 +256,12 @@ flows:
             3.2: 
                 flow: update_data_post_load
 
-
+    auto-all:
+        steps:
+            1: 
+                flow: auto-sch-setup
+            2: 
+                flow: auto-sch-data
     auto-sch-setup:
         steps:
             1: 
