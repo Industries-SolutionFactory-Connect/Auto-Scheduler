@@ -252,7 +252,7 @@ flows:
                 task: query
                 options:
                     object: Skill
-                    query: select Id Skill whereDeveloperName like 'Body%' or DeveloperName like 'Value%' or DeveloperName like 'Periodic%' or DeveloperName like 'Brae%'
+                    query: select Id Skill where DeveloperName like 'Body%' or DeveloperName like 'Value%' or DeveloperName like 'Periodic%' or DeveloperName like 'Brae%'
                     result_file: Snowfakery/ServiceResource/data/SR3.csv
             
             23:
@@ -527,7 +527,7 @@ flows:
                 task: query
                 options:
                     object: Skill
-                    query: select Id Skill whereDeveloperName like 'Body%' or DeveloperName like 'Value%' or DeveloperName like 'Periodic%' or DeveloperName like 'Brae%'
+                    query: select Id Skill where DeveloperName like 'Body%' or DeveloperName like 'Value%' or DeveloperName like 'Periodic%' or DeveloperName like 'Brae%'
                     result_file: Snowfakery/ServiceResource/data/SR3.csv
             
             34:
