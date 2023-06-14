@@ -236,13 +236,39 @@ flows:
                     name: Create Service Resources
 
             20:
+                task: query
+                options:
+                    object: Skill
+                    query: select Id Skill where DeveloperName like 'Accessories%' or DeveloperName like 'Value%' or DeveloperName like 'Brae%'
+                    result_file: Snowfakery/ServiceResource/data/SR1.csv
+            21:
+                task: query
+                options:
+                    object: Skill
+                    query: select Id Skill where DeveloperName like 'Accessories%' or DeveloperName like 'Value%' or DeveloperName like 'Wax%' or DeveloperName like 'Brae%'
+                    result_file: Snowfakery/ServiceResource/data/SR2.csv
+            
+            22:
+                task: query
+                options:
+                    object: Skill
+                    query: select Id Skill whereDeveloperName like 'Body%' or DeveloperName like 'Value%' or DeveloperName like 'Periodic%' or DeveloperName like 'Brae%'
+                    result_file: Snowfakery/ServiceResource/data/SR3.csv
+            
+            23:
+                task: query
+                options:
+                    object: Skill
+                    query: select Id Skill where DeveloperName like 'Accessories%' or DeveloperName like 'Value%' or DeveloperName like 'Periodic%' or DeveloperName like 'Brae%'
+                    result_file: Snowfakery/ServiceResource/data/SR4.csv
+            24:
                 task: generate_and_load_from_yaml
                 options:
                     generator_yaml: Snowfakery/ServiceResource/createServiceResourceSkill.recipe.yml
                 ui_options:
                     name: Create Service Resources Skills
 
-            21:
+            25:
                 task: assign_permission_sets
                 options:
                     api_names: AutomotiveInExperienceCloudPsl, AutomotiveSchedulerInExprcCloudPsl, LeadMngmntInExperienceCloudPsl, VisitMgmntInExperienceCloudPsl
