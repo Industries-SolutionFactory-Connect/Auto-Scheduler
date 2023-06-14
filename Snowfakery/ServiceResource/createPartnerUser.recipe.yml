@@ -55,10 +55,6 @@
       SalesforceQuery.find_record:
         from: Contact
         where: FirstName = 'Harry'  
-    UserRoleId:
-      SalesforceQuery.find_record:
-        from: UserRole
-        where: Name = 'Dealer'
 - object: User 
   count: 1
   fields: 
