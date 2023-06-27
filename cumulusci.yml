@@ -214,12 +214,12 @@ flows:
                 options:
                     generator_yaml: Snowfakery/ActionPlan/createActionPlan.recipe.yml
 
-            # 17:
-            #     task: deploy
-            #     options:
-            #         path: force-custom/flexipages
-            #     ui_options:
-            #         name: Deploy the Vehicle record page metadata 
+            17:
+                task: deploy
+                options:
+                    path: force-custom/flexipages
+                ui_options:
+                    name: Deploy the Vehicle record page metadata 
 
             18:
                 task: generate_and_load_from_yaml
@@ -271,7 +271,7 @@ flows:
             25:
                 task: assign_permission_sets
                 options:
-                    api_names: AutomotiveInExperienceCloudPsl, AutomotiveSchedulerInExprcCloudPsl, LeadMngmntInExperienceCloudPsl, VisitMgmntInExperienceCloudPsl
+                    api_names: AutomotiveInExperienceCloudPsl, AutomotiveSchedulerInExprcCloudPsl, LeadMngmntInExperienceCloudPsl, VisitMgmntInExperienceCloudPsl, Omnistudio_Runtime_for_Partners, Salesforce_Scheduler_for_Automotive
                     user_alias: jdugal, sblaine, hminor, jmiller, ljonas
                 ui_options:
                     name: Assigning Permission Sets to Partner Users
@@ -545,7 +545,7 @@ flows:
             36:
                 task: assign_permission_sets
                 options:
-                    api_names: AutomotiveInExperienceCloudPsl, AutomotiveSchedulerInExprcCloudPsl, LeadMngmntInExperienceCloudPsl, VisitMgmntInExperienceCloudPsl
+                    api_names: AutomotiveInExperienceCloudPsl, AutomotiveSchedulerInExprcCloudPsl, LeadMngmntInExperienceCloudPsl, VisitMgmntInExperienceCloudPsl, Omnistudio_Runtime_for_Partners, Salesforce_Scheduler_for_Automotive
                     user_alias: jdugal, sblaine, hminor, jmiller, ljonas
                 ui_options:
                     name: Assigning Permission Sets to Admin User            
@@ -561,13 +561,34 @@ flows:
             #     ui_options:
             #         name: Delete recently created objects
 
-            36:
-                task: assign_permission_sets
+            4:
+                task: delete_data
                 options:
-                    api_names: AutomotiveInExperienceCloudPsl, AutomotiveSchedulerInExprcCloudPsl, LeadMngmntInExperienceCloudPsl, VisitMgmntInExperienceCloudPsl
-                    user_alias: jdugal, sblaine, hminor, jmiller, ljonas
+                    no-prompt: true
+                    objects:  GeoCountry, UnitOfMeasure, BusinessBrand, OperatingHours, Pricebook2
                 ui_options:
-                    name: Assigning Permission Sets to Partner Users   
+                    name: Delete recently created objects
+            # 36:
+            #     task: assign_permission_sets
+            #     options:
+            #         api_names: AutomotiveInExperienceCloudPsl, AutomotiveSchedulerInExprcCloudPsl, LeadMngmntInExperienceCloudPsl, VisitMgmntInExperienceCloudPsl
+            #         user_alias: jdugal, sblaine, hminor, jmiller, ljonas
+            #     ui_options:
+            #         name: Assigning Permission Sets to Partner Users   
+
+            # 3: 
+            #     task: deploy
+            #     options:
+            #         path: manual/layouts
+            #     ui_options:
+            #         name: Vehicle Definition Layout 
+
+            #  28:
+            #     task: deploy
+            #     options:
+            #         path: force-custom/flexipages
+            #     ui_options:
+            #         name: Deploy the Vehicle record page metadata 
 
 plans:
     install:
